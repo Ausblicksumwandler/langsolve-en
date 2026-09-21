@@ -16,6 +16,7 @@
 \usepackage{tabularx} %Table cell formatting
 \usepackage{framed} %Creation of coloured domains
 \usepackage{tocloft} %Table of Contents customization
+\usepackage[normalem]{ulem} %Non-float underline and strikethrough
 \usepackage{microtype} %Subtle typography improvements
 \usepackage[hidelinks]{hyperref} %Creation of hyperlinks between document sections
 \usepackage{cleveref} %Referencing adds the type of reference before its numbering in \autoref
@@ -84,7 +85,7 @@
 \colorlet{intro}{brown}
 %New commands and environments
 \newcommand*{\bt}[1]{\textbf{#1}}
-\newcommand*{\ut}[1]{\underline{#1}}
+\newcommand*{\ut}[1]{\uline{#1}}
 \newcommand*{\vm}[1]{\boldsymbol{#1}}
 \newenvironment{example}{\def\FrameCommand{\colorbox{sampler}} \MakeFramed{\advance\hsize+\width}\begin{center}}{\end{center}\endMakeFramed}
 \newenvironment{syntax}{\def\FrameCommand{\colorbox{ruler}} \MakeFramed{\advance\hsize+\width}\begin{center}}{\end{center}\endMakeFramed}
@@ -97,14 +98,13 @@
 \tableofcontents \clearpage
 
 \section{Introduction} \label{sec:enint}
-This document gives a brief overview of the methods used to develop the solver. It is not intended to  comprehensively document them, but rather serves as an introduction of the main concepts and design choices that have been made, so as to facilitate other authors to later make their own contributions. In particular, two things are considered:
+This document gives a brief overview of the methods used to develop the solver. It is not intended to  comprehensively document them, but rather serves as an introduction of the main concepts and design choices that have been made, so as to facilitate other authors to later make their own contributions. In particular, three things are considered:
 \begin{enumerate}
 \item  Structure of the employed \LaTeX{} code 
 \item Naming and usage conventions 
+\item GitHub repository structure
 \end{enumerate}
-Understanding both of these things is crucial for those willing  to contribute to any linguistic solution themselves. The resultant standardization  makes it possible to easily update and use the solver, irrespective of how complex and long it may become in the future. 
-
-Although \bt{Git} and \bt{GitHub} are also necessary for  updating the real document, its  knowledge can be conveniently  obtained from the internet, and has been omitted.
+Understanding  these things is crucial for those willing  to contribute to any linguistic solution themselves. The resultant standardization  makes it possible to easily update and use the solver, irrespective of how complex and long it may become in the future. 
 
 To begin with, we must look at what \LaTeX{} is and why it matters, especially for creating any such solver. Those interested only in the implementation may skip to \autoref{sec:enstruc}.
 \section{Typography and LaTeX} \label{sec:entyp}
@@ -293,15 +293,40 @@ Some minor tips and remarks:
         \item The table of contents does not record `subsubsections'
     \end{enumerate}
 \end{example}
-\section{Conclusion}
-Anyone willing to contribute to the solver must follow the following steps:
+\section{GitHub repository structure}
+\bt{Git} is a version update system that keeps track of files as they are changed, and also of who changed what. It stores the history of all changes and makes it possible to revert any project back to a previous state, allowing for a security net, making it particularly useful for software development. \bt{GitHub} is an online platform based on \bt{Git}, which has been used for storing the solver. This ensures that development can occur from any part of the world, and safeguards the solver against possible mistakes.
+
+Although the net entry barrier for both \bt{GitHub} and \LaTeX{} is high, these are both fantastic open source tools that will be helpful regardless  of what you plan to do in the future. Combined, they have made it possible to  collaborate systematically across the globe: an ability that this solver intends to capitalize on to the fullest. Hence, although this next part can be a headache, please bear with it.
+\subsection{Users}
+A learner who merely wishes to use the solver need not possess a \bt{GitHub} account. Use the \texttt{Code} tab in the repository,  download the entire thing as a .zip file, and unpack it on your computer. Then, open \texttt{ENG.tex} (the main file) and comment the \verb|\include| lines for languages you don't want (using \%). Thereafter, follow the steps in \autoref{sec:enstruc} and compile the main file. The resultant output pdf is ready to use.
+\subsection{Contributors}
+Anyone willing to contribute to the solver must own a GitHub account, and be at least bilingual. There are two kinds of contributors for any perspective, and these have different roles to play:
+\begin{itemize}
+    \item \textit{Primary author}: The one(s) responsible for maintaining the solution for a particular perspective
+    \item \textit{Co-authors}: Those who have edited part of the solver. Includes both the ones in it for the long run, and the ones who turn up occasionally
+\end{itemize}
+The co-authors in it for the long run, as well as the primary author of any perspective (assuming I have been displaced as primary author) will be placed in language teams of all languages they know, as part of the organisation \bt{Ausblicksumwandler}. This means that someone who knows German and French gets placed in both these teams simultaneously if staying for the long run.
+
+The way an update proceeds is as follows:
 \begin{enumerate}
-    \item Fork the repository \texttt{langsolve-en} on your GitHub account
-    \item Edit the necessary source files
-    \item Compile locally using LuaLaTeX, then debug possible errors and warnings
-    \item Submit a Git pull request ONLY for the edited `.tex' files
+    \item Someone proposes a change in some \texttt{(lang)/} path using a pull request. This someone could be anyone from anywhere, and not necessarily a member of the organisation
+    \item The teams for the medium and target, in this case `en, (lang)' must review the change. At least one person from both these teams must agree to the change and approve it
+    \item After both teams have approved a pull request, I am the one who will approve it last and make it  mergeable  with the \texttt{main} branch. This serves as more of a structural security overview: I do not intend to overly scrutinize and mess with every proposed change (unless you change something I have personally solved)
+    \item Team members can also propose changes, which would then need to be approved by someone else from their team. This is because one cannot propose and approve their own change, even if normally authorised to do so. I am not exempt from this process either: Although I hold final merge authority (by virtue of being the final one to approve anything), I cannot and will not merge unless the relevant language teams have already reviewed and accepted my changes
 \end{enumerate}
-On reviewing the edit, the pull request may be granted, which then truly updates the solver.  A learner may duplicate this solver and comment out (using \%) all unnecessary languages in the main file, so as to reduce  total pdf length.
+\ut{In the initial phases, as the teams are small, some of the structure may not look exactly like this, but this is the plan.} Please note that although the rules are comprehensive, an approval given by any bilingual normally satisfies both the \texttt{medium/target} team approval conditions simultaneously. Hence, it is important to ensure that no part of the change is accidentally glossed  over.
+
+The method to propose a change is roughly as follows:
+\begin{enumerate}
+    \item Fork (duplicate) the repository \texttt{Ausblicksumwandler/langsolve-en} on your GitHub account
+    \item Download and edit the necessary source files
+    \item Compile locally using LuaLaTeX, then debug possible errors and warnings
+    \item Create a branch in your fork (with source as the \texttt{main} branch of your fork) and update  the  `.tex' files as a push to it
+    \item Create  a Git pull request with base repository  \texttt{Ausblicksumwandler/langsolve-en}, base branch  \texttt{main}, head repository  your fork, and compare branch as the branch you created in your fork. Use appropriate comments in pull requests explaining your changes
+    \item Do not worry about file duplication on pushing the edited files into your fork branch, since \bt{GitHub} automatically calculates the changes made and stores the latest file version
+    \item Allow maintainers to make changes to the pull request branch, so that everything doesn't need to be done again in case something minor needs  correction
+\end{enumerate}
+There are some other variations to this: for example one can also work on a pull request started by someone else, but I will spare you the details. Once the change is reviewed, the pull request may be granted, which then truly updates the solver.
 
 The soul of a language embodies the cultures and histories of those who speak it. Whether this soul survives and in what form is completely up to the people involved. A cursed spirit (\textsanskrit{केतु}) like myself can only create  a mechanism to house it, which I will be observing  with great interest.
 

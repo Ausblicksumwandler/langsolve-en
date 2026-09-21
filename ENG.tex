@@ -1,0 +1,33 @@
+% ----- Generate and read UserGuide.pdf before proceeding -----
+\documentclass[12pt,twoside,openany]{book}
+%Packages and commands for convenience
+\input{package.tex}
+\input{command.tex}
+
+\begin{document}
+\frontmatter
+\maketitle
+%Calling god
+\thispagestyle{empty}
+\vspace*{\fill}
+\begin{LARGE}
+\begin{center}
+    \textbf{\textsanskrit{ॐ श्री परमात्मने नमः}}
+\end{center}
+\end{LARGE}
+\vspace*{\fill}
+\clearpage
+\phantomsection \label{toc}
+\tableofcontents
+\include{Preface}
+
+\mainmatter
+%One chapter per language. Divide further later
+\include{Intro} %Intro MUST be included in every compilation due to copyright and convenience reasons
+\include{german/Deutsch}
+
+\begin{comment}
+\backmatter
+Unnumbered chapters. Use \appendix for letter based numbering.
+\end{comment}
+\end{document}

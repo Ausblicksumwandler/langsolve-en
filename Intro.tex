@@ -1,0 +1,1001 @@
+\setcounter{chapter}{-1}
+\chapter{Terminology} \label{chap:term}
+%Sequence of term definition according to  order of usage in \autoref{sec:strbas}:
+\vspace{0.5em plus 0.3em minus 0.1em}
+\begin{center}
+\begin{tabular}{m{5cm} m{10cm}}
+    \bt{Renamed term} & \bt{Original term / Description} \\\hline
+    Iff & If and only if\\\hline
+    Perspective & Language: A method of perceiving the world \\\hline
+    Multiplicity & Numerical state of a term. The code for singular is $1$, and the highest multiplicity (plural) is $\mathbb{M}$ \\\hline
+    Noun root ($\vm{R}$) & The row vector of the form(s) of a noun, which are used  to create its  case based forms. $\vm{R}(1)$ represents the singular root, $\vm{R}(2)$ the dual root and so on \\\hline
+    Roughness/Smoothness & The degree to which a perspective stores meaning in word form variations. Rougher perspectives use more variations\\\hline
+    Noun unit & The self-sufficient and invariant block of text containing a noun and its attributes, which can be directly deployed in a sentence\\\hline
+    Case - Multiplicity matrix ($\vm{C}$) & The matrix whose cells are noun forms, columns are multiplicities and rows are cases\\\hline
+    Adjective root & The base version of an adjective that changes form when kept in the noun unit\\\hline
+    $\vm{C}$ analogues & $\vm{G}$: Article, $\vm{J}$: Adjective, $\vm{P}$: Pronoun\\\hline
+    Verb root (VR) & Verb infinitive without its infinitive ending\\\hline
+    Verb chain (VC) & A sequence of  verb forms, which contains the conjugating verb  and the dormant chain\\\hline
+    Conjugating verb (CV) & The only verb in the verb chain that changes form according to person and multiplicity (conjugates) \\\hline
+    Dormant chain (DC) & The invariant part of the verb chain, which encodes all that the conjugating verb did not  \\\hline
+    Special verb ($\mathcal{S}$) & Verb that requires a verb argument for use\\\hline
+    Prepositionally supported verb ($\mathcal{Z}$)& Verb that takes a prepositional argument\\\hline
+    Helping verb ($\mathcal{X}$) & Verb that  serves only to change the VC structure\\\hline
+    Prefixed verb ($\mathcal{Y}$) & Verb that uses a prefix to make a new verb infinitive\\\hline
+    [Object/non-object] verb & A verb that [compulsorily needs/does not take] an object\\\hline
+    Tense & Describes the time and aspect of any action described by the verb chain\\\hline
+    Aspect & The state of the action described by the verb\\\hline
+    Aspect-Time matrix ($\vm{T}$) & The matrix whose cells are tenses, columns are time, and rows are aspects\\\hline
+    Tense submatrix ($\vm{S}$) & The matrix whose cells are verb forms, columns are multiplicities, and rows are conversation natures (person). The $2^{nd}$ person has a $3^{rd}$ dimension for politeness based forms\\\hline
+    Politeness grade & The degree of politeness. $0$ is the most informal and $\mathbb{H}$ the most formal
+\end{tabular}
+\vfill
+\vspace{0.5em plus 0.3em minus 0.1em}
+\begin{tabular}{m{5cm} m{10cm}}
+    \bt{Renamed term} & \bt{Original term / Description} \\\hline
+    Base cell ($\vm{T}(n_1,n_2)$) & The cell in $\vm{T}$, which has no DC and whose CV is closest to the verb infinitive\\\hline
+    Subclause & Dependent clause\\\hline
+    P1 & Present Participle: -ing based ongoing forms like going, talking, killing, hopping\ldots \\\hline
+    P2 & Past Participle: -ed based completed forms like gone, talked, killed, hopped\ldots \\\hline
+    Main sentence & Independent clause \\\hline
+    Unit & The smallest independent and indivisible part of a sentence with a fixed purpose\\\hline
+    Sentence mode & A specific rearrangement of units, along with a change in the form variations of the CV, which changes  sentence interpretation\\\hline
+    Principle/Optional mode (PM/OM) & A sentence mode that must exist, or may exist in a sentence respectively\\\hline
+    Direct/Indirect argument for  relationals (dRA/ndRA) & The subclause that stands with the relational is the dRA, while the other one the ndRA\\\hline
+    Relational ($\mathcal{R}_\boxdot$) & Relational conjunction:   Conditional marker that creates a layered hierarchy\\\hline
+    Additional ($\mathcal{A}_\boxdot$) & Additional conjunction: Grouping marker that creates a flat hierarchy. Arguments for single and coupled conjunctions: $\mathbb{S}, \mathbb{O}$\\\hline
+    Interrogative words (IW)& Words that declare the beginning of a question expecting an elaborate answer\\\hline
+    Describer subclause & Relative clause: Additional description for a noun \\\hline
+    Hook word ($\vm{Q}$) & Relative pronoun: The pronoun that starts any describer subclause\\\hline
+    Order cell & The cell in $\vm{T}$ which is used for forming commands\\\hline
+    Grade keyword & An invariant keyword used to increase the politeness grade of a command\\\hline
+    Subject suppliers (SS - $\circledS$) & Case $3$ prepositions that can be used to introduce a performer in a process passive\\\hline
+    Opener & The introductory phrase that declares the sentence mode `speech'\\\hline
+    Direct/Indirect argument & The argument unit to the opener for the direct/indirect speech variants\\\hline
+    Indirect arg. conjunction (IAC) & The conjunction used to link the indirect argument and opener in  indirect speech\\\hline
+    Negative words ($\vm{N}$) & The invariant words used to invert the meaning of a unit\\\hline
+    $\mathfrak{R}24/12$ & Standard (24hr) or normal (12hr) time\\\hline
+    Time preposition & The preposition that  marks a time unit. The calendar analogue is the date preposition\\\hline
+    Half marker (HM) & A marker for $\mathfrak{R}12$ time clarifying the exact 12hr half being considered\\\hline
+    Marker verb (MV, $\vm{D}$) & A verb  signifying a forced/permitted action, which takes the actual action verb as its argument
+\end{tabular}
+\end{center}
+
+\chapter{Introduction} \label{chap:int}
+\textit{In honour of the madness that created this document, this introduction has been carried over exactly as it was first written.}
+
+I have always dreamed of being a villain. A cursed spirit, a natural disaster that alters the composition of wherever it goes, and leaves without explanation. Why? This world has no need for a battle maniac like me, and dares suffocate me with its hundreds of chains, restrictions and hypocrisy. It is only natural that I respond in kind, and attempt to break out. For example, these symbolic barriers we call language\ldots if broken, the people who look at foreigners and envy their lives, or look at foreign lands as some utopia that will finally fulfil their dreams and desires will understand the reality behind them, realizing that there is in fact, no paradise to escape to. You cannot escape your fate, and WILL lose, no matter what. This, I hope will aid in the collapse of society and bring me the joy I seek\ldots
+
+Now that this can no longer be considered academic literature, it is time to address the actual point of this document. First, a tiny disclaimer: If your goal is to learn a language for the sake of impressing someone, being a gimmicky YouTuber or for any other half-hearted reason, this piece is beyond you; stop reading. 
+
+If you have ever tried to learn a language aside from what you were born with, you have likely thought about  the best way to do this, and inevitably come across the two prevailing schools of thought:
+\begin{enumerate}
+    \item Learn mostly by input-output and let the subconscious acquire the language
+    \item Understand the structure and technicalities, then proceed towards input
+\end{enumerate}
+
+Most people tend to gravitate towards the first point and seem to largely ignore the second, since that is what most `experts' tell them to do. In their defence, the second method does not let you see any visible progress even if you dedicate to it, and the first one is loads easier to implement (Duolingo for example), which brings us to our actual problem: The way languages are taught in  classes is\ldots fragmented to put it lightly, and does not focus on creating real understanding. Most classes just explain how to output  the target language to pass a test,  contain explanations that are too verbose; inadequate; or both, making it seem like grammar is a complete waste of time, and not something to be taken seriously. The advent of YouTube has allowed access to many undoubtedly good teachers that circumvent this problem, but one still needs to integrate knowledge from various sources to get anywhere. The fundamental issue still remains: there is no  complete structural transformation from source to target, with concise and concrete explanations about every practical technicality. Also, learning resources normally use a popular medium like English to teach the target, which can be counterproductive for those who have different mother tongues. Hence, the ultimate goal of this series is to both  `solve' language structures using a medium language to facilitate internal understanding, and to provide a rigorous logical method for the solution of any target using any medium. In order to comprehend how this series attempts to achieve this, we must begin at the grassroots.
+
+Language and communication are not the same thing. A dog owner is able to teach his dog to `fetch', `sit' or do other things without the dog ever understanding natural language. Even a baby, who is considered the apex learner  has no base for understanding anything when born. What occurs over the course of time is pattern recognition, something our brains are incredibly good at. The brain looks at an apple and notices that the people who take care of me often call this red juicy thing an `apple' so that is probably what it is. Maybe the colourful things they cover my body with are `clothes' and I am `cute'. My point being, this is how someone who has never learned to read or write can still end up with good speaking and listening skills. As society became more complex, we needed better ways to describe and think about things. Thereupon, various scripts and methods to tackle these problems were created by different regions, which gave rise to our multi-lingual cocktail of a world.
+
+Naturally, if the ways of association developed differently, every group of people speaking a language essentially has a different thought process and perspective of how they look at the world. I will go a step further and define `language' as a `shared perspective of viewing the world' rather than just a method of communication. Hence, attempting to acquire one inevitably brings you closer to another perspective, which means two things:
+\begin{enumerate}
+    \item This is an attempt to reprogram your brain to think differently, it is going to hurt and take time. There are no shortcuts.
+    \item You cannot attempt to form fit your old perspective to the new one: this is an insult to both of them.
+\end{enumerate}
+Concretely, this means that a new language must be treated as its own independent unit. You are NOT going to think in your old perspective and translate later. That is not learning, but foolishness.
+
+Let us return to the two methods of learning. Attempting to learn mostly by `comprehensible input ' is like training a Large Language Model like ChatGPT. This model has no idea what anything means, but has so much data that it ends up finding the best patterns everytime, giving the illusion of understanding. Yet there is no substance behind this apparent mastery, which becomes clear the more intricate the subject matter is.
+
+It is indeed possible, after bombarding the brain with tons of information, to learn a language to fluency: think of your own mother tongue. You probably have no idea  why things are said exactly in a particular manner, but your senses automatically guide you to the correct usage. This is hardly an efficient method of learning, since after training such a model, there is no chance of improvement. In the tangled mess of `I just know it works', how will you ever find out which part needs improvement? How will you improve anything without simply relying on more data? You won't even know if it is helping. Worse, you may pick up incorrect patterns because of input from people who do not know how to use the language properly. I know, because I learned English exactly like this, and never understood how to study it until I relearned the entire thing for this work from scratch. On the other hand, if you structure the process using grammar and calculated effort, it is possible to efficiently reprogram your brain to think like the target population. You may not be able to understand people immediately, but you will have an inherently better understanding of why things are the way they are, and the incoming data can be easily sorted and interpreted without any guesswork, including necessary error correction. Babies also eventually go to school to learn the structure of their mother tongues to become fluent, but the YouTubers don't tell you that, do they?
+
+\bt{TLDR}: If you believe humans are intelligent, stop learning like an AI. Data poisoning is a significant problem in language learning, against which grammar offers protection. A `comprehensible input only' individual will be completely screwed.
+
+Which finally brings us to my attempt here. The only thing I will do in this text is to take the structure of the target language, put it against the structure of English, and explain how both languages think: how they approach things differently, and transition from source to destination step by step. This text will deal with \bt{EVERY} practically meaningful structural aspect of the target language, and aims to create a thorough understanding of its soul in the reader. I want you to be able to embody it to the point you remember it in your next life. Not that you should, but you should be able to.
+
+Obviously, to claim to have included absolutely everything relevant can be arrogant, since it is always possible that something eluded my grasp, or that I made a mistake. As such, I am open to comments in case you find something  I missed and cannot be understood based on this text alone. Send me an email to \href{mailto:ojaspidey@gmail.com}{\textcolor{magenta}{ojaspidey@gmail.com}} with the subject `The soul of languages' and explain the issue using whichever language I have dealt with in this entire text. If you use a different subject (case sensitive), I will ignore your email. Assume you are dealing with a system rather than a human. If I find the suggestion noteworthy, I will add you to the contributors and update this work.
+
+\phantomsection \label{copyright}
+Lastly, a few words about \textcolor{magenta}{\bt{copyright}}. Of course, you must mention my name and cite  this piece properly, if you ever decide to use it for any purpose: for example as literature for a research paper.  BibTeX: 
+\begin{lstlisting}
+@misc{persolve,
+    author = {Ojas Sevekar},
+    title = {The Language Solver},
+    year = {2026}}
+\end{lstlisting}
+Assuming that due credit is given, I do not care if people  make notes of, reverse engineer or modify this solver for personal use, or even start YouTube channels or other commercial activity using the mentioned principles. I hereby distance myself from all profits and losses that arise as a consequence of this solver, but will ALWAYS retain its original ownership, irrespective of how many co-authors contribute to it in the future. All authors will be named separately per perspective, and  included in its final section along with references and other credits.
+
+\bt{This series is entirely made using open source tools, and will always remain open source.} If you need the corresponding \LaTeX{} code used, or have other questions, you may use the email above, this time with no title restrictions. Since all the employed tools are open source, I also take no responsibility for any potential software/hardware damage that this solver causes. I am merely a user, and have ONLY built the theories contained in this document, not any software that was used to create it.
+\section{How to proceed?} %\label{sec:procd}
+There are multiple things that must be mentioned before we begin.
+\begin{enumerate}
+    \item This work will not always call concepts by their formal names: I will often give them new names to aid understanding. Do not be surprised. All renamed terms are detailed in \autoref{chap:term}.
+    \item Nothing can be defined with itself. English will not be taught here.
+    \item This text assumes that you know how to read the target language script. This will not be taught. The other things that won't be taught are how to speak, and intonation / spelling rules in general, although I might mention a few in some places. This is because I do not speak to people, and because intonation and special spellings are best learned by observation.
+    \item The use of translators to understand new words is acceptable, but is not recommended  for entire sentences, unless you know every word in the sentence and still struggle to understand it. This is because translators are made for translating to natural language, and often hide what the target language actually tries to convey. This is disastrous for learners, since you can easily end up with incorrect associations.
+    \item I do not respect the Common European Framework of Reference (A/B/C1,2) for languages, as I believe it is far too lenient on what it means to learn one. For example, I received a score of $115/120$ in my TOEFL test which put me at the level of C2, but I still do not know many words and cannot speak with perfect grammatical fluency. I consider myself around B2 to C1 and certainly not the divine C2. So rather than trying to grade everything, be honest and evaluate how capable you are \textit{vs} judging how well you pass a test.
+    \item Irrespective of how close the target language is to the ones you know, treat it as if you have never known it before in your life. This will turn off the automatic inference in your brain that tries to form fit the new words to the ones you know. Even if they mean the same thing, always check before concluding so, and try not to use words that are too similar to avoid a language mixup: a disgusting condition where multiple languages constantly get mixed in your thoughts because you encoded them not as independent entities, but as entangled objects. At times, you may even remember words from the wrong language when conversing. To avoid this, I will always try to use pure words as far as my knowledge allows. This means that no loan words like `Ryomen Sukuna' are permitted.
+    \item In order to ensure that no confusion between target and source occurs - especially for languages using the same script, I will code words in the target language \bt{bold} unless explicitly specified or obvious. For English sentences that mimic the target grammar for the sake of reprogramming, \ut{underline} will be used. Do not process these sentences with classical English rules.
+    \item Only the standard dialects will be considered. Region specific variations can be decoded when the standard basics are clear. After all, dialects are the final bosses of language literacy: even native speakers might struggle with them.
+    \item Acquire words by linking them to picture memory, not other words. No two words from different languages are equivalent in general: it is better to understand their intent than linking text to text. This direct method also iterates faster than first thinking in your comfort language and then translating like a retard. If there are too many meanings for a word, remember only the one which is currently relevant. When the word reappears in another context, relearn it with the new meaning. This will  develop contextual connections in the brain, and is a highly effective encoding method.
+    \item I would like to define a certain term here - roughness. A language is rougher the more meaning it tries to encode in varying word forms. As a result, there are lesser words  with a freer placement, but the meaning is more computationally expensive to decode. In contrast, a smoother language (like English) has many words with a relatively fixed placement order against very few word form changes, leading to  computationally cheaper and faster understanding.  Rougher languages will be a lot more taxing and difficult to get the hang of.
+    \item Shortly, I will present a universal language model. This model will serve as the scaffolding to explain every language considered in this series.
+    \item It is neither expected nor necessary to learn every single thing mentioned in this text, since a lot of grammatical structures are quite rare and can be bypassed using other constructions and methods. This is where input will help you get an idea of what is important and what is not, thereby further improving  learning efficiency. Someone who knows 70\% vocabulary and the entire structure is basically a  god/goddess of that perspective.
+    \item This text is not to be read in one go. You are attempting to change the fundamentals of your thought process, it cannot be handled in one afternoon. Despite the inherent difficulty, any language in this world can be reached to practical fluency in two years with a sincere effort time of one-two hours per day. Any. (Practical fluency implies naturalization in common situations.  Proper technical and scientific fluency will require around three-four years in total. Perfect fluency is impossible.)
+    \item Once  practical fluency has been achieved, reverse subtitling can be employed to quickly increase vocabulary. Reverse subtitling implies that the spoken language is the source, and the target language builds the subtitles. The prerequisite for this method is that the entire target structure must be known.
+    \item A good method to improve pronunciation and suppress accents is to practice speaking in an exaggerated manner. Try to pronounce every valley and cliff slowly, until they no longer disappear on speaking fast. Even if the accent never truly disappears, you will at least always be understood no matter what.
+    \item At the end of every language chapter, I will mention resources that I referred to and are useful for acquiring that language in general, both structurally and in practice. Use them as you will. 
+    \item Good luck.
+\end{enumerate}
+\section{The structure} \label{sec:strbas}
+We will treat the different parts separately, with multiple subparts. Sometimes they may be varied depending on perspective, but the draft is always the same. There are five main pillars for any language:
+\begin{enumerate}
+    \item \bt{\textit{Alphabets}} - Writing system, Associated speech
+    \item \bt{\textit{Nouns}} - Ideas
+    \item \bt{\textit{Verbs}} - Actions
+    \item \bt{\textit{Prepositions}} - Relative positioning
+    \item \bt{\textit{Sentences}} - Information ordering
+\end{enumerate}
+Each of these pillars further have multiple subdivisions. Someone who reads and understands only \autoref{sec:strbas} would obtain the fundamentals to be able to solve  for any language  of choice, or even create a language of his/her own. It is encouraged and perhaps necessary that the reader attempts to use this framework to try to decode their own mother tongue(s), so as to judge its efficacy and reach.
+\section{Noun} \label{sec:ennoun}
+As I said previously, I won't deal with alphabets. Just watch YouTube or something. Spelling rules can be easily explained on the basis of ease of pronunciation. So, what is a noun? A noun is a concept. Whatever you speak about is the noun. Nouns have  three attributes which can cause form changes:  a possible associated gender, a case, and multiplicity.
+ 
+But why change forms at all? Abstract concepts like `patience' cannot  be in multiples to begin with, and only living things can be appropriately gendered. For nouns that support multiplicity, an additional word like `many' could simply be added as a plural marker, or the noun could simply be written multiple times. This is a valid objection, but it would be rather useful to think about this in a different way. Languages have already been created in a certain manner, and the world is the result. Neither of the mentioned methods are incorrect, and are both in use in different regions of the world  with their respective advantages and disadvantages. 
+
+One of the goals of this text is to decipher the ideas behind every such structural choice, and allow for a richer depth in any language learning journey. Many of these choices are not strictly necessary, and could be easily eliminated while creating any hypothetical language for precision and ease of learning. That said, I do not know how `natural' such a language will remain, and if it will be in any way differentiable from computer code.
+\begin{enumerate}
+    \item It is possible to let the multiplicity of nouns to be left to context, as is done by languages like Japanese and Korean. If defined, the entire form becomes an inseparable term, even if composed of multiple words. An example for the noun `book' in some perspectives: buku/buku-buku (Indonesian), Buch/Bücher (German), \textjapanese{本}/\textjapanese{本} (Japanese), book/books (English). Normally, the noun root is comprised of  case $1$  forms.
+    \item Gender can be cancerous at the beginning, but has its own charm. This is not a required feature but exists in a non-trivial number of perspectives. Think of it as a memory test.
+    \item Nouns follow the cases.
+\end{enumerate}
+The more form changes a perspective uses, the rougher it becomes, whereas smoother languages lean towards stricter rules at the risk of being more wordy (English for example). Artistically, rougher languages cannot be defeated, but have a steep  learning curve.
+
+Every noun can be thought of as a container which may or may not house the various features that modify it: Examples being cases, adjectives, articles among others. These features along with the noun form an inseparable `noun unit' as it will be called, and is an independent block, whose internal order of words cannot be disturbed, and is unique per language. The existence of such units is guaranteed in smooth languages, whereas rougher ones sometimes do not use them.
+
+\bt{To structurally know any noun, one must know its form changes with respect to Gender, Multiplicity, and Case}
+
+\subsection{Case}
+This is  the most important feature pertaining to a noun. A case is a uniquely defined meaning attributed to a noun, that clarifies its role in a sentence. There are two ways to attribute this meaning - First is to use a preposition, and the other is to uniquely change the word form. The first approach leans towards smoothness whereas the latter towards rough behaviour. In order to clearly illustrate these approaches, it is necessary to  first introduce the 8 basic cases of communication, based on the divine progenitor of languages - \textsanskrit{संस्कृतम्} (Sanskrit).
+\begin{table}[t]
+\centering
+\begin{tabular}{|c|c|m{8cm}|c|}
+    \hline  \bt{No.} & \bt{Name} & \bt{Description} & \bt{Prepositions} \\
+    \hline $1$ & Subject & Noun who performs the action (Actor) & - \\
+    \hline $2$ & Object & Noun on which the action is performed & - \\
+    \hline $3$ & Instrumental & Noun which is used (method/means/companionship) & with, using \\
+    \hline $4$ & Dative & Noun which is being pointed at (direction/intention) & to, for \\
+    \hline $5$ & Ablative & Noun from which/whom  separation occurs & from \\
+    \hline $6$ & Genitive & Noun who possesses (Possessor) & of \\
+    \hline $7$ & Locative & Noun which is used as reference (location/condition) & at, in \\
+    \hline $8$ & Vocative & Calls/Beckons someone & Hey Tom! \\\hline
+\end{tabular}
+\caption{The 8 basic cases of communication}
+\label{tab:ennounT1}
+\end{table}
+
+The cases with their numbers, short explanations and possible prepositions that could be used for them are illustrated in \autoref{tab:ennounT1}. Of these, the vocative case is not really relevant, since it only occurs occasionally and usually follows the forms of the subject case. These cases exist in some shape or form in EVERY language of the world, since these meanings are fundamental to existence. English is a preposition based smooth language and does not alter word forms, allowing it to be a good medium to solve for rougher languages. Since perspectives are structured differently in general, I will refer to base cases by using just their numbers in the consequent text. So, even if case naming and association changes per language, case numbers and their meanings will remain forever invariant. 
+
+If form changes are used, then the noun, according to the number of cases in the perspective will have a table similar to \autoref{tab:ennounT1}. The resulting matrix of case vs multiplicity will be termed the `case-multiplicity' matrix and be given the code $\vm{C}$.
+\subsection{Article}
+These are emphasizers. In other words, they mention whether  a general noun or something specific with prior context is under consideration. An example:
+\begin{example}
+    \begin{tabular}{c}
+    (A) piece of metal cannot  stave off hunger, but  can turn (the) tide of war \\\hline The mermaid is (a) fool
+    \end{tabular}
+\end{example}
+Many rougher languages do not have this feature, since exclusivity can be given in other ways.  This section will be omitted if irrelevant. If needed, the correspondent matrix will be labelled $\vm{G}$. Subdivisions of this matrix according to gender will be marked with subscript `$M,F,N$': $G_{M},G_{F},G_{N}$ for the male, female and neutral counterparts respectively.
+
+\bt{Case, gender and multiplicity form changes - exactly like a noun}
+\subsection{Adjective}
+These words describe nouns, either directly before them or somewhere else in the sentence. In order to avoid confusion, they are normally kept right before the noun they describe but after articles, where their root often changes form  (Matrix name: $\vm{J}$). Additionally, adjectives have normal, comparative and superlative forms, wherein the latter two  allow for the comparison of  nouns based on one of their properties. If adjectives stand alone, the correspondent existential verb (like `to be' for English) must be  the main verb of the sentence, although the comparative forms can  sometimes use other main verbs. Rather interestingly, adjectives are not a necessary part of a language, since the idea of describing a noun implies a sentence like:
+\begin{example}
+    \begin{tabular}{c|c}
+        \bt{Existential verb} & \bt{Adjective} \\\hline
+This woman is beautiful & This beautiful woman\ldots \\ \hline
+Her veins are extraordinary & Her extraordinary veins\ldots
+    \end{tabular}
+\end{example}
+Hence, if one were to use property based existential verbs, the idea of adjectives can be circumvented and merged with the verb `to be'. Korean uses this approach, but whether it makes sense to do this is another matter entirely. 
+
+Aside from using its comparative and superlative forms, normal adjective intensity can also be modified by adding intensity words before them:
+\begin{example}
+    too good, very bad, extremely bitter, rarely sweet\ldots
+\end{example}
+If used, the entire group becomes a single adjective unit, in which only the original adjective undergoes any necessary form change. Both of these adjective phenomena have  the same cause, which has to do with the way describer subclauses interact with noun units. 
+
+\bt{Normal, comparitive, superlative forms along with the form changes corresponding to the noun unit}
+\subsection{Pronoun}
+These are placeholders for nouns that are repeated too many times, and consequently follow similar structural patterns as them.  Not absolutely necessary, but contribute to linguistic variety. For example, Japanese does not like to use them and sticks to repeating names or implying their existence based on context. Similar to nouns, pronouns have their own corresponding forms. There exist three different kinds of pronoun forms for the three types of conversations - First person when speaking about a group you are a part of, second person for speaking about a group the conversation partner is a part of, and third person for speaking about a group neither you nor the conversation partner is a part of. Often, the second person contains multiple politeness based variants, which in most cases are based on the plural forms of the informal second person.  The pronouns described until now are termed `personal', since they describe the various `persons'. 
+
+Aside from them, there exist other typical classes:  indefinite, demonstrative, possessive,  reflexive. Nouns, and every pronoun class except `personal, reflexive' can only ever be in third person.
+
+A reflexive pronoun is employed if any other case aside from $1$ references  the same entity as $1$ in the same sentence. I am not completely sure why this distinction exists, since a personal pronoun would do just fine, and the forms are often based upon them. Due to  reverse referencing and lone usage (never part of a noun unit), this class can never be in case $1$ or $6$, although case $6$ might have rare exceptions in smooth languages: `Make something of yourself'. Since reflexivity is directly attached to the case $1$ noun, this class must follow its person and multiplicity: only the case may differ. An example with case $2$:
+\begin{example}
+\begin{tabular}{c|c}
+    \bt{Reflexive} & I\{$1$\} wash myself\{$2$\} \\\hline \bt{Normal} & He\{$1$\} washes me\{$2$\}
+\end{tabular}
+\end{example}
+In order to understand possessive pronouns, a distinction must be drawn between them and general case $6$ personal pronouns. Case $6$ personal pronouns always stand alone in a sentence and only imply possession corresponding to a certain person.  Possessive pronouns  always start a noun unit, and never appear with articles. Often, they also change form.
+\begin{example}
+    \begin{tabular}{c|c|c}
+        \bt{Personal:} $6$ & \bt{Possessive} & \bt{Person, Multiplicity} \\\hline
+        This blood is (mine) & This is (my) blood & First, singular\\\hline
+        These walls are (hers) & These are (her) walls & Third (feminine), plural
+    \end{tabular}
+\end{example}
+Most languages use case $6$ personal pronouns as root forms to make the form variations for their possessive counterparts, but  both these classes are still fundamentally different. Another important difference is that using a case $6$ personal pronoun requires the existential verb `to be' as the main verb. 
+
+\textit{For the curious who wonder if such contractions are also possible for other cases aside from  $6$, for example  case $3$, the short answer is no. The long answer is yes, but you would never need that functionality because of how unnatural it is. A possessive pronoun technically acts like an adjective, and gives the noun unit  an addition of the form:}
+\begin{example}
+    \begin{tabular}{m{4cm}|m{5cm}|m{5cm}}
+        My book is wet & The book, which is mine, is wet & The book, which I possess, is wet\\\hline
+        I mutated her hand & I mutated the hand, which was hers & I mutated the hand, which she possessed
+    \end{tabular}
+\end{example} 
+\textit{Assume for a moment that the case $3$ counterpart to `my' is `myo'. `Myo book' now means: `The book, which uses me' according to the case $3$ meaning. The reason the meaning flips is because $1,6$ are the only cases that make their argument the actor in the expanded subclause, see \autoref{tab:ennounT1}. Among these, $1$ expects a verb and is ruled out. To illustrate, if `moy' is the case $1$ pronoun, `moy almonds' means: `The almonds, which I perform' or `I almonds', which does not make sense. Examples for cases $3,4,5$:}
+\begin{example}
+    \begin{tabular}{c|m{7cm}}
+Lisa tossed myo book in the trash & Lisa tossed the book, which uses me, in the trash\\\hline
+Hois cat kicked him in the face & The cat, who (???) to him, kicked him in the face\\\hline
+Tom was looking for horu book & Tom was looking for the book, which separated itself from her
+    \end{tabular}
+\end{example}
+\textit{It is clear that all case contractions other than $6$ require other nouns to make sense, and cannot interact sensibly with personal pronouns. Case $4$ even becomes invalid since the verb is undefined. Another way to look at this is that case $6$ shows the state of possession, which can be done with only one argument, while other cases normally require more to make sense. In the case $3$ example, it is not clear what the book uses him for. The case $5$ example is valid, but will never make sense to use due to the inverted order of actor and object. A world where nouns start using people (personal pronouns) for various things, rather than people nouns  is rather unnecessary to think about, wouldn't you say?}
+
+In the previous (non-italic) examples is hidden another class: the demonstrative pronoun. These place emphasis on a particular object(s) along with declaring whether the object(s) in question is near or far from the speaker.
+\begin{example}
+    \begin{tabular}{c|c}
+        \bt{Near} & \bt{Far} \\\hline
+        (This) is my blood & (That) is my blood \\\hline
+        (These) tools may work & (Those) tools may work
+    \end{tabular}
+\end{example}
+Often display form variation, and can be used as both standalones and in a noun unit. For standalone usage, previous context is necessary. The last class termed `indefinite' references  objects with unknown quantities or identities.
+\begin{example}
+    \begin{tabular}{c|c}
+        (Something) is wrong & He found (nothing) \\\hline
+        (Somebody) once told me\ldots & (Nobody) could survive that
+    \end{tabular}
+\end{example}
+They display form variation, but not nearly as much as other pronoun classes. Can  be used both as standalones as well as starters of the noun unit. In fact, if the  classes `personal, possessive' are considered as independent and dependent counterparts of a greater class, with `reflexive' being temporarily ignored, then every pronoun has two types of possible uses: Independent, Dependent. The independent use is what has been called `standalone', while the dependent use requires them to start the noun unit, without which they are invalid. To summarize:
+\begin{syntax}
+    \begin{tabular}{c|c|c}
+    \bt{Class} & \bt{Dependence} & \bt{Matrix code}\\\hline
+    Personal; Possessive & Independent($In$); Dependent($De$) & $a$ \\\hline
+    Indefinite & Both & $b$ \\\hline
+    Demonstrative & Both & $c$ \\\hline
+    Reflexive & Dependent & $r$
+    \end{tabular}
+\end{syntax}
+The matrix for pronouns will be named $\vm{P}$ in general, with subarguments for the class of pronouns according to the above codes, and optional subscripts \enquote{\textit{M,F,N}} for the third person. Independence/Dependence will be marked by $In/De$ respectively. Additional subarguments concerning the person are: $[1_{p},2_{p},3_{p}]$.  The matrix arguments for describing the case-multiplicity matrix of a pronoun are (case,multiplicity,politeness) which follow the structural convention described in \autoref{fig:enverbZ1}. 
+
+Especially for $[a,De]$, the multiplicity and politeness of the root forms used  must also be specified beside  the person in curly brackets: \{M,H\}. Hence, $[a,De]$ never needs politeness defined in its cells: (case,multiplicity)
+
+\bt{Case, multiplicity, gender - like a noun}
+\subsection{Joining}
+Rules for joining nouns to create new nouns are important depending on which language is considered. Compounds created using such methods normally have a case $6$ relation between the individual components, but sometimes other cases like $4, 7$ may also be found. Sometimes multiple cases may seem to fit the same example, but this is no cause for concern as long as the word is understood correctly. 
+\begin{example}
+    \begin{tabular}{c|m{9cm}}
+        \bt{Case} & \bt{Examples} \\\hline
+        $4$ & train station, water bottle, tooth/brush \\\hline
+        $6$ & train driver, water bottle, factory owner\\\hline
+        $7$ & Lap/top, earth/worm
+    \end{tabular}
+\end{example}
+These rules serve as tools  to decipher unknown noun compounds, and provide a method to reconcile structure and meaning.
+
+\subsection{Numbers}
+Numbers can either occur on their own as pure numbers (one, two\ldots),  as rank counters (first, second, three-eighths\ldots) or to define the multiplicity of objects (single, double, half, one-third\ldots). Their form variations and usage mimic  adjectives in practice,  but pure numbers normally remain invariant. Since ranks represent a specific quantity, adjective gradations (comparative/superlative) are not permitted for them. 
+
+From a mathematical perspective, natural languages  concern themselves only with positive rational factors like $3\frac{4}{5}$ for example. The way such a factor is written in word form is to take its whole part, and club it with the fractional part. For the scope of this solver, the following property is important:
+\begin{syntax}
+Let $f$ be a positive rational number, with $[f]$ and $\{f\}$ representing the floor (greatest integer smaller than $f$) and fractional (fractional part of $f$) functions respectively. Then, $f$ can be uniquely expressed as:\begin{equation}
+    f = [f] + \{f\}
+    \label{eq:factor}
+\end{equation}
+\end{syntax}
+Using this property, any factor $f$ can be expressed as an integral part (represented by a pure number) and a fractional part (represented by a modified rank counter), on which a multiplicity marker (`times' for English) can later be appended. Examples for $f$: two and two-thirds ($2\frac{2}{3}$), one and three-quarters ($1\frac{3}{4}$), twenty-two and three-eighty-seconds\ldots. Additionally, there is normally a special verb template that denotes the action of multiplying: doubling, tripling, halving\ldots. This subsection is directly related to timekeeping.
+
+\bt{Gender, case}
+
+\section{Verb} \label{sec:enverb}
+These are action words that describe what occurs to the nouns in a sentence. Verbs have either a suffix or attached preposition that signifies that they are in their dictionary (infinitive) form. If this signifying marker is eliminated, the verb root is left, which is operated upon by conjugation rules. 
+
+However, verbs cannot directly be used in sentences without forming verb chains (VC). Based on whether the verb takes additional arguments;  the verb tense; and mode of the sentence in question,  the verb chain will vary. Any verb chain has exactly one verb which conjugates according to person and multiplicity, while the other components remain invariant. This variable verb is  the conjugating verb (CV). The invariant part will be termed the dormant chain (DC). 
+
+\bt{To derive the VC for any combination of sentence mode, verb tense and verb argument type, one only needs to know the corresponding CV and DC}
+
+The CV may never be empty, though the DC can be a null set. Hence, for every declaration of verb chain structure, the CV and DC will be mentioned separately. Obviously, all such VCs must have a main verb, which is the focus. The question of whether the verb takes arguments is always answered for the main verb. 
+
+A verb can take two types of arguments: verb, preposition. Any verb can only take one argument from either type at a time. The idea behind supplying these arguments is to supplement the meaning of the verb. Depending on its current usage, a verb may fall in the class `takes arguments', or `takes no argument'. However, it must be noted that these classes  are not mutually exclusive for a given verb: the classification is based solely on its current usage. At the same time, it is also true that there exist verbs, which strictly belong to only one of them. Ex: \textit{get up, get} are both valid verbs, but belong to different argument classes.
+
+A common example for special verbs requiring a verb argument is the class of `modal' verbs:
+\begin{example}
+    \begin{tabular}{c|c}
+        He can (what?) the guitar & He can (play) the guitar\\\hline
+        I must (what?) my opponents & I must (kill) my opponents
+    \end{tabular}
+\end{example}
+If the supporting argument is missing, it is implied via earlier context, since  `modal' verbs are incomplete without their argument.
+
+Verbs that  take prepositional arguments are  `prepositionally supported': get (up), take (out), burn (down)\ldots. The added preposition defines a certain direction or intensity, and creates a new combined meaning with the verb. Also, the preposition requires an associated noun in the necessary case, even if it is implicit. 
+
+Helping verbs (which may otherwise be used normally) are  used as placeholders or indicators. Their sole purpose is to change the VC structure to mark aspects or times. Hence, they must always have a non-empty associated DC. English uses `to be, to have, will' as helping verbs. Aside from this, prefixes can be added to the main verb to change its meaning, but this does not change the verb chain: make/remake, vow/disavow, do/undo\ldots. Such verbs will be briefly considered in the subsection on prefixes. To concretely summarize:
+\begin{syntax}
+    \begin{tabular}{c|c|c}
+        \bt{Class} & \bt{Argument} & \bt{Set code}\\\hline
+        Special  & Verb & $\mathcal{S}$\\\hline
+        P.supported & Preposition & $\mathcal{Z}$\\\hline
+        Helping & Verb & $\mathcal{X}$\\\hline
+        Prefixed & -/Preposition & $\mathcal{Y}$
+    \end{tabular}
+\end{syntax}
+The last distinction separate from all the rest is about verbs that take  or do not take objects. For this solver, object verbs mean those verbs that compulsorily need an object (case $2$ noun) to make sense: I use (what?), I use (a knife). Non-object verbs are those that express state change and never take objects: The car stopped, The bomb is exploding. These two categories are mutually exclusive, and are normally differentiated through a change in the verb infinitive: either a prefix or different spelling. English is a language that does not make these changes unfortunately:
+\begin{example}
+    \begin{tabular}{c|c}
+        \bt{Non-object} & \bt{Object}\\\hline
+        The car($1$) stopped & I($1$) stopped the car($2$)\\\hline
+        The boat($1$) drowned & He($2$) drowned the boat($2$)
+    \end{tabular}
+\end{example}
+This is particularly important for the subsection on passive sentences, since  passives for non-object verbs are illegal.
+
+\textit{Footnote - `to be' as a verb will always be irregular irrespective of language}
+
+\bt{VC, Aspect-Time Matrix: \autoref{tab:enverbT1}}
+
+\subsection{Tense}
+Here, I would like to introduce the Aspect-Time-Politeness matrix. Any language can have ONLY three time forms - past, present, future. Along with this, there can be additional information encoded within a verb that portrays the state of the action being performed. The combination of both these things is what we call a tense. Note that a tense only describes the relative time with respect to the referred point of time. In other words, a tense answers two questions:
+\begin{enumerate}
+    \item When did this action occur?
+    \item What is the state of this action?
+\end{enumerate}
+Both these questions are independent, and give rise to the Aspect-Time matrix, which is  documented for English in \autoref{tab:enverbT1}.
+\begin{table}[bt]
+    \centering
+    \begin{tabular}{|c|c|c|c|c|}
+        \hline $\Diamond$ & \bt{Past} & \bt{Present} & \bt{Future} & \bt{Neutral} \\
+        \hline Habitual/Simple &  &  &  & \\
+        \hline Continuous &  &  &  & \\
+        \hline Perfect &  &  &  & \\
+        \hline Perfect continuous &  &  &  & \\\hline
+    \end{tabular}
+    \caption{Aspect-Time Matrix: $\vm{T}$. Politeness in the $3^{rd}$ dimension}
+    \label{tab:enverbT1}
+\end{table}
+
+I am sure you can see where each tense fits already. The column `Neutral' implies the existence of just the aspect without commenting on the time. These are infinitive based forms which  appear in contracted subclauses of a sentence, and cannot stand on their own. A fun fact is that if you take these neutral forms and use enough adverbs, it is possible to understand the sentence as usual even without a time conjugation. Naturally, this is neither allowed nor elegant.
+
+Many cultures have politeness and respect ingrained in their lives, and consequently language. In such cases, the third dimension of politeness appears for either direct conversation partners, or those being spoken of ($2^{nd}, 3^{rd}$ person). For the $3^{rd}$ person, a salutation or special title often suffices without any necessary form changes. For the $2^{nd}$ person, both pronouns and verbs often have different forms to encode this politeness. Due to technical limitations, all politeness grades have to be documented below each other, but the reader should imagine them as out of the page, both for pronouns and verbs.
+
+In order to get the right form of a verb, first the appropriate cell from \autoref{tab:enverbT1} must be chosen. Within each such cell (tense), verbs generally display form changes according to multiplicity and person. Once the person and multiplicity are decided, one may consider if a politeness grade is relevant. If not, the algorithm stops, or the politeness variant is updated to deliver the final verb form. This process is illustrated in \autoref{fig:enverbZ1}. Although I have only tested four: Pictorial (Japanese type), Slavic, Indian and European, I can confidently state that this works for all language groups.  Prove me wrong if you dare. 
+
+\begin{figure}[bth]
+    \centering
+\begin{tikzpicture}[node distance=1.5cm,>=stealth]
+  % Stil für Knoten
+  \tikzstyle{punkt}=[rectangle,draw,thick,minimum width=1.6cm,minimum height=0.9cm,align=center]
+
+  % Mittelknoten waagerecht
+  \node[punkt,label=above:{Step 1}] (m1) {Aspect ($a$)\\ Time ($t$)\\ in $\vm{T}(a,t)$};
+  \node[punkt,label=above:{Step 2}] (m2) [right=of m1] {Person ($p$)\\ Multiplicity ($m$)\\ in $\vm{S}[\vm{T}(a,t)](p,m)$};
+  \node[punkt,label=above:{Step 3}] (m3) [right=of m2] {Politeness applicable?\\ No - Terminate\\ Yes - Degree $h$ appended};
+
+  % Kanten vom Anfangsknoten zu den Mittelknoten
+  \draw[->] (m1) -- (m2);
+  \draw[->] (m2) -- (m3);
+\end{tikzpicture}
+\caption{Verb form calculation algorithm}
+\label{fig:enverbZ1}
+\end{figure}
+Since matrices have been properly introduced, basic matrix notation is required. Any matrix $\vm{A}$ has individual cells represented by notation (row, column). So the cell formed by the intersection of row $3$ and column $2$ will read $\vm{A}(3,2)$.  By default, the Aspect-Time matrix will be denoted by the symbol $\vm{T}$. The submatrix of a cell of $\vm{T}$ describing person and plurality changes will be denoted by $\vm{S}$. All cells of a particular dimension will be collectively denoted using `:', which makes the notation for the $i^{th}$ row of $\vm{T}$ as $\vm{T}(i,:)$, and for the $i^{th}$ column as $\vm{T}(:,i)$. Similarly, cell ranges can be defined using something like $\vm{T}(4,3\leftrightarrow 4)$ for the columns $3$ to $4$ including both of them for the $4^{th}$ row. MATLAB users will find themselves right at home.
+
+On the basis of the above notation and \autoref{fig:enverbZ1}, a particular verb form can be written as: $\vm{S}[\vm{T}(a,t)](p,m)$. If and only if (iff) politeness is relevant, an additional dimension $h$ at the end  in the form $(p,m,h)$ must be appended with the relevant degree. The degree $0$ is the most informal, whereas every natural number after it will represent an increase in formality. For denoting the highest possible formality in a perspective, the letter $\mathbb{H}$ will be used instead.
+
+Interestingly, the first step of \autoref{fig:enverbZ1} can also be used to  obtain the structural pattern of the corresponding cell in $\vm{T}$, not including $\vm{T}(:,4)$. For the next algorithm, an operator called the method ($\mathcal{M}$) must be introduced:
+\begin{syntax}
+    Let a verb chain $V$ correspond to cell $\vm{T}(i,j)$ in \autoref{tab:enverbT1}, not including $\vm{T}(:,4)$. A method $\mathcal{M}^{X}_{p}[V]$ is defined as an operator that takes in $V$ as an argument, and adds $p$ to the $X^{th}$ argument of $\vm{T}(i,j)$. Argument $1$ of $\vm{T}(i,j)$ is $i$. Methods do not affect the person and multiplicity of $V$.
+\end{syntax}
+The cell of $\vm{T}$ which has the smallest verb chain, with the CV in its  infinitive (dictionary) form is the base cell: $\vm{T}(n_1,n_2)$. Normally, this cell  always has time `present' and aspect `simple/continuous'. Starting from a verb chain $b$ from this base cell, two methods are applied successively in order to reach the necessary cell in $\vm{T}$. The total transformation is: $\mathcal{M}^{2}_{t-2}[\mathcal{M}^{1}_{a-1}[b]]$. This algorithm is illustrated in \autoref{fig:enverbZ2}.
+\begin{figure}[bth]
+    \centering
+\begin{tikzpicture}[node distance=1.5cm,>=stealth]
+  % Stil für Knoten
+  \tikzstyle{punkt}=[rectangle,draw,thick,minimum width=1.6cm,minimum height=0.9cm,align=center]
+
+  % Mittelknoten waagerecht
+  \node[punkt,label=above:{Step 1}] (m1) {Start at base cell\\ $b$ in $\vm{T}(n_1,n_2)$};
+  \node[punkt,label=above:{Step 2}] (m2) [right=of m1] {Apply aspect $a$\\ $g=\mathcal{M}^{1}_{a-1}[b]$ \\$\rightarrow\vm{T}(n_1+a-1,n_2)$};
+  \node[punkt,label=above:{Step 3}] (m3) [right=of m2] {Apply time $t$\\ $\mathcal{M}^{2}_{t-2}[g]$\\  $\rightarrow\vm{T}(n_1+a-1,n_2+t-2)$};
+
+  % Kanten vom Anfangsknoten zu den Mittelknoten
+  \draw[->] (m1) -- (m2);
+  \draw[->] (m2) -- (m3);
+\end{tikzpicture}
+\caption{Verb chain calculation algorithm for any cell in $\vm{T}$}
+\label{fig:enverbZ2}
+\end{figure}
+
+The reason for the shift in $a-1$ or $t-2$ is to keep it consistent with the variable definitions and conventions created previously. If $\vm{T}$ is defined differently, the base cell will move around, and the coordinate shift in \autoref{fig:enverbZ2} will need to be adjusted accordingly. In essence, aspect comes before time. Let us say we want to build  the English `Past Perfect', which is $\vm{T}(3,1)$ according to \autoref{tab:enverbT1}, for the verb `to destroy':
+\begin{example}
+    \begin{enumerate}
+    \item Our base cell is $\vm{T}(1,2)$, with the form `destroy' 
+    \item Apply  aspect: $\mathcal{M}^{1}_{3-1}[\texttt{destroy}]=$ `have destroyed'
+    \item Apply time: $\mathcal{M}^{2}_{1-2}[\texttt{have destroyed}]=$ `had destroyed'
+    \end{enumerate}
+\end{example}
+This reduces the memory required to store the VC variation in $\vm{T}$, since only the  forms for the column and row  containing  the base cell need to be remembered: $\vm{T}(:,n_2), \vm{T}(n_1,:)$. If  $\vm{T}(n_1,4)$ is considered as the base cell, this also works for $\vm{T}(:,4)$.
+\subsection{Adverb}
+Adverbs add information to the verb analogous to adjectives for nouns. Normally, adverbs never change form. The only important things about them are their building and placement. The placement can be picked up by exposure, so only the building will be considered. 
+
+Although adjectives and adverbs have [many structural similarities/overlapping forms],  adjective gradations (comparative / superlative) can never be used as adverbs. An interesting fact is that adverbs and tenses are not independent, as mentioned earlier. One can use adverbs to bypass the need of a tense (time, not aspect) and vice versa. Some languages use this feature to avoid changing the verb in order to create different  time forms (Chinese).
+\subsection{Nominalization}
+The conversion of adjectives and verbs into nouns to denote processes, states or other contracted meanings is referred to as nominalization. This section is closely related to describer subclauses. Examples: The sad, the wealthy, Driver, Prisoner\ldots
+
+There are two  types of noun conversions:
+\begin{enumerate}
+    \item \textit{Contractions}: The associated noun is eliminated due to being obvious, and for stylistic reasons
+    \item \textit{Conceptualizations}: The concept behind the root word is crystallized as a state or process
+\end{enumerate}
+Contractions are valid only for adjectives, and they mean different things for pure, P1 based and P2 based words. Pure adjectives create real contractions, where the base word is obvious, and often `man/woman/people':
+\begin{example}
+    \begin{tabular}{c|c|c}
+        The people, who are poor & The poor people & The poor\\\hline
+        The man, who is English & The English man & The Englishman\\\hline
+        People, who are German & German people & Germans
+    \end{tabular}
+\end{example}
+Sometimes it isn't as simple as merely eliminating the noun, but such specifics are language dependent. P1 based contractions represent someone currently performing the action represented by the verb, or who usually performs that action, and normally end up representing professions:
+\begin{example}
+    \begin{tabular}{m{5cm}|c|c}
+        The man, who is driving & The driving man & The driver\\\hline
+        The woman, who is working as a doctor & The  woman working as a doctor & The doctor
+    \end{tabular}
+\end{example}
+The second example looks strange, because there are no other words to express that concept.  Hence, P1 based contractions that represent professions are better treated as independent nouns rather than contractions, although their source is P1 adjectives.
+
+P2 based contractions represent someone who is currently suffering the action represented by the verb:
+\begin{example}
+    \begin{tabular}{c|c|c}
+        The man, who has been imprisoned & The imprisoned man & The prisoner\\\hline
+        The people, who have been infected & The infected people & The infected
+    \end{tabular}
+\end{example}
+Since such contractions mostly refer to people, they are normally gendered, and have different forms for the male and female versions: the actual, NOT grammatical gender is important. English does not perform this differentiation in form: `Prisoner' can refer to both the male or female counterpart. Technically, this  is not limited to living entities, as long as the omitted noun is obvious. In such  cases, assume the grammatical gender of the omitted noun. Such contractions are  shorthand ways of compressing simple describer subclauses, and help  declutter sentences, especially when a certain property of the eliminated noun is more important than its existence.
+
+In contrast, conceptualizations create specific nouns that represent either a state or process. Pure adjectives may be conceptualized in two ways, the first of which denotes a collective of all entities that possess a certain quality:
+\begin{example}
+    \begin{tabular}{c|c}
+        Evil & Evil  balances the scales\\\hline
+        The good & The good can be a handful
+    \end{tabular}
+\end{example}
+Since the collection is not limited to people or things, there is no associated noun. Hence, this is not a contraction, although English makes it appear like one. The second way is more common and adds some suffixes to / uniquely alters adjectives to create concepts:
+\begin{example}
+    Beauty(beautiful), Weakness(weak), Strength(strong), Roundness(round)\ldots
+\end{example}
+The next two ways are for verbs, the first of which represents process nouns:
+\begin{example}
+    \begin{tabular}{c|c}
+        thinking & Thinking is good for you\\\hline
+        killing & The killing of enemies is a soldier's responsibility
+    \end{tabular}
+\end{example}
+The second way represents states that occur as a result of the associated action; during the associated action, or the collective entities responsible for performing the action:
+\begin{example}
+    \begin{tabular}{c|c|m{6cm}}
+        The state of  rescuing someone &rescue & The rescue succeeded\\\hline
+        %The body that  administers & administration & The administration could not fool the people\\\hline
+        The body that governs & government & The government decides\\\hline
+        The state of being permitted & permission & He received permission for the duel
+    \end{tabular}
+\end{example}
+Depending on the perspective, there are some special suffixes that may sometimes be added to nouns, irrespective of whether they are pure or nominalized:
+\begin{example}
+    \begin{tabular}{c|c|m{9cm}}
+        -cle & something small & particle (small part), icicle (small ice piece), chronicle (small time-book), article (tiny item)
+    \end{tabular}
+\end{example}
+Uses for such suffixes are normally restricted, with at max one example per perspective that occurs frequently. They are not extremely relevant due to their inconsistent usage and (sometimes) meaning, but can rarely prove useful.
+\subsection{Prefix}
+Some beginnings alter the meaning of verbs (and consequently their nominalized counterparts) they are applied on, but these are often not very consistent. This section is a starting point into the realm of possibility, and is considered only for completeness.  As such, it will not be very detailed. Besides, learning large lists of meanings without appropriate context is not a good way to acquire them to begin with.
+\section{Preposition} \label{sec:enprep}
+Words that show the location (space/time) of any object. More precisely, these give the relative  sense of time or space: towards, against, from, for, at etc.  Never declined, and have only two possible use cases:
+\begin{enumerate}
+    \item Directly before the associated noun, at the very beginning of the noun unit
+    \item With prepositionally supported verbs as their argument
+\end{enumerate}
+Basic prepositions exist in some form in every language, but their situational associations are often different and need to be relearned, which is the only hurdle with these words. Prepositions are to cases what adverbs are to tense time forms: The lesser the reliance upon them, the rougher a language will become.
+\section{Sentence} \label{sec:enstce}
+Uptill now, verb chains (VC) and noun units have been introduced and documented. One may also form some other units like adverb or pronoun units that can be deployed beside these. This grouping of similar components into units is similar to `tokenization' with a `Lexer': an essential first step for compiling any computer code. Using these units in specific orders, interpretable sequences can be formed, which are called sentences. A formal definition of a sentence is:
+\begin{syntax}
+    An ordering of the CV, DC and various  units according to fixed rules,  which yields a comprehensible meaning is called a sentence
+\end{syntax}
+Note that the meaning is not necessarily unique, which is the foundation of all poetry and artistic flair. However, at least one comprehensible meaning must exist, otherwise the ordering is invalid. One may compare this to `context free grammar' that compilers for programming languages use. Naturally, each perspective has different unit ordering syntaxes with varying degrees of freedom, which change its roughness. Rougher perspectives place lesser emphasis on unit order and prefer working with self-explanatory varying forms instead (Russian).
+
+The unit order and modes of sentences for various purposes are important for understanding the general mien of the perspective.  A sentence must always have a VC,  case $1$ unit and mode. These components are sometimes implicit but still present. Expressive capabilities are then added using the features mentioned in the previous subsections.
+
+Sentence mode is normally encoded in the VC or unit placement, and uses  unique special combinations that change sentence interpretation, rather than simply changing the state of the action as a verb aspect would do. Hence, sentence modes and verb aspects are independent. Examples of some sentence modes: Interrogation, Voices (Active/Passive), Speech (Direct/Indirect), Orders\ldots
+
+Among all modes, the voice (Active/Passive) is special since it is necessary, and can coexist with other modes or stand alone. However, no other mode can exist without a voice. Hence, the voice will be termed as the `principle mode (PM)', and all others as `optional modes (OM)'. For any verb $V$, the method to find the base cell $\vm{T}(n_1,n_2)$ of its VC corresponding to the given optional mode is as follows:
+\begin{enumerate}
+    \item Start from the active voice base cell
+    \item Change the voice, if necessary
+    \item Deploy any verb $R\in\mathcal{S}$, if required
+\end{enumerate}
+After the base cell is found,  consequent computation is performed using the steps in \autoref{fig:enverbZ2}. Depending on the optional mode, $\vm{T}$ may need to be updated, as some optional modes  modify its structure. As the final step, the optional mode is applied on the CV. 
+
+The optional mode `Order/Request' requires the active voice, $\vm{T}(n_1,n_2)$ and does not allow $R\in\mathcal{S}$, which makes most of the calculation trivial for it. By default, all the consequent optional mode explanations will  consider the active voice. Any passive structures can be found using the above algorithm.
+
+If the sign $\biguplus $ is declared at the beginning of a subsection, it defines a sentence mode.
+\subsection{Punctuation}
+The flow of sentences is  decided by these symbols, which while similar across perspectives are often never exactly  same. Most important for written communication or mental transliteration. This section will help decode tiny nuances that would otherwise not make sense: German writes double quotes as \textgerman{\enquote{A}} as compared to \enquote{A} in English.
+
+Technically speaking, punctuation marks are separators with context attached to them. Although everyone knows their general idea, a description of their use cases is still  useful. Instead of the actual examples, these signs will be categorised into `tokens' which declare their purpose:
+\begin{enumerate}
+    \item \textit{SoS}: [ ] - Space separator. \bt{Use} - Separation of distinct words
+    \item \textit{EoS}: [.] - End of  sentence
+    \item \textit{CoM}: [,] - Pause separation. \bt{Use} - Similar ideas, describer subclauses, quote-based contractions, conjunctions and their contractions
+    \item \textit{InQ}: [?] - Question
+    \item \textit{ExC}: [!] - Exclamation. \bt{Use} - Exclamation, order, strong emotion
+    \item \textit{CoS}: [;] - Context based separation. \bt{Use} - Closely related sentences, dissimilar ideas (in long lists)
+    \item \textit{CdA}: [:] - Context dependent addition. \bt{Use} - Sentence descriptions, quotations, explanations
+    \item \textit{CoN}: [-] - Connector. \bt{Use} - Connection of related nouns 
+    \item \textit{QoT}: [``A''/`A'] - Quotations. \bt{Use} - Direct speech, word-to-word referencing
+    \item \textit{AoE}: [()] - Shorthand \textit{CdA}
+    \item \textit{EoL}: ['] - Elimination of letter(s). \bt{Use} - Word contraction and clubbing
+    \item \textit{SoO}: [/] - Separation of options
+    \item \textit{PoU}: [\ldots] - Pause of uncertainty. \bt{Use} - Incompleteness, thinking, elimination of irrelevance (for excerpts)
+\end{enumerate}
+Anything I have not mentioned (EM dash), I do not see as important enough. This list is for the sake of completeness, memorization is NOT necessary.
+\subsection{Conjunction}
+Joining sentences is the core of natural language. Often, ideas are clubbed together, contrasted, chained into multiple cause-consequence clauses and what not. This continuity is in line to how we think, and its abscence becomes painfully obvious once you try to think in a language you do not master, and must default to smaller, painstakingly formed sentences that repeatedly break the flow. They are the building blocks of logical programming, never change form, and always stay at the very beginning of whichever clause they are attributed to. Note that conjunctions are treated as `keywords' rather than units, and take EXACTLY two clause arguments, irrespective of conjunction type.
+
+Any `relational' conjunction relates two clauses.  Irrespective of its meaning and which clause it is attributed to, the two clauses can normally be arranged in any order. The clause a relational conjunction is directly attributed to is its direct argument (dRA), while the other one is its indirect argument (ndRA):
+\begin{example}
+    \begin{tabular}{c|c}
+    I am old, (because) I cannot die & (Because) I cannot die, I am old
+    \end{tabular}
+\end{example}
+After one clause ends, a `comma' or similar punctuation is normally added to signify this ending. The three most important relational conjunctions are: `that, because, if', and will get special consideration. On the other hand, `additional' conjunctions are used to combine two  clauses, and have no specific punctuation rules: sometimes a `comma' is used before them, sometimes not. If the combined clauses share common units, these units appear only once:
+\begin{example}
+    \begin{tabular}{m{7cm}|m{6cm}}
+        He has killed the man. He has killed the woman. & He has killed the man (and) the woman\\\hline
+        I like spiders with a passion. I do not like bananas with a passion. & I like spiders (but) not bananas with a passion
+    \end{tabular}
+\end{example}
+Both of these conjunction types cause significantly different effects on sentence structure, as is evident. Relational conjunctions cannot be chained, but  can be nested. In contrast,  additionals can be both chained and nested. Common units for chained additional usage are  calculated with respect to the very first argument.
+
+Relational conjunctions specify an exact relation between their argument clauses, which behaves differently from defining a set of elements like additionals do. If multiple conditions or consequences must be bundled, a relational conjunction is introduced once, and all necessary clauses are connected using additional conjunctions to make a large clause, which then becomes one of its arguments:
+\begin{example}
+    If (`a' is smaller than `c', and [`a' is smaller than] `b' but [`a' is] greater than `d'), (the program should print something). Because (`a' is smaller than `c' but [`a' is] greater than `b'), (the computer did not print anything).
+\end{example}
+In this example, the text inside the square brackets represents common units which can be eliminated. Any additional conjunction is essentially a `boolean operator' which can keep adding on itself, while relational conjunctions expect a hard stop after the second argument. However, using relationals as arguments of other relationals is valid:
+\begin{example}
+    (The problem is) (\textit{that}) ([\textit{if}] [\{we were to say\} \{\textit{that}\} \{this method does not work\}], [we might face a rebellion])
+\end{example}
+Another way to think about this is that additionals always create a flat hierarchy, while relationals create a layered hierarchy. This is similar to how in any classic mathematical expression like
+\begin{equation*}
+    3+9\times5\div8-4
+\end{equation*}
+the precedence order of addition/subtraction, and that of division/multiplication is the same, but the division/multiplication operations must be evaluated before the others (BODMAS). Hence, attempting to create a `parse tree', where the lower levels of the tree are evaluated first will throw the division/multiplication below addition/subtraction. Until lower levels of the tree are evaluated, higher levels cannot be operated upon. However, within one level, the order of operations does not matter: additional conjunctions remain at one level of the parse tree, whereas relational conjunctions create multiple layers.
+
+A subcategory of additional conjunctions are the `coupled' conjunctions, which are split into two parts. The idea behind these is to emphasize a relative state. The first part introduces the state relation and first argument, whereas the second part introduces the last argument. Depending on the meaning, some of these are restricted to exactly two arguments:
+\begin{example}
+    \begin{tabular}{c}
+        He (neither) [helped], [killed] (nor) [troubled] us\\\hline She ate (both) [the dog] (as well as) [the house]
+    \end{tabular}
+\end{example}
+The second part can normally be used alone as an independent conjunction, but the first part can never be used alone without the second. In terms of word placement, both the parts are placed exactly before the units they join.
+
+Most languages use contractions for the conjunctions `that, in order to/so that', since they occur frequently. These contractions are normally only possible when the case $1$ noun for both the main sentence and subclause are the same. This allows the subclause to eliminate the conjunction and case $1$ noun, and  a contraction marker is added to signify this process. The resulting subclause preserves its original aspect, but takes its time from the main clause. Hence, the verb chains in such contractions correspond to one of the cells of $\vm{T}(:,4)$:
+\begin{example}
+    \begin{tabular}{m{7cm}|m{7cm}}
+        \bt{Contracted} & \bt{Expanded} \\\hline
+        I keep going to avoid collapsing & I keep going, so that I can avoid collapsing \\\hline
+        He wants to win & He wants, that he wins 
+    \end{tabular}
+\end{example}
+This is possible because `that, in order to/so that' are either state-reason / belief-possibility conjunctions:  they physically stay with the second argument, which supports the first. Due to this, the second argument must occur in the same time frame as the first, but may use a different aspect (action state). Hence, every $\vm{T}(i,:)$ gets its own contracted $\vm{T}(i,4)$.
+\subsection{Interrogation}
+$\biguplus$ There are two types of questions according to the type of answers they expect:
+\begin{enumerate}
+    \item Yes/No
+    \item Elaborations
+\end{enumerate}
+\textit{Yes/No} questions normally have a changed verb placement. In some languages, this is encoded in the verb rather than its placement (Japanese), while rougher variants like \textsanskrit{हिंदी} (Hindi) also allow interrogation using only a changed tone of speech. The booleans `Yes/No' never change form.
+
+\textit{Elaborations} expect an explanation as an answer, and  are always built using  special interrogative words (like the W-words in English). These words always start the question, and contain information about the type of expected answer. Ex: `what' - something; `how' - the method; `when' - the time\ldots
+
+All questions have and normally end with a question symbol/marker like `?' to denote interrogation. Questions can never contain conjunctions.
+\subsection{Describer subclause}
+$\biguplus$ These are analogous to adjectives, but contain a lot more information. The sentence does not suffer a loss of validity if this clause is eliminated:
+\begin{example}
+    \begin{tabular}{m{5cm}|m{9cm}}
+        \bt{Contracted} & \bt{Expanded}\\\hline
+        The soldier was sad & The soldier, who likes to watch the light fade out of the eyes of his enemies, was sad
+    \end{tabular}
+\end{example}
+Introducing a describer subclause requires a  \textit{CoM} separator (,) after the associated noun unit, followed by a hook word. When the subclause ends, another \textit{CoM} is used to return to the main sentence. If there are no remaining words in the main sentence after the subclause ends, no \textit{CoM} is used. Any such subclause is considered as part of its corresponding noun unit. Note that a general describer subclause must follow neither the time nor the aspect of the main sentence, and is completely independent of it.
+
+The very first word that marks the beginning of any describer subclause is the hook word, which may itself be subject to form variations. Its matrix will be named $\vm{Q}$. Hook words always assume the  multiplicity and gender of the associated noun, but not its case. This is because  the role of the noun  may be altered in the subclause,  but its identity may not:
+\begin{example}
+    \begin{tabular}{c}
+    The man($1$), from whom($5$) the blood was extracted, was  a vampire\\\hline The man($1$), whose blood($6$) was extracted, was a vampire
+    \end{tabular}
+\end{example}
+This property is more observable for rougher perspectives where $\vm{Q}$ is larger. Due to the special nature of case $6$, its hook words are dependent: they always need an associated noun argument, as seen in the second example. The consequently formed noun unit  takes case $1$ in the subclause.
+
+Such subclauses can be made as descriptive as desired, and although used mainly for nouns, it is also possible to make them for  personal pronouns ($\vm{P}[a,In,:]$) as well. Since $\vm{Q}$ automatically assumes $3_p$, the pronoun must be mentioned again in some perspectives to give the proper context. English is not one of them:
+\begin{example}
+    \begin{tabular}{c}
+        I, who have created the universe, am bored\\\hline
+        He fought me, who led the army, and decided
+    \end{tabular}
+\end{example}
+Unless dealing with the psychos in Philosophy, you will never need this construction.
+
+The most commonly occurring subclauses are often contracted using  adjectival verbs (Verbs made into adjectives), assuming that specific contraction conditions are met. Such adjectives always treat the noun they describe as the subject of the verb they were formed from, were the subclause to be expanded. Using such a contraction, the subclause may be embedded into the noun unit, which is otherwise not possible. There are two possibilities:
+\begin{enumerate}
+    \item P1 based: Active voice, with aspect `Ongoing' - $\vm{T}(2,:)$
+    \item P2 based: Passive voice (State passive), with aspect `Ongoing' - $\vm{T}(1,:)$
+\end{enumerate}
+English is a bad language to illustrate this, but I will try regardless. Due to their nature, no preposition can be used before the hook word of their expanded subclause. First, the P1 based contraction:
+\begin{example}
+    \begin{tabular}{m{6cm}|m{7cm}}
+        \bt{Contracted} & \bt{Expanded} \\\hline
+        The burning castle collapsed & The castle, which was burning, collapsed\\\hline
+        The burning castle is collapsing & The castle, which is burning, is collapsing \\\hline
+        The burning castle will have collapsed & The castle, which will be burning, will have collapsed
+    \end{tabular}
+\end{example}
+Here, the fact that the castle continues to burn is something that occurs at the instance to which the sentence refers, and the castle is the subject (case $1$) of the describer subclause. Compare the sentences to their expanded versions to see the influence of time. Here, the aspect of the main sentence is irrelevant, whereas its time  is carried over into the subclause. Depending on the type of contraction, the aspect of the subclause is always fixed. For P2 based contractions:
+\begin{example}
+    \begin{tabular}{m{6cm}|m{8cm}}
+        \bt{Contracted} & \bt{Expanded}\\\hline
+        The burned coal was being useless & The coal, which was burned, was being useless\\\hline
+        The burned coal is useless & The coal, which is burned, is useless\\\hline
+        The burned coal will have been being useless & The coal, which will be burned, will have been being useless
+    \end{tabular}
+\end{example}
+Again, the aspect of the main sentence is variable:  only its time is carried into the subclause. As per passive voice logic, the noun `coal' becomes the subject of the subclause and suffers the action `to burn' rather than performing it. Although the considered examples have been kept simple, the length of the embedded subclause is not a restriction:
+\begin{example}
+    \begin{tabular}{m{7cm}|m{7cm}}
+        \bt{Contracted} & \bt{Expanded} \\\hline
+        The factory owner (dancing like Bully Maguire) was responsible for the deaths of millions & The factory owner, who was dancing like Bully Maguire, was responsible for the deaths of millions  [P1] \\\hline
+        The man (sliced up by the chicken) is not dead & The man, who is sliced up by the chicken, is not dead [P2]
+    \end{tabular}
+\end{example}
+This method is an extension of the other two, with the embedded clause behaving  as a single unit. Any necessary form variation is applied solely on the P1/P2 adjective; with  P1, P2 being codes for English present and past participles respectively. The rest of the subclause remains untouched.
+
+Lastly, describer subclauses can be nested indefinitely:
+\begin{example}
+    The man, (whose wife, [who is often attacked by assassins, \{who have no sense of honour, \ut{which is a valuable commodity}\}], works at the factory, [which is jointly owned by them]), is dead
+\end{example}
+\textit{A small note} for those stumped due to my previous examples: These were created as a result of the solution of English. It is enough to understand the basic concepts, even if the actual structure eludes you. For the curious, use a solver with a different source language that solves for English, so as to understand what is truly going on. After all, this text is made for real polyglots, and will be more rewarding the broader your perspectives reach.
+
+Describer subclauses can also be made for indefinite pronouns ($\vm{P}[b,In]$) that reference unknown nouns. For this, interrogative words are necessary:
+\begin{example}
+    \begin{tabular}{c}
+        Something (which could not be named) starting killing us\\\hline We heard someone (who remained unseen)
+    \end{tabular}
+\end{example}
+Since English does not differentiate between something specific and indefinite in terms of the hook word, these examples end up being pointless for illustration. Were a perspective like German to be considered, the difference would become crystal clear.  Indefinite descriptions cannot be contracted. All the associated rules are otherwise the same.
+\subsubsection{Noun duplication}
+This has nothing to do with describer subclauses, but uses the same \{\textit{CoM} content \textit{CoM}\} style that they use. In this case, rather than separating similar ideas, the \textit{CoM} separates equivalent descriptions of the same entity:
+\begin{example}
+    [The man], [the myth], [the legend] named \textsanskrit{चाणक्य} (Chanakya)
+\end{example}
+Naturally, only one of these is strictly necessary, and all of them must use the exact same cell of $\vm{C}$, since they are equivalent. All such duplications form a single combined unit. If a personal pronoun ($\vm{P}[a,In,:](1,:,0\leftrightarrow\mathbb{H})$) is used as the first unit, with only two total internal units, the \textit{CoM} is not used between them:
+\begin{example}
+    \begin{tabular}{c|c|c}
+    [We] [the people of India]\ldots & [I] [a monster of old]\ldots & [You] [fanatics]\ldots
+    \end{tabular}
+\end{example}
+\subsection{A closer look at units}
+Before continuing, something about units must be clarified. Recall that units are the building blocks for a sentence, which are ordered in various ways to potentially change its modes. The thing is, sentences themselves can also act as units for a sentence. Such subsentences are normally separated from the main sentence exactly like describer subclauses, with a \{\textit{CoM} content \textit{CoM}\} syntax. 
+
+The most basic  sentence (irrespective of mode) has a case $1$ unit, verb chain and potentially a case $2$ unit. Other cases may be added as per requirement, but are not necessary. While the verb chain clearly cannot be a sentence, the case $1, 2$ units can:
+\begin{example}
+    \begin{tabular}{c}
+        (I) know, [what you have done]\\\hline
+        Can (you or anyone related to you) tell \{me\}, [when you will return]?\\\hline
+        (The thing) is, [sentences can also act as units for a sentence]\\\hline
+        (Whoever can kill me) is allowed [\sout{that he} to cut the bread \{with my sword\}]\\\hline
+        (He) is [as high as a kite]
+    \end{tabular}
+\end{example}
+where [$2$], ($1$) are the cases. Other cases are marked by \{$N$\}. Some perspectives use special orderings for subsentences that mimic describer subclauses, but English is not among them. This idea is incredibly important to understand, since complex sentences often use such subsentences and appear more complicated than they actually are. The order of parsing is thereby clear:
+\begin{syntax}
+    \begin{enumerate}
+        \item Parse the case, verb, adverb units and their ordering. Verb and adverb units do not support recursion
+        \item Parse each case unit separately. If the current unit is a noun unit, unit parsing is complete. Otherwise, return to step 1
+        \item Move to the next unit and start from step 2
+    \end{enumerate}
+\end{syntax}
+Once the parsing is complete, a multilayered parse tree will appear that uniquely defines the considered sentence. This is exactly what a `parser' does after the Lexer has finished tokenization of any string. If anything is incorrect, the context-free grammar will declare the resultant tree invalid, which for humans makes the sentence `sound strange and unnatural', but we still understand it, since the brain does not shutdown due to minor errors. Interestingly, there are no sentence mode combination restrictions when doing this.
+
+At this point, my original claim about languages being logical is self-sustaining. Naturally, I cannot claim that the brain makes parse trees internally each time someone listens to a sentence, and perhaps the key to real mastery relies on leaving the calculations behind. Yet, this method should prove invaluable to decipher and troubleshoot sentences that otherwise seem too complicated to think about. If someone has difficulties understanding this explanation, I strongly encourage watching the first five hours of \href{https://www.youtube.com/watch?v=awsH0iq0O1A}{Compiler architecture} by Milen Patel.
+\subsection{Order/Request}
+$\biguplus$ Separate verb command forms for orders/requests. Politeness based languages end up with multiple verb forms here. 
+
+Orders are always given in the present, and  exclusively to $2^{nd}$ person observers. This means that there is exactly one cell in \autoref{tab:enverbT1}: $\vm{T}(1,2)$, and only its second person including the entire third dimension which is responsible for this form. This cell will be termed as the `order cell'.
+
+Interestingly, orders allow more politeness grades than the perspective normally provides. Using  grade keywords like `please/kindly' (normally as the first or last unit), or  hypothesis based orders, one may  increase the politeness grade by $\approx0.5$ units, which allows the maximum politeness to be $\approx\mathbb{H}+1$ rather than the usual $\mathbb{H}$. There are technically some other methods to further increase the grade, but those are only needed by those who want to grovel before others like Saturn (\textsanskrit{शनि}), which is behaviour I do not condone. The more the politeness grade, the more the order transitions into a request:
+\begin{example}
+    \begin{tabular}{m{7cm} c}
+        \textit{Statement} & \textit{Grade}\\\hline
+        Get the bicycle! & $-0.5$\\\hline
+        Get the bicycle & $0$\\\hline
+        Please get the bicycle & $0.5$\\\hline
+        Could you get the bicycle? & $0.5$\\\hline
+        Could you please get the bicycle? & $\approx0.8$\\\hline
+        Would it be possible to get change? & $0.5$\\\hline
+    \end{tabular}
+   \\ \bt{Note:} For English,  since politeness does not exist, $0=\mathbb{H}$. Compounding grade keywords or hypotheticals cannot cross the next integer, hence a grade of $1$ is impossible in English.
+\end{example}
+Hypothesis based orders are technically interrogations, and always use  \textit{InQ} (?) at the end. The exception to this rule are  `have' based requests: 
+\begin{example}
+I would like to have a tomato / We would like to have a tomato
+\end{example}
+These are  active voice hypothetical sentences $\in\vm{S}[\vm{T}(1,2)](1_p,1\leftrightarrow\mathbb{M})$.
+
+In spoken language,  the tone of voice also increases or decreases the politeness grade. \textcolor{red}{Mars (\textsanskrit{मंगळ})} based direct and loud statements reduce the grade, while \textcolor{blue}{Moon (\textsanskrit{चन्द्र})} based soft and gentle statements increase it. Hence, the minimum politeness grade of any spoken statement is not actually $0$, but negative.
+
+There is normally an independent form for first person group orders like `Let us go!', but since such commands have little form variation, it is advised to directly memorize them. Self directed orders like `Go, me!' are treated as part of the second person, as  reflexive commands. Unless used by narcissists, their politeness grade is always $0$.
+
+Depending on the politeness grade and formation, a command ends with either \textit{EoS}, \textit{InQ}, or \textit{ExC}.
+\subsection{Hypothesis}
+$\biguplus$ Refers to the idea of considering something that is expressed to not be true, as if it were true. Often, these statements are  hypothetical ifs, with no base in reality or truth. However, they ONLY mean that whatever is considered is, according to the speaker, not true.
+\begin{example}
+    \begin{tabular}{c}
+    I would sacrifice my soul, if it meant I could fight someone\\\hline
+    Had she drunk his blood, she would be cured
+    \end{tabular}
+\end{example}
+In the first example, the cause consequence chain are expressed to be false, yet considered as if they were true. This is solely from the speaker's perspective: the truth is supposed to be that he/she still has a soul to sacrifice, but no comment can be made about whether the speaker really has one. In the second example, she never actually drank his blood, nor can you comment upon whether what the speaker said would really happen if she did. The speaker merely says that if she had, the outcome would be as the speaker expressed. This sentence nature will become clearer with practice, and is one of my  main arguments for why one should not learn a language using the same language.
+
+This optional argument often messes with the arrangement of $\vm{T}$, so the corresponding matrix will be labelled $\vm{T}_K$.
+\subsection{Active/Passive Voice}
+$\biguplus$ The active voice is a statement, where there is a clear-cut subject who performs the action. The passive voice  is used when the performer of the action is unknown or unimportant, and makes the subject the receiver of the action. The focus is on what happened, rather than who did it: 
+\begin{example}
+    \begin{tabular}{c|m{5cm}|m{5cm}}
+        \bt{Active} & He ate the monster & I have killed the protagonist\\\hline
+        \bt{Passive} & The monster was eaten by him & The protagonist has been killed
+    \end{tabular}
+\end{example}
+Sometimes, the passive voice is also used to emphasize the action itself, in which case its performer/medium can be additionally introduced using case $3$ prepositions:
+\begin{setdef}
+    \begin{tabular}{|c|c|c|}
+        \hline \textit{Actual actor} & by & $\circledS(1)$ \\\hline
+        \textit{Medium} & with & $\circledS(2)$\\\hline
+    \end{tabular}
+\end{setdef}
+These prepositions will be termed subject suppliers (SS) with the matrix code $\circledS$.
+\begin{example}
+    \begin{tabular}{m{7cm}|m{7cm}}
+        \textit{Actual actor} & \textit{Medium}\\\hline
+        The man was arrested by the police & The car was raised with a screw jack
+    \end{tabular}
+\end{example}
+The passive voice can be further subdivided into a state and process passive (\textit{Zustands-/Vorgangsleidform vom Deutschen}), concepts which are difficult to demonstrate in English without a verbose explanation. Both of these focus on different sides of an event:  the state passive looks at the consequence of an event, while the process passive looks at the  execution of that event. 
+
+ONLY object verbs can be subject to the passive voice. Structurally, any passive eliminates the case $1$ unit and replaces it with the case $2$ unit. 
+The state passive is represented by $\vm{T}(1,:)$ and the process passive by $\vm{T}(2\leftrightarrow 4,:)$ in English.
+
+Since the subject of the passive voice is not an actual performer of any action, and merely receives its effects, reflexive usage ($\vm{P}[r,De,:]$) with passives is invalid.
+\subsection{Direct/Reported Speech}
+$\biguplus$ Speech comes into play only when the words of another (a spoken statement) are recounted, and is invalid if this condition is not met. Hence, each sentence must have a voice, but may or may not have a speech.
+
+Direct speech recounts a  statement word for word. Double  or single quotes are used to mark such statements. There is no great difference between both \textit{QoT} types, and double  quotes are usually the default. Sometimes,  \textit{QoT} defaults are switched depending on perspective. Reported (indirect) speech reports what someone  said, and may not be word for word, but gets the message across. Each speech starts with a tone-setting opener phrase like `He said, She has exclaimed, He is hollering' and continues with either the direct or indirect variant. One may think of the actual message as the argument to these opener units. The  opener unit is universally placed first, but  some perspectives may allow unit shifting under specific conditions.
+
+The VC used for openers normally refers to the past with the `Completed' aspect or similar, which only happens because reporting is normally done for something that has already happened, and is not a grammatical restriction. The cell of $\vm{T}$ that  the opener uses determines the aspect-time state, which acts as the reference for the cell $\vm{T}_R$ used by the argument. In other words, $\vm{T}$ denotes the state relative to the moment of expression, while $\vm{T}_R$ denotes the state relative to $\vm{T}$. As a result, the `time' denoted by $\vm{T}_R$ can often be misleading.
+
+In general, ($\vm{T}, \vm{T}_R$) can be independently chosen, but some combinations are a lot more common. In a perfect world, the aspect-time matrices $\vm{T}=\vm{T}_R$, but some perspectives shape $\vm{T}_R$  differently, which points more towards a lack of foresight than some hidden genius. Due to their being self-explanatory and numerous, no examples of openers will be listed.
+
+Direct variants pass the entire quote wrapped in  \textit{QoT} as the direct argument, with the argument and opener always separated  by the \textit{CoM}. If the argument follows the opener,  \textit{CdA} may also be used instead. If quotes are nested, the internal quotation changes to the complementary \textit{QoT} variant:
+\begin{example}
+    \begin{tabular}{c}
+    I said, \enquote{He said, \enquote{The time is near.}}\\\hline She asked: \enquote{Will you be hungry?}\\\hline I will have questioned, \enquote{Who were you?}
+    \\\hline He said, \enquote{Kill him!}
+    \end{tabular}
+\end{example}
+If the speaker is obvious, the opener may also be omitted. 
+
+If any sentence ends with a direct speech quotation, the punctuation used in the quote also ends the entire sentence. This means that there cannot be additional punctuation after a quote:
+\begin{example}
+    I spoke \sout{\textit{CdA}} \enquote{Brave warrior \sout{\textit{CoM}} who are you \sout{\textit{InQ}}}\textit{EoS} - \textit{EoS} not allowed!
+\end{example}
+
+Indirect variants transform the direct  argument to make the indirect argument. An indirect argument:
+\begin{itemize}
+    \item does not permit any punctuation  aside from  \textit{EoS} and \textit{CoM}
+    \item often uses a conjunction  to introduce itself 
+    \item is framed with respect to the one reporting. Sometimes, the opener and argument must be significantly changed
+\end{itemize}
+Depending on the sentence mode (excluding its voice) used in the direct argument, different conjunctions are used for introducing its indirect form. These conjunctions will be termed indirect argument conjunctions (IAC):
+\begin{setdef}
+    \begin{tabular}{c|c|c}
+        \textit{Nature/Mode} & \textit{IAC} & \textit{Comments}\\\hline
+        Normal / Declaration & that & -\\\hline
+        Interrogation (Yes/No) & if & Opener always first\\\hline
+        Interrogation (Elaborations) & - & The question remains a sentence unit\\\hline
+        Order & that & Often contracted 
+    \end{tabular}
+\end{setdef}
+Any other modes are not relevant. `Describer subclauses' cannot stand alone, and `Hypothesis, Speech' can just be grouped under declarations.
+
+Based on the aforementioned properties,  the sequence of operations to create an indirect argument from a direct one is: 
+\begin{enumerate}
+\item Eliminate unnecessary punctuation
+\item Choose the appropriate IAC
+\item Reframe according to the reporter
+\item Apply the sentence mode `Speech' on the CV
+\end{enumerate}
+Since  direct speech does not allow changing the original statement, the sentence mode `Speech' mentioned above automatically implies  indirect speech:
+\begin{example}
+    \begin{tabular}{c}
+        I said that \{he said that the time was near\}.\\\hline  She  asked if she would be  hungry. \\\hline He will have questioned who she was.\\\hline
+        He ordered [that he kill him] / [him to  kill him].
+    \end{tabular}
+\end{example}
+Using reported speech creates  distance between the reporter and subject matter, and is often used to display non-involvement in whatever is being reported.
+
+If someone is asked about details regarding any particular situation, for example  during a police investigation, the `nature' of  indirect speech that describes these retellings will always be `Declaration'. To avoid having to repeat the same kind of  `that' sentences while reporting these testimonies, and to allow for some stylistic compactness, there exist replacement forms for the `Declaration' nature. 
+
+These forms use certain fixed  prepositions like `according to'  in their openers to signify the mode `Speech'. Such openers are composed of only the fixed preposition and speaker noun unit  without a VC, since the main verb is assumed to be along `to say/express' in meaning. Since the opener becomes time neutral without a VC, the time of expression is taken from the indirect argument. Depending on perspective and preposition, opener unit ordering may also be switched. 
+
+The indirect argument loses both its optional mode `Speech' (usually) and its associated `Declaration' conjunction `that':
+\begin{example}
+    \begin{tabular}{m{7cm}|m{6.5cm}}
+        [According to] the witness, the car burned down & The witness [said that] the car burned down\\\hline
+        [According to] the crowd, the seeds of terror have been planted & The crowd [mentioned that] the seeds of terror had been planted
+    \end{tabular}
+\end{example}
+The conjunction `as' can also be used to this effect, but requires the VC. All other rules stay the same:
+\begin{example}
+    \begin{tabular}{m{7cm}|m{7cm}}
+        [As] the oracle foretold, he will arrive & The oracle foretold [that] he would arrive
+    \end{tabular}
+\end{example}
+Such replacements are useful for supplementing the source of information with the actual statements supplied and simplify chronological processing, since the indirect argument now uses expression based timing: $\vm{T}$ instead of  $\vm{T}_R$.
+\subsection{Blessings}
+$\biguplus$ A statement that we wish would happen to someone else is  technically a hypothetical, but contains an  intent stronger than  mere intellectual play, and simultaneously weaker than a direct order. This sentence mode is used when the speaker has no control over the events addressed, yet wants them to happen in a certain manner. Since occurrences are rare,  most perspectives do not take it that seriously, which is why it usually doesn't get its own unique CV forms:
+\begin{example}
+    \begin{tabular}{c}
+        May god bless you\\\hline May he go to hell\\\hline May the king live long! / Long live the king!
+    \end{tabular}
+\end{example}
+Perpectives like \textsanskrit{संस्कृतम्} treat this mode with much more respect. Since a wish upon somebody makes sense only in the present or future, this mode restricts itself to exactly one cell: $\vm{T}(n_1,n_2)$. Future wishes are made using adverbs/reframing, and never needed unless dealing with manipulators who like to play word games.
+\subsection{Negativity}
+Who would we be without the ability to be negative? Any negation must be associated with  either a noun unit, indefinite pronoun ($\vm{P}[b,In]$), adverb or  VC.  Particular negative words ($\vm{N}$), prefixes, suffixes or unique word forms perform this function. Elements of $\vm{N}$ never change form.
+
+Any $W\in\vm{N}$ inverting verbs/entire sentences ($\vm{N}(2)$) mimics adverbs while the one inverting nouns ($\vm{N}(1)$) behaves like adjectives/articles. Indefinite pronouns get their own unique evil counterparts, and adverbs use either $\vm{N}(2)$ or unique forms:
+\begin{example}
+\begin{tabular}{c|m{9cm}}
+    \bt{Noun} & I have [\{no\} time] \\\hline
+    \bt{Verb} & I [do \{not\} need] money\\\hline
+    \bt{Pronoun: $[b,In]$} & [Nothing / Something] can be done \\\hline
+    \bt{Adverb} & I have [never / always] killed before / This car is [\{not\} fast / slow]
+\end{tabular}
+\end{example}
+Since $\vm{P}[b,In]$ come up in the subsection on pronouns, their evil counterparts will  be treated here only as an afterthought. Adverb based evil is word and meaning dependent: Either $\vm{N}(2)$  or typical adverb rules are to be followed, so a description thereof will  be omitted to avoid redundancy.
+
+The usage of quantity/scale related $\vm{P}[b,De/In]$  creates a fixed set of objects. Since life does not always run in extremes, one may sometimes desire a partial rather than  full inversion of such a set. The usual suspects for this are `many, much, all, every'; which  can be subject to incomplete inversion using $\vm{N}(2)$:
+\begin{example}
+    \begin{tabular}{c}
+        [Not all] fruits cause death\\\hline [Not many] people remember me\\\hline [Not all] become one
+    \end{tabular}
+\end{example}
+\subsection{Timekeeping}
+Not really groundbreaking, but one must know how to represent  time. There are a couple of different rules here that define the type of reporting: standard time (24hr) vs normal time (12hr). These are then combined with numbers and used to express how much of the day has been suffered till that point. Calendar dates are similar and will be included here. 
+
+24hr time ($\mathfrak{R}24$) is formal, direct and used for cases where clarity and accuracy is crucial, since each time instance per day has exactly one unique associated time stamp. One must report both the hour and minute precisely, which makes the expression compact, rigid and easy to learn.
+
+In contrast, 12hr time ($\mathfrak{R}12$) is used for informal situations, and divides the day into two 12hr halves, with time stamps for both halves mirroring each other. The context decides which half is currently being considered in a statement, and can potentially be misunderstood. 12hr time also allows approximate expressions using uncertainty markers, and has special names for  quarters of an hour, making its expression  inherently more flexible yet less accurate.
+
+To declare  time, one  uses the time preposition defined for the perspective: `at' for English. Thereafter follows either $\mathfrak{R}12/24$. Pure numbers (refer to \autoref{sec:ennoun}) are used in any time expression wherever needed:
+\begin{example}
+    \begin{tabular}{m{6.5cm}|m{7cm}}
+        I died at half past eight & He stabbed me at quarter to eight\\\hline
+        The chicken mutated at around quarter past ten & The military will arrive at quarter to eleven\\\hline
+        The military arrived at 1042hrs & The apocalypse was scheduled at 0000hrs
+    \end{tabular}
+\end{example}
+Sometimes, the short forms AM (Ante-Meridiem)  and PM (Post-Meridiem) may be used for the 12 hours before and after midday (1200hrs) respectively to add clarity to $\mathfrak{R}12$ time. These will be termed half markers (HM). Either abbreviation is simply added as a suffix to the expressed time.
+
+Kindly note that these methods are not comprehensive but sufficient, and do not include non-standard expressions:
+\begin{example}
+    \begin{tabular}{m{14cm}}
+    \textcolor{red}{Half past two} lies some minutes in the past\\\hline The shipment is scheduled to arrive at a time, which is exactly the same as the time it would be, if the minute and hour hands of the present time were to be switched
+    \end{tabular}
+\end{example}
+All time expressions are  considered as  independent noun units with the  time preposition permanently in use, \textcolor{red}{except} for  cases where the time unit is in case $1$. Calendar dates form similar units with their own date preposition.  
+
+The standard calendar syntax popularly used today is the Gregorian calendar  (DD/MM/YYYY), and will be primarily focused upon. The  scientific \textsanskrit{पञ्चांग} (Panchang) based calendar, which is based purely upon astronomy will be briefly mentioned if Indian perspectives are considered, at least if I am the one preparing the solver.
+
+\textcolor{purple}{\bt{Note}}: The \textsanskrit{पञ्चांग} is an intricate and meticulous astronomical system that uses the movement of the sun (through zodiac signs) and moon (through \textsanskrit{नक्षत्र} [Nakshatra]) to define how long `1 year, month, day\ldots'  is and with respect to what. Due to this, the exact duration of these units is not fixed, and dependent upon  actual  planetary movement. This is the reason why Hindu festivals apparently keep moving through the Gregorian calendar per year. 
+
+Since it is impossible to explain every detail of such a system without getting sidetracked, `a brief mention' really does mean only a brief mention. The most I can do is define some important terms: The interested should expend effort to find out what they mean on their own.
+\section{Specific constructions} \label{sec:enspco}
+Some unique expressions and properties used by the target language. Knowing these will help you naturally understand native speakers. Due to the sheer potential size of such a database, it will never be comprehensive, and aims only to give a certain intuition for some perspective specific things. Despite this, there exist some peculiarities that remain common across perspectives, and will always appear in this section.
+\subsection{Forced/Permitted actions}
+Forced actions are undertaken because of compulsion, while permitted actions are allowed by some authority, both of which differ from  actions performed willingly.  Perspectives  differentiate between these  action types by changing the base cell in some way during step 1 of the mode calculation sequence explained by \autoref{sec:enstce}. The enforcer uses case $1$, the one being forced case $2$, and the action being forced becomes either the argument to a specific marker verb (MV), or changes form entirely. Depending on whether the forced action is itself an object verb, another case $2$ noun may appear. 
+
+In English, one  the marker verbs employed are:
+\begin{setdef}
+    \begin{tabular}{c|c|c}
+        Permitted action & to let & $\vm{D}(1)$\\\hline Forced action & to make & $\vm{D}(2)$
+    \end{tabular}
+\end{setdef}
+The MV is always the CV of the base cell, while the verb argument is  counted as part of the DC:
+\begin{example}
+    He let me fight the cat / She is making me make him study
+\end{example}
+Every sentence mode is compatible with every forced/permitted action. However, any element $E\in\vm{D}$ possesses incomplete membership of $\mathcal{S}$, and is not a special verb. This is  verified by the fact that the action type must be changed in step 1, but special verbs are added in step 3 of the mode calculation written in \autoref{sec:enstce}:
+\begin{example}
+        Could you let me fight the cat / I am being made [to] make him study
+\end{example}
+The passive voice is the only  sentence mode that sometimes requires unique changes when these action types are involved, which is  the reason why $E\notin\mathcal{S}$. All of this MV trouble is eliminated if a form change is employed instead, since the base cell DC after step 1 remains a null set.
+\subsection{Infinitive units}
+A verb infinitive  can be used as a sentence unit. Such units express the general idea of an action, and do not link it to any specific  case $1$ noun:
+\begin{example}
+    \begin{tabular}{m{14cm}}
+        ([To be] free from the shackles of society) is not possible\\\hline
+        ([To live]) and ([to let live]) are good philosophies\\\hline
+        ([To \{be able to\}\{can\} do] something) and ([to \{have to\}\{must\} do] something) are not the same situations
+    \end{tabular}
+\end{example}
+All possible $\vm{T}(:,4)$ can be used for this purpose, although depending on perspective, any $V\in\mathcal{S}$ might require \{alternative\} forms. P1 and P2 based  $\vm{T}(i,4)$ are often  further contracted. Contracted P1  units can be used as normal:
+\begin{example}
+    [to be] (seeing the sunrise) never fails to sadden me
+\end{example}
+Contracted P2 units  act as a shortened dRA for `because/after' depending on context, and can no longer be used normally:
+\begin{example}
+    Having made dinner, she left her house : After/Because she had made dinner, she left her house
+\end{example}
+\subsection{Fillers}
+Fillers are rarely found in writing (at least they shouldn't be) and are mostly encountered in informal speech. They are used to fill silent gaps in spoken sentences when someone is thinking about what to say next, express uncertainty or to elicit a response from someone on a question which is contextually obvious. Sometimes, obvious answers may also be answered using fillers. As a result, they are not expected to mean anything specific, and can mostly be eliminated without consequence.
+
+Since this class of words is heavily context dependent and perspective specific, it is often difficult to translate their meaning directly. Take all explanations in this subsection with healthy skepticism:
+\begin{example}
+        I am [just] so tired / Is he [really] dead? / I said get in the [f**king] car!
+\end{example}
+Because of the universal nature of the soul,  curse words can be used as fillers in every perspective. \bt{All} of them will be ignored to maintain the decency of this document, since a real villain does not need such cheap vocabulary to make a statement.
+\subsection{Impersonal passives}
+It is sometimes acceptable to use object verbs without an object in the active voice. If such sentences are subject to the passive, some $\vm{P}[a,In,3_p]$ acts as the passive case $1$ unit:  `it' for English. Similarly, it is also possible to use some case unit other than $2$ for the passive case $1$ unit:
+\begin{example}
+    \begin{tabular}{c|c}
+        People are celebrating & It is being celebrated\\\hline I thank the mayor($4$) & The mayor($4$) is thanked
+    \end{tabular}
+\end{example}
+Although passives for non-object verbs are illegal, they are still possible under certain conditions, but only in some perspectives, of which English is NOT one.
+
+Due to their rare occurrence and ease of circumvention, `Impersonal passives' are not that important in general. Yet, one must  know they exist, in order to avoid potentially confusing them with something else.
+\subsection{Ancient relics}
+All languages are stained by the history of their speakers, and evolve along with them. Sometimes, some grammatical rules or words may be changed to fit newer times, but remnants of the old times still stick around in some form, often with a different meaning. This can  be a lot more irritating than it seems, because different age groups using different time zones of the same perspective may not be able to understand, or may misunderstand each other. Consequently, the size of any perspective keeps growing with time if left unchecked, making it impossible to truly master it. This is why I firmly claim that a true level of C2 is impossible to achieve, even for monolinguals.
+
+That being said, even for some of the worst offenders like Chinese or Japanese, there is a certain level of backward compatibility that must be maintained. For example, anyone learning Japanese needs to at least know the context of the seven to eight different personal pronouns, even if he/she never practically uses them. Depending on where it belongs, such explanations will be scattered throughout the solver, while this subsection will deal with all patterns that are rather unique, and do not fit anywhere else.
+
+Ancient relics are rather important for people who wish to study historical or old texts written in the target perspective.  Examples of texts that use old  English  are `Romeo and Juliet' or `Hamlet'. Anyone who has suffered them will know instantly why these relics create  problems: Most of the references do not make sense in the present day and age.
+
+\bt{The structure officially ends here}, but I will also add some closing remarks, my references, and the names of all those who supported chapter development  in a final section when an actual  perspective is considered.
+\section{Closing remarks} \label{sec:enrmrk}
+Dialects are the feeble attempts of people trying to be different and exclusive from `the crowd', even though everyone is useless and none of us matter. Sometimes they also develop because of spatial separation and historical reasons. They often  have specific pronunciation differences (or extremely bad pronunciation that creates new words altogether), or entirely new words that you will never find in standard texts. This means that you may only ever pick these up through remote travels, or watching shows that are so niche that basically nobody out of the target group watches them. Many times, translators and language resources aren't even trained on dialects, which means you only have AI to rely on. This is why dialects are extremely difficult to learn, let alone master.
+
+At the same time, today's \textsanskrit{राहु} dominated world of technology, convenience and deception allows anyone to easily  get information from anywhere, so expanding perspective has never been easier. Just be very certain of what your goals are if you decide to learn a dialect, since the standard perspective will normally suffice even for most advanced purposes.
+\subsubsection{References}
+References include sources for \bt{Grammar, useful websites} and  \bt{exposure}. These are ordered as per decreasing  degree of usage of the primary author.
+\subsection{Authors}
+Every perspective has a primary author. If multiple people have equal contributions, they are all grouped under `primary author', in which case the usage ordering rule mentioned previously is no longer applicable. All people who are not primary authors are automatically `co-authors', and need to choose a sign for themselves from the math library (except \verb|$\boldsymbol$|). This sign is locally defined: The same person can use different signs in different perspectives. 
+
+These signs are to be used to mark (as an exponent) any additions in the corresponding references of \autoref{sec:enrmrk}.  Do NOT use them in the solver body outside the corresponding \autoref{sec:enrmrk}.  Anything that was used to support development, like music and their artists, are grouped under \bt{Supporters}, similarly marked by each author.
+
+I am by default the primary author for all perspectives, but if someone  solves a significant portion (at least 5 \ut{complete} subsections) for any particular perspective, that person automatically takes over this role for that perspective. This person then becomes the one on whom the responsibility of regulating the solution falls. The UserGuide documents what this entails.
+
+With this, the solver for any general language using  medium `English' has been successfully set up. Around 30\% of the effort needed for learning any perspective in the world is already done. The remaining depends on whether you have the will to finish what you started. Feel free to skip to the perspective of interest, and if it does not yet exist, solve for it. May the blessing of {\color{red}Mars (\textsanskrit{मंगळ})} be with you as you burn your enemies to the ground.
+\begin{center}
+    \large
+\hyperref[toc]{\textcolor{cyan}{\bt{Link back to the table of contents}}}
+\end{center}
+Photo source: Demon slayer - \textjapanese{鬼滅の刃}
