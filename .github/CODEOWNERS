@@ -1,0 +1,18 @@
+# Language-specific ownership
+
+/german/ @Ausblicksumwandler/german
+
+# Core project files
+
+/ENG.tex @Ausblicksumwandler/core-maintainer
+/Preface.tex @Ausblicksumwandler/core-maintainer
+/Intro.tex @Ausblicksumwandler/core-maintainer
+/package.tex @Ausblicksumwandler/core-maintainer
+/command.tex @Ausblicksumwandler/core-maintainer
+/UserGuide.tex @Ausblicksumwandler/core-maintainer
+/figures/ @Ausblicksumwandler/core-maintainer
+/fonts/ @Ausblicksumwandler/core-maintainer
+
+# Protect the ownership rules themselves
+
+/.github/CODEOWNERS @Ausblicksumwandler/core-maintainer
