@@ -1,0 +1,363 @@
+\section[Verb]{Verb (Tätigkeitswort)} \label{sec:deverb}
+An infinitive (dictionary form/\bt{Grundform}) has the ending \bt{-en/n}.  For every verb $V\in \mathcal{S}$, all structural rules are exactly the same. Helping verbs ($\mathcal{X}$) are used to specify tense, sentence mode, or  both. Members of these sets are:
+\begin{setdef}
+    \begin{tabular}{m{14cm}}
+        $\mathcal{S}$ : \{Müssen, Können, Dürfen, Mögen, Sollen, Wollen, Lassen\}\\\hline
+        $\mathcal{X}$ : \{Haben, Sein, Werden\}
+    \end{tabular}
+\end{setdef}
+
+Before explaining the rules pertaining to $\mathcal{Z}$, it is useful to consider a small fact about the VC: The DC is always exiled to the end of any sentence, while the CV stays at second place. This means that all verbs that take arguments will have them  thrown to the very end irrespective of use case. The set $\mathcal{Z}$ is labelled in \bt{Deutsch} as \bt{trennbar} (separable):
+\begin{example}
+    \begin{tabular}{c c|c c}
+        \textit{Verb} & \textit{Meaning} & \textit{Verb} & \textit{Meaning}\\\hline
+        \bt{auf/geben}& to give up & \bt{unter/legen} & to place under \\\hline
+        \bt{an/ziehen} & to pull towards (attract) & \bt{hin/schreiben}& to write down\\\hline
+        \bt{auf/hören}& to hear up (stop) & \bt{an/lernen} & to learn towards (train)
+    \end{tabular}
+\end{example}
+As seen in the last  row, some prepositionally supported verbs mean something  different than the sum of their parts. This becomes especially annoying due to the counterintuitive placement of the DC at the end, which is why using and interpreting verbs in $\mathcal{Z}$ takes some getting used to. The set $\mathcal{Y}$ is labelled as \bt{untrennbar} (inseparable), and behave like typical verbs with prefixes. These can themselves have prepositional arguments: \bt{an/vertrauen} (to entrust), \bt{an/erkennen} (to recognise)\ldots. Sometimes, they also have arguments that behave like prepositions but aren't: \bt{überein/stimmen} (to match), \bt{kennen/lernen} (to get to know someone)\ldots
+
+A pronunciation tip: The preposition (no matter where it is) is stressed in \bt{trennbar} verbs whereas the main stem and not the prefix is stressed in \bt{untrennbar} verbs. If there are multiple prefixes (rare), then the stress alternates like \bt{\textit{miss}-ver-\textit{stehen}}, with  italic text showing the stressed sections.
+
+For advanced learners, some verbs belong to both $\mathcal{Z}, \mathcal{Y}$, and both use cases mean different things. This is not completely random: $\mathcal{Z}$  is literal, whereas $\mathcal{Y}$ is rather symbolic:
+\begin{example}
+    \begin{tabular}{c|c|c}
+$\mathcal{Z}$ & \bt{Er schaute die Unterlagen durch} &  He was looking through the documents\\\hline
+$\mathcal{Y}$ & \bt{Sie hat seine Pläne durchschaut} & She has \ut{his plans} seen through 
+    \end{tabular}
+\end{example}
+Such verbs have some specific associated prepositions: \bt{durch, über, unter, um}. So you can first suspect foul play when you see any of these, while the general prepositional argument only creates a member of $\mathcal{Z}$. Additionally, among such verbs with dual citizenship, the helping verb for building the \bt{Perfekt} form of $\mathcal{Y}$ is always \bt{haben}.
+
+Like English, \bt{Deutsch} does not differentiate between object and non-object verbs, except by context: \bt{erschrecken} (to frighten/to be frightened). The object for any object verb is a case $2$ unit \textit{without} an associated preposition. This distinction is important, since case $2$ can otherwise appear with a preposition even if a non-object verb is used (\bt{Akk/Dat} - \autoref{sec:despco}).
+\subsection[Tense]{Tense (Handlungsart und Zeitstufe)}
+\autoref{tab:deverbT1} represents the German aspect-time matrix. Any forms for the polite \bt{Sie} can be obtained by letting the CV stay in its infinitive form, irrespective of which VC is being considered. Hence, their explicit description can be safely ignored to declutter the matrix.
+\begin{table}[bth]
+    \centering
+    \begin{tabular}{|c|c|c|c|c|}
+        \hline $\Sigma $ & Past & Present & Future & Neutral\\\hline
+        Ongoing & \bt{Präteritum} & \bt{Präsens} & \bt{Futur 1} & \bt{zu + Grundform}\\\hline
+        Completed & \bt{Plusquamperfekt} & \bt{Perfekt} & \bt{Futur 2} & \bt{MdV + zu + $\mathcal{X}$}\\\hline
+    \end{tabular}
+    \caption{Aspect-Time matrix: $\vm{T}$}
+    \label{tab:deverbT1}
+\end{table}
+
+Pure terms for the tenses in \autoref{tab:deverbT1} have not been used  because they are unoriginal and too long. The base cell is $\vm{T}(1,2)$, while the \bt{Grundform} refers to the verb infinitive. 
+
+\textcolor{magenta}{\bt{First, aspect}}  constructions for verbs $V\notin \mathcal{S}$ and $\vm{T}(:,2)$ are considered:
+\subsubsection{$\vm{T}(1,2)$: Present Ongoing (Präsens)}
+Denotes an action that is occurring at the time of expression. This is the base cell, with  form variation as in \autoref{tab:deverbT2}.
+\begin{table}[bth]
+    \centering
+    \begin{tabular}{|c|c|c|}
+        \hline $\zeta$ & $1$ & $\mathbb{M}$\\\hline
+        $1_p$ & VR + \bt{e} & \bt{Grundform}\\\hline
+        $2_p$ & VR + \bt{st} & VR + \bt{t}\\\hline
+        $3_p$ & VR + \bt{t} & \bt{Grundform}\\\hline
+    \end{tabular}
+    \caption{Aspect: Ongoing, $\vm{S}[\vm{T}(1,2)]$}
+    \label{tab:deverbT2}
+\end{table}
+
+All conjugations are based upon the verb root (VR), and some VRs show exceptional configurations exactly for $\vm{S}[\vm{T}(1,2)](2_p,1,0)$ and $\vm{S}[\vm{T}(1,2)](3_p,1)$. Since there is only one verb in the chain, it is also the CV, while the DC is a null set. An example for both regular and irregular form variation:
+\begin{example}
+    \begin{tabular}{c c}
+    hören - \bt{to hear}&
+    \begin{tabular}{c|c|c}
+        $\pi$ & $1$ & $\mathbb{M}$\\\hline
+        $1_p$ & höre & hören \\\hline
+        $2_p$ & hörst & hört \\\hline
+        $3_p$ & hört & hören
+    \end{tabular}\\\hline
+    erlöschen - \bt{to be extinguished}&
+    \begin{tabular}{c|c|c}
+        $\pi$ & $1$ & $\mathbb{M}$\\\hline
+        $1_p$ & erlösche & erlöschen \\\hline
+        $2_p$ & erlischst & erlöscht \\\hline
+        $3_p$ & erlischt & erlöschen
+    \end{tabular}
+\end{tabular}
+\end{example}
+For verbs whose \bt{Grundform} ends with  \bt{-eln}, the  \bt{e} is eliminated from the VR in $\vm{S}[\vm{T}(1,2)](1_p,1)$, merely for pronunciation purposes. Ex: \bt{krabbeln/krabble}
+\begin{syntax}
+    CV Conjugation pattern (CVC): $\vm{T}(1,2)$
+\end{syntax}
+Example sentences:
+\begin{example}
+    \begin{tabular}{c|c}
+        \bt{Ich vergesse mich} & I am forgetting myself\\\hline
+        \bt{Er reinigt sein Zimmer} & He is cleaning his room
+    \end{tabular}
+\end{example}
+
+\subsubsection{$\vm{T}(2,2)$: Present Completed (Perfekt)}
+Denotes a completed action at the time of expression. Note that it does not matter how recently the action was completed, just that it is complete at the considered  moment of expression. Hence, \bt{Perfekt} coupled with adverbs is often  used to express things that happened in the past, although it is not technically a past form. The way this tense is built is twofold:
+\begin{enumerate}
+    \item Choose the correct  helping verb for the CV from $\mathcal{X}$: \bt{haben/sein}
+    \item Convert the CV into its \bt{MdV} form
+    \item The \bt{MdV} becomes appended to the end of the DC, while the helping verb becomes the new CV
+\end{enumerate}
+Depending on the CV, either of \bt{haben/sein} can be chosen as the helping verb according to two universal rules:
+\begin{syntax}
+    For any verb $V$, if
+    \begin{itemize}
+        \item $V$ does not take case $2$ nouns ($V$ is a non-object verb) \ut{\textit{AND}}
+        \item The case $1$ noun used with $V$ [effects a change of state or non-oscillatory motion on itself / undergoes a change of state or non-oscillatory motion]
+    \end{itemize}
+    then $V$ uses helping verb \bt{sein}. Otherwise, $V$  uses \bt{haben}.
+\end{syntax}
+Exactly two exceptions exist which use \bt{sein}: \bt{bleiben, sein}.  Around 80\% of all verbs do not satisfy both of the aforementioned conditions simultaneously, so if you find yourself  unsure of what to use, default to \bt{haben}.
+
+The \bt{Mittelwort der Vergangenheit (MdV)}, which  grammar textbooks simply call \bt{Partizip2} is the analogue of P2 (gone, looked\ldots) in English. The \bt{MdV} is formed by either of three rules, also depending on the irregularity of the verb. For irregular verbs, the VR undergoes transformation.
+\begin{enumerate}
+    \item \bt{ge} + VR + \bt{t}
+    \item \bt{ge + Grundform}
+    \item \textcolor{magenta}{VR + \bt{t}}
+\end{enumerate}
+\textcolor{magenta}{Only} verbs that end in \bt{-ieren} like: \bt{stornieren, fungieren, studieren, fundieren} exclusively follow the third pattern. These are mostly germanised verbs and although I personally dislike them, that is no reason to leave them out.
+
+All other verbs follow either of the first two patterns. Irregular verbs use their \bt{Präteritum} forms, or  close variants to them as the VR. They do have certain repeating patterns, but it is not possible to describe these, and  are best learned through observation. Any verbs in $\mathcal{Y}$ do not take the initial \bt{ge-}, since their own prefix overrides its addition. Exceptions are incredibly rare: \bt{gekennzeichnet, gehandhabt}. Verbs in $\mathcal{Z}$ behave as usual, and the argument simply attaches itself before the \bt{MdV} form. Some verb/\bt{MdV} pairs:
+\begin{example}
+    haben/gehabt, sein/gewesen, lassen/gelassen, erstarren/erstarrt, verlassen/verlassen, entscheiden/entschieden, geschehen/geschehen, sterben/gestorben, aufgeben/aufgegeben, kennenlernen/kennengelernt, übereinstimmen/übereingestimmt, emporwinden/emporgewunden
+\end{example}
+If a verb can be used as both an object and non-object verb, sometimes the \bt{MdV} and \bt{Präteritum} forms corresponding to both variants are different:
+\begin{example}
+    \begin{tabular}{c|c|c}
+        \bt{Verb} & \bt{Object:} MdV, $\vm{T}(1,1)$ \bt{root} & \bt{Non-object:} MdV, $\vm{T}(1,1)$ \bt{root}\\\hline
+        erschrecken & erschreckt, erschreckt & erschrocken, erschrak \\\hline
+        schmelzen & geschmelzt, schmelzt & geschmolzen, schmolz
+    \end{tabular}
+\end{example}
+\begin{syntax}
+    CV Conjugation pattern (CVC): $\vm{T}(1,2)$
+\end{syntax}
+Example sentences:
+\begin{example}
+    \begin{tabular}{c|c}
+        \bt{Ich habe sie gestern gesehen} & I have  her yesterday \ut{seen}\\\hline
+        \bt{Meine Mutter hat mein Fahrrad verkauft} & My mother has my bicycle \ut{sold}
+    \end{tabular}
+\end{example}
+\textcolor{magenta}{\bt{Next, time}}  constructions for verbs $V\notin \mathcal{S}$ and $\vm{T}(1,:)$ are considered:
+\subsubsection{$\vm{T}(1,1)$: Past Ongoing (Präteritum)}
+Used for narrations. To get the \bt{Präteritum} root, add \bt{-t} as a suffix to the VR. The VR changes if the verb is irregular. Leaving aside the irregular formations of the roots, there are otherwise no conjugation irregularities. The pattern follows \autoref{tab:deverbT2}, but with some differences:
+\begin{enumerate}
+    \item $(3_p,1)$ follows $(1_p,1)$
+    \item If the verb is irregular, $(1_p,1)=$ `\bt{Präteritum} root'
+    \item Sometimes, an additional \bt{e} is added at the end of the \bt{Präteritum} root in $(2_p,:,0)$ for ease of pronunciation
+\end{enumerate}
+Two examples are given below to illustrate:
+\begin{example}
+    \begin{tabular}{c c}
+    kaufen - \bt{to buy}&
+    \begin{tabular}{c|c|c}
+        $\pi$ & $1$ & $\mathbb{M}$\\\hline
+        $1_p$ & kaufte & kauften \\\hline
+        $2_p$ & kauftest & kauftet \\\hline
+        $3_p$ & kaufte & kauften
+    \end{tabular}\\\hline
+    sterben - \bt{to die}&
+    \begin{tabular}{c|c|c}
+        $\pi$ & $1$ & $\mathbb{M}$\\\hline
+        $1_p$ & starb & starben \\\hline
+        $2_p$ & starbst & starbt \\\hline
+        $3_p$ & starb & starben
+    \end{tabular}
+\end{tabular}
+\end{example}
+Common irregular patterns used to make \bt{Präteritum} roots are:
+\begin{setdef}
+gehen/ging, sterben/starb, sehen/sah, frieren/fror, halten/hielt, werden/wurde, reißen/riss, entscheiden/entschied, lassen/ließ
+\end{setdef}
+\begin{syntax}
+    CV Conjugation pattern (CVC): $\vm{T}(1,1)$
+\end{syntax}
+Example sentences:
+\begin{example}
+    \begin{tabular}{m{5.5cm}|c}
+        \bt{Ich ging nach dem Supermarkt} & I was going to the supermarket\\\hline
+        \bt{Meine Hoffnungen starben am(an+dem) Dienstag} & My hopes were dying on Tuesday
+    \end{tabular}
+\end{example}
+\subsubsection{$\vm{T}(1,3)$: Future Ongoing (Futur 1)}
+Uses the helping verb \bt{werden} for the purpose. The formation proceeds as follows:
+\begin{enumerate}
+    \item Append the CV in its \bt{Grundform} to the end of the DC
+    \item The new CV is \bt{werden}, which follows \autoref{tab:deverbT2}
+\end{enumerate}
+\begin{syntax}
+    CV Conjugation pattern (CVC): $\vm{T}(1,2)$
+\end{syntax}
+Example sentences:
+\begin{example}
+    \begin{tabular}{m{6cm}|c}
+        \bt{Ich werde nach dem Supermarkt gehen} & I will be  to the supermarket \ut{going}\\\hline
+        \bt{Du wirst bald sterben} & You will be \ut{soon} dying
+    \end{tabular}
+\end{example}
+With that, all the cells in $\vm{T}$ can be successfully derived, even for varying sentence modes. For the sake of completeness:
+\begin{example}
+    \begin{tabular}{m{5cm}|c|m{5cm}}
+    Ich werde nach dem Supermarkt gegangen sein & Futur 2 & \bt{I will to the supermarket \ut{gone have}}\\\hline
+    Ich war nach dem Supermarkt gegangen & Plusquamperfekt & \bt{I had to the supermarket \ut{gone}}
+    \end{tabular}
+\end{example}
+\subsubsection{Special verbs (Sondertätigkeitswörter)}
+For verbs $V\in \mathcal{S}$, $V$ is the CV while the main verb in its \bt{Grundform} is the DC for the base cell: $\vm{T}(1,2)$. All transformations work as described earlier, but there are two special rules:
+\begin{enumerate}
+    \item If $V$ is sent to the DC, it \ut{MUST} stay at its very end in its \bt{Grundform}
+    \item If any other $G\in\mathcal{X}$ is sent to the DC while $V$ is already in it, $G$ will not interact with the main verb or $V$, and will permeate as far as possible to the front of the DC
+\end{enumerate}
+In practice, the second rule is only applicable for $\vm{T}(2,3)$. The exact nature of interactions to be expected will be clear in \autoref{sec:destce}. Some examples to demonstrate both rules:
+\begin{example}
+    \begin{tabular}{m{6.5cm}|m{5.5cm}|c}
+    Wir werden lange haben warten [müssen] & \bt{We will long \ut{have waited} \ut{[have to]}} & Futur 2\\\hline
+    Ich habe heute gehen [sollen] & \bt{I \ut{have} today \ut{gone} \ut{[should]}} & Perfekt\\\hline
+    Du darfst die Gesellschaft nicht töten & \bt{You are allowed to society \ut{not kill}} & Präsens
+    \end{tabular}
+\end{example}
+The last thing to mention about $\mathcal{S}$ is that these verbs can be chained. One only needs to create the corresponding base cell according to which verb is used first, after which the above methods can be used directly:
+\begin{example}
+    \begin{tabular}{m{15cm}}
+Let $S_1, S_2, S_3\in\mathcal{S}$, and one desires to use them with the main verb $M_V$ in the order $S_2, S_3, S_1$, with the left most component being used first. The corresponding base cell will be:\\
+CV: $S_1$, DC: $M_V + S_2 + S_3$\\
+\bt{Perfekt:} CV = `haben', DC = $M_V + S_2 + S_3 + S_1$\\ \bt{Futur 2:} CV = `werden', DC = $\texttt{haben} + M_V + S_2 + S_3 + S_1$
+    \end{tabular}
+\end{example}
+Practically, I do not believe it is possible to chain more than two meaningfully, but a complicated case is always better for illustration. Also, since all verbs in $\mathcal{S}$ use the helping verb `haben' for building their \bt{Perfekt} aspect, a direct substitution has been made in the above example.
+
+\subsection[Adverb]{Adverb (Umstandswort)}
+There are some important formation patterns based on the word ending. Since there is a significant overlap between the set of all adjectives and adverbs,  the following patterns are to be assumed applicable solely for adverbs, unless otherwise specified. Note that this list is not comprehensive but  sufficient:
+\begin{enumerate}
+    \item Unlike English, \bt{Deutsch} does not differentiate between `clear' and `clearly'. Hence, most adjectives also double as adverbs: 
+    \begin{example}
+    \bt{herrlich} (magnificently), \bt{seltsam} (strangely), \bt{begrenzbar} (terminably)\ldots
+    \end{example}
+    \item \bt{-s}: Normally have something to do with placement in time/space, and made from nouns: 
+    \begin{example}
+    \bt{morgens} (in the morning), \bt{abends} (in the evening), \bt{rechts} (to the right)\ldots
+    \end{example}
+    \item \bt{Eigenschaftswort + er + maßen}: Shows  something  in accordance to the associated adjective: 
+    \begin{example}
+    \bt{erwiesenermaßen} (as is proved), \bt{gewissermaßen} (to a certain extent)\ldots
+    \end{example}
+    \item \bt{-weise}: Denotes the manner in which  something proceeds. If the root word is an adjective, the construction follows the previous rule: 
+    \begin{example}
+    \bt{normalerweise} (normally), \bt{ähnlicherweise} (similarly), \bt{zeitweise} (from time to time)\ldots
+    \end{example}
+\end{enumerate}
+Like with verbs, only  adverb units can be used in sentences. 
+
+\subsection[Nominalization]{Nominalization (Nennwortbildung)}
+\subsubsection{Contraction (Verkürzung)}
+To contract a noun, take the normal noun unit, eliminate the noun, and then capitalize the adjective. The grammatical gender corresponds to the actual gender of the entity, or if the entity does not have a natural gender, its grammatical gender. The only exceptions to this rule are instruments like `cutter, accelerator' which are always \bt{männlich}, and follow the corresponding \bt{MdG} type contraction rules.
+
+The contracted adjective always declines as if the omitted noun still exists.
+\begin{example}
+    \begin{tabular}{c c}
+    Pure adjective & \begin{tabular}{c|c}
+        \textit{Expanded} & \textit{Contracted}\\\hline\bt{Das hübsche Mädchen} & \bt{Die Hübsche}\\\hline \bt{Gefährliche Frauen} & \bt{Gefährliche} \end{tabular}\\\hline
+    \bt{MdG} & \begin{tabular}{c|c}
+        \textit{Expanded} & \textit{Contracted}\\\hline\bt{Im folgenden Teil} & \bt{Im Folgenden} \\\hline \bt{Zu der als Anwältin arbeitenden Frau} & \bt{Zu der Anwältin}\\\end{tabular}\\\hline
+    \bt{MdV} & \begin{tabular}{c|c}
+        \textit{Expanded} & \textit{Contracted}\\\hline \bt{Die gefangenen Bevölkerungen} & \bt{Die Gefangenen}\\\hline\bt{Die ungewollten Leute}& \bt{Die Ungewollten}\end{tabular}
+    \end{tabular}
+\end{example}
+Some explanations are in order. 
+\begin{itemize}
+    \item \bt{MdG (Mittelwort der Gegenwart)} is the German counterpart to the P1 form
+    \item \bt{MdG} type contractions representing male professions  use the suffixes \bt{-er/-er} on the verb root for \bt{Ein/Mehrzahl}. If there is no associated verb, then the pattern \bt{Sturz/Stürze} is followed instead. Female professions always use suffix \bt{-in} on the corresponding male profession for building the \bt{Einzahl}. The \bt{Mehrzahl} is built by \bt{-innen}. Sometimes, they also have an extra \bt{Umlaut}: \bt{Arzt/Ärzte, Ärztin/Ärztinnen}; \bt{Fahrer/Fahrer, Fahrerin/Fahrerinnen}
+    \item If there are multiple adjectives in a noun unit, only one of them can be contracted according to the above rule, while the other behaves as normal
+    \item Anything can be contracted  as long as the sentence makes sense in context
+\end{itemize}
+Nationalities are a special case for this rule. Even though they should technically be pure adjective type contractions, \bt{MdG} type nouns are used instead:
+\begin{example}
+    \begin{tabular}{c|c}
+        \textit{Male/Female} & \textit{Nationality}\\\hline
+        \bt{Russe/Russin} & Russian\\\hline
+        \bt{Inder/Inderin} & Indian \\\hline
+        \bt{Franzose/Französin} & French
+    \end{tabular}
+\end{example}
+The only country for which this works normally is Germany: \bt{Deutscher/Deutsche}
+\subsubsection{Conceptualization (Vorstellungsbildung)}
+A collection of all entities that possess a certain quality can be described by using the contraction rule on a pure adjective, but keeping the grammatical gender as \bt{sächlich}. No associated noun exists in this case, but form changes still assume that the noun unit exists as usual:
+\begin{example}
+    \begin{tabular}{c|m{3.5cm}|m{7cm}}
+        \bt{Das Deutsche} & German (refers to the language) & \bt{Im Deutschen gibt es einen Makel}\\\hline
+        \bt{Das Kluge} & The clever & \bt{Auf den Klugen kann man immer vertrauen}\\\hline \bt{Das Böse}& The Evil & \bt{Das Böse hat gewonnen}
+    \end{tabular}
+\end{example}
+Suffixes  \bt{-heit/-keit} or a form change with \bt{Umlaut + e} are the patterns used for creating concept nouns. The suffixes \bt{-heit/-keit} can also be added to VRs and \bt{MdV}s, and the consequently formed nouns behave similarly. All of them  are always grammatically \bt{weiblich}:
+\begin{example}
+    Güte, Stärke, Schönheit, Sauberkeit, Trägheit, Verrücktheit, Besessenheit, Kleinigkeit, Verträglichkeit\ldots
+\end{example}
+Making process nouns from verbs is as follows:
+\begin{enumerate}
+    \item Capitalize the \bt{Grundform} and assume the gender is \bt{sächlich}
+    \item Yeah. The entirety of $\vm{C}$ for these nouns except for $\vm{C}(4,1)$ is exactly the same
+\end{enumerate}
+The only reason $\vm{C}(4,1)$ even changes is due to \bt{Genetiv} rules. Some examples:
+\begin{example}
+    Denken, Fahren, Gehen, Zusammenleben, Berücksichtigen, Töten\ldots
+\end{example}
+State nouns  are mostly grammatically \bt{weiblich}, and are mostly formed by adding a suffix to the VR:
+\begin{example}
+    \begin{tabular}{c|c|m{9cm}}
+        \textit{Suffix} & \textit{Frequency} & \textit{Nouns}\\\hline
+        \bt{-ung} & Extreme & \bt{Bildung, Verwaltung, Einstellung, Zahlung, Fahndung, Ursprung}\\\hline
+        \bt{-e} & Low & \bt{Sperre, Reise, Runde}\\\hline
+        \bt{-} & Average & \bt{Bild, Urteil, Teil, Regel, Anruf}\\\hline
+        \bt{-nis} & Low & \bt{Versäumnis, Erlaubnis, Erlebnis}\\\hline
+        VR transform & Low & \bt{Verschluss, Tod}
+    \end{tabular}
+\end{example}
+Lastly, there are only two noun suffixes worth considering:
+\begin{enumerate}
+    \item \bt{-chen}: Reduces scale. Gender \bt{sächlich}: 
+    \begin{example}
+        \begin{tabular}{c|c}
+            \bt{Teilchen} & Particle[s]\\\hline
+            \bt{Früchtchen}& Small fruit[s]\\\hline \bt{Brötchen} & Small bread[s]
+        \end{tabular}
+    \end{example}
+    \item \bt{-schaft}: A collective/community; a state/condition; a property. This suffix can sometimes also apply to adjectives or adverbs. Gender \bt{weiblich}:
+    \begin{example}
+        \begin{tabular}{c|c}
+            \bt{Gemeinschaft[en]} & Community[ies] \\\hline \bt{Herrschaft[en]} & Dominion[s] (The state of domination)\\\hline \bt{Freundschaft[en]} & Friendship[s] \\\hline \bt{Wissenschaft[en]} & Science[s] (Collection of knowledge)\\\hline \bt{Landschaft[en]} & Landscape[s]
+        \end{tabular}
+    \end{example}
+\end{enumerate}
+Of these, \bt{-schaft} is much more common and not as restricted in use as \bt{-chen}. 
+
+Fun fact: All words that end in \bt{chen} are \bt{sächlich}, leading to \bt{Mädchen} (girl) being  grammatically neutral.
+\subsection[Prefix]{Prefix (Vorsilbe)}
+\autoref{tab:deverbT3} has the most common prefixes used to create \bt{untrennbar} verbs with their usual meanings. Though useful for a formal entry, there are many exceptions with regard to meaning, so be mindful.
+\begin{table}[bth]
+    \centering
+    \begin{tabular}{|c|m{4.5cm}|c|}
+        \hline\textit{Prefix} & \textit{Meaning}& \textit{Examples}\\\hline
+        \bt{be} & Emphasizes the result of an action. This prefix always creates object verbs, and allows no prepositions in the case $2$ noun unit & \bt{beängstigen, beantworten, bereuen}\\\hline
+        \bt{ent} & Take something away & \bt{entfernen, enteignen, entschlüsseln}\\\hline
+        \bt{er} & Result of an action & \bt{erlassen, erhöhen, erachten}\\\hline
+        \bt{ge} & No specific meaning & \bt{geschehen, gelingen, gestehen}\\\hline
+        \bt{emp} & No specific meaning & \bt{empfangen, empören, empfinden}\\\hline
+        \bt{miss} & Opposite / Failure & \bt{misslingen, missachten, missglücken}\\\hline
+        \bt{wider} & Against & \bt{widersprechen, widerstehen, widerfahren}\\\hline
+        \bt{zer} & Destruction  & \bt{zerstören, zerreißen, zerschlagen}\\\hline
+        \bt{ver} & Disappear,  make a mistake, no specific meaning, destroy,  multiply, opposite & \bt{verwenden, verachten, vermählen}\\\hline
+    \end{tabular}
+    \caption{Prefix table}
+    \label{tab:deverbT3}
+\end{table}
+
+Of these prefixes, \bt{ver} is the most versatile, since it can form many specific verbs using adjectives or adverbs. The pattern is:
+\begin{syntax}
+    \bt{ver + Eigenschaftswort/Umstandswort + en}
+\end{syntax}
+They are so versatile, that I suspect it is possible to write entire stories using only this verb variant:
+\begin{example}
+    vernachlässigen, verabscheuen, verbergen, verlegen, verkaufen, verderben, versiegeln, verunreinigen, verschmutzen, verschmelzen, verhören, verschmachten, verzieren, verdanken, verlesen\ldots
+\end{example}
+If anyone ever manages to succeed in this challenge, I would very much like to read the resulting abomination.
