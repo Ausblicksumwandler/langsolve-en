@@ -1,0 +1,82 @@
+\usepackage{tikz} %Vector figures
+\usetikzlibrary{positioning, shapes.geometric}
+\usetikzlibrary{external}
+\tikzexternalize[prefix=figures/]
+\usepackage[all]{nowidow} %Single lines across page breaks are not allowed
+\usepackage{listings} %For program code
+\usepackage{booktabs} %Additional table formatting options
+\usepackage[a4paper, margin=2.5cm, bottom=2cm,top=2cm]{geometry} %Page layout formatting
+\usepackage{graphicx} %Insertion of images
+\graphicspath{{figures/}}
+\usepackage{enumitem} %Bullet point formatting
+\setlist[enumerate]{leftmargin=15pt}
+\setlist[itemize]{leftmargin=15pt}
+\usepackage{xcolor} %Custom colours
+\usepackage{amsmath} %Alphabetical math variables
+\usepackage{amssymb} %Math symbols
+\usepackage{caption} %Caption formatting
+\usepackage{subcaption} %Allows grouping multiple objects along with subcaptions for each
+\usepackage{tabularx} %Table cell formatting
+\usepackage{framed} %Creation of coloured domains
+\usepackage[normalem]{ulem} %Non-float underline and strikethrough
+\usepackage{tocloft} %Table of Contents customization
+\usepackage{microtype} %Subtle typography improvements
+\usepackage[hidelinks]{hyperref} %Creation of hyperlinks between document sections / to the internet
+\usepackage{cleveref} %Referencing objects adds the object type before its numbering in \autoref
+\hypersetup{colorlinks=true, linkcolor=black, urlcolor=blue}
+\usepackage{comment} %The comment environment. Be careful when using, can cause bugs. Forbidden in the preamble
+\usepackage{titling} %Title page formatting
+\usepackage{titlesec} %Section title formatting
+\titleformat{\chapter}[hang]
+  {\normalfont\huge\bfseries}
+  {Chapter \thechapter:}
+  {10pt}
+  {\Huge}
+\titlespacing*{\chapter}{0pt}{-10pt}{20pt}
+%Fonts and language settings
+\usepackage{fontspec} %Setting up fonts per language script
+\usepackage{polyglossia} %Language declaration commands
+\usepackage[autostyle=true]{csquotes} %Language aware quotation
+%Polyglossia settings: Each language separate to set potential options
+\setdefaultlanguage[variant=british]{english}
+\setotherlanguage{sanskrit}
+\setotherlanguage{german}
+\setotherlanguage{japanese}
+\setotherlanguage[mathfunctions=false]{russian}
+
+%Font settings for fontspec: Define ONLY per script, not language
+\defaultfontfeatures+{Path = fonts/, BoldFont=*-Bold, UprightFont=*-Regular, Extension = .ttf}
+% Main Fonts (English)
+\setmainfont{NotoSans}[
+    Script = Latin,
+    ItalicFont=*-Italic,
+    BoldItalicFont = *-BoldItalic
+]
+\setsansfont{NotoSerif}[
+    Script = Latin,
+    ItalicFont=*-Italic,
+    BoldItalicFont = *-BoldItalic
+]
+\setmonofont{NotoSansMono}[
+    Script = Latin
+]
+% ------- Other fonts -------
+% Cyrillic (Russian)
+\newfontfamily\cyrillicfont{NotoSans}[
+    Script = Cyrillic,
+    ItalicFont = *-Italic,
+    BoldItalicFont = *-BoldItalic
+]
+% Devanagari (Sanskrit)
+\newfontfamily\devanagarifont{NotoSansDevanagari}[
+    Script = Devanagari
+]
+% Hanzi (Simplified Chinese)
+\newfontfamily\cjkfont{NotoSansSC}[
+    Script=CJK,
+    CJKShape=Simplified
+]
+% Hangul (Korean)
+\newfontfamily\hangulfont{NotoSansKR}[
+    Script = Hangul
+]
