@@ -1,0 +1,120 @@
+\documentclass[12pt,letterpaper,twoside]{article}
+\usepackage[left=2.5cm, right=2cm, top=3.5cm, bottom=3.5cm]{geometry}
+\usepackage{amsmath}
+\usepackage{framed}
+\usepackage{xcolor}
+\usepackage{tabularx}
+\usepackage{polyglossia}
+\usepackage{fontspec}
+\setdefaultlanguage{english}
+\setotherlanguage{sanskrit}
+
+\defaultfontfeatures+{Path = fonts/, BoldFont=*-Bold, UprightFont=*-Regular, Extension = .ttf}
+\setmainfont{NotoSerif}[
+    Script = Latin,
+    ItalicFont = *-Italic,
+    BoldItalicFont = *-BoldItalic,
+    Extension = .ttf
+]
+\setsansfont{NotoSans}[
+    Script = Latin,
+    ItalicFont = *-Italic,
+    Extension = .ttf
+]
+\setmonofont{NotoSansMono}[
+    Script = Latin
+]
+\newfontfamily\devanagarifont{NotoSansDevanagari}[
+    Script = Devanagari
+]
+\setlength{\parskip}{0.75em}
+\setlength{\parindent}{0pt}
+\definecolor{sampler}{rgb}{0.63, 0.79, 0.95}
+\definecolor{ruler}{rgb}{0.9, 0.6, 0.6}
+\definecolor{mathset}{rgb}{0.6, 0.9, 0.6}
+\newenvironment{example}{\def\FrameCommand{\colorbox{sampler}} \MakeFramed{\advance\hsize+\width}\begin{center}}{\end{center}\endMakeFramed}
+\newenvironment{syntax}{\def\FrameCommand{\colorbox{ruler}} \MakeFramed{\advance\hsize+\width}\begin{center}}{\end{center}\endMakeFramed}
+\newenvironment{setdef}{\def\FrameCommand{\colorbox{mathset}} \MakeFramed{\advance\hsize+\width}\begin{center}}{\end{center}\endMakeFramed}
+\begin{document}
+\tableofcontents\clearpage
+\section{\textsf{Installing LaTeX efficiently}}
+This section is solely for those people who would rather not install around $10GB$ of \LaTeX{} locally, and are users who have and want to have little to do with \TeX{} outside the scope of the solver.  Regardless of this, you will still have to compile and read the \texttt{UserGuide} after going through this \texttt{InstallationGuide}. Do not worry about the technical \LaTeX{} terminology in this document, all of it has been explained in the \texttt{UserGuide}.
+
+A complete installation of \LaTeX{} as provided by \texttt{texlive} contains everything that you could ever require, but  the solver obviously does not  need all of it. If one were to cut down on the superfluous chunks of software, the resultant \LaTeX{} installation takes up around $4.4GB$ of space. What you save in space, you gain in the difficulty of the initial setup. Weigh your options well.
+
+\texttt{Texlive} offers  installations for both Windows and MacOS, and although I have tested only the Windows version, the necessary collections and packages remain the same regardless of operating system. The \texttt{texlive} installer offers various `schemes' in its advanced settings, which are predefined installation settings created for users, best suited for particular purposes. We  select the `custom' scheme, and setup all necessary settings ourselves.
+
+All related and dependent packages are grouped under a `collection', which are self-contained, and are most sensibly installed as one unit. Under the `custom' scheme, one may select various collections to install initially. The  collections to be chosen are:
+\begin{setdef}
+    \begin{tabular}{c|c}
+        \textit{Name} & \textit{Description}\\\hline
+        \texttt{basic} & Essential programs and files\\\hline
+        \texttt{latex} & \LaTeX{} fundamental packages\\\hline
+        \texttt{latexextra} & \LaTeX{} additional packages\\\hline
+        \texttt{latexrecommended} & \LaTeX{} recommended packages\\\hline
+        \texttt{pictures} & Graphics, pictures, diagrams
+    \end{tabular}
+\end{setdef}
+Do not choose any languages, these will be added later with some other collections. On successful installation of \LaTeX{}, the wizard can be closed. 
+
+To proceed further, the \texttt{tlmgr} tool is required. \texttt{tlmgr} is a package management tool that allows  easy addition/removal of packages and collections after the initial installation. It is launched using the `command prompt' or `powershell' by using the code:
+\begin{syntax}
+    \texttt{tlmgr} (Command) (additional argument) (package/collection name)
+\end{syntax}
+Run \texttt{tlmgr} with `Command = install', `additional argument =' and the package/collection names as follows. Note that every collection name follows \texttt{collection-}:
+\begin{setdef}
+    Collections:\\
+    \begin{tabular}{c|c}
+        \hline\textit{Name}& \textit{Description}\\\hline
+        \texttt{langchinese} & Chinese\\\hline
+        \texttt{langcyrillic} & Cyrillic script languages\\\hline
+        \texttt{langenglish} & UK and US English\\\hline
+        \texttt{langgerman} & German \\\hline
+        \texttt{langjapanese} & Japanese\\\hline
+        \texttt{langkorean} & Korean\\\hline
+        \texttt{langother} & Other languages\\\hline
+    \end{tabular}\\ Packages:\\ 
+        \texttt{ulem, latexmk, lua-calendrica}
+\end{setdef}
+These can  be installed simultaneously, provided their names are separated by a space:
+\begin{example}
+    \texttt{tlmgr install collection-langchinese collection-langother ulem}
+\end{example}
+The above command will install and configure the given collections/packages. After the configuration is complete, the \texttt{UserGuide} can be generated, and the solver  be run in theory.
+
+\textit{\textbf{Note:}} Installing the  collections for either of chinese/japanese/korean automatically installs the collection \texttt{langcjk}, which they depend upon. Although users need not explicitly worry about this, do not remove this collection just because it is not mentioned in the above table.
+
+One may wonder about why so many languages are required for a basic compilation. The reason is simply that I did not write the solver with compact installations in mind, since as time passes, the size of the solver is expected to keep increasing. Aside from these basic language collections, one may choose to selectively install only those collections which are of interest. Keep in mind that aside from the \verb|\include| line in \texttt{ENG.tex}, the \verb|\setotherlanguage| command in \texttt{package.tex} must now  be similarly commented out to eliminate unwanted language solutions in the main file, since the corresponding language collection won't be installed and would cause a \texttt{polyglossia} compilation error. 
+
+Font definitions need not be touched, since \verb|\(script)font{}| depends on \texttt{fontspec},  not on \texttt{polyglossia} language switching.
+\section{\textsf{Compiling a LaTeX file}}
+Depending on preference, users of \LaTeX{} may use multiple methods of running it on a file. I will document three such methods here, but the user is encouraged to mess around with others as well:
+\begin{enumerate}
+    \item Console commands \item VS Code \item \TeX Studio
+\end{enumerate}
+\textbf{Console commands} are for people who are more machine than human, and don't care about beauty. To use them, you use `powershell/command prompt' with
+\begin{syntax}
+    \texttt{cd("(File directory)")}
+\end{syntax}
+and point to the directory where the `.tex' source file resides. Then, one may run
+\begin{example}
+    (latexengine) (additional argument) (File name).tex
+\end{example}
+to start compilation. If an error occurs, the `.log' file must be checked and the errors corrected. Using this method, it is possible to edit and compile using no more than  traditional `.txt' files and the console. An example using \texttt{lualatex} would be:
+\begin{example}
+    \texttt{lualatex --shell-escape ENG.tex}
+\end{example}
+These commands are simple, and best suited for users who just want the solver to work, and have no interest in the inner workings of \LaTeX{}. By design, such surface-level users are  incapable of contributing to any language solutions. 
+
+The only problem with this approach is that a source file normally requires multiple reruns before the final pdf is usable. This happens because of things like cross referencing, which cannot be handled in a single forward pass. The user must be aware of this, and run \LaTeX{} multiple times until the output is correct. \texttt{ENG.tex} needs two complete `lualatex' compilations to generate a usable pdf. Do not be surprised or worried if the output pdf looks incomplete or broken after a single run: nothing is bugged.
+
+\textbf{VS Code} is a code editor that offers a middle path between beauty and functionality. Using the tools provided by the \LaTeX{} extension, it is possible to easily edit and debug source files. The extension also provides common rerun patterns for compiling a source file, which is termed as a recipe. Using the `latexmk (lualatex)' recipe, the user can compile the source file with a single command, without worrying about rerun details. However, VS Code is ultimately a general code editor, and retains some console like properties, which become evident when dealing with its settings.
+
+\textbf{\TeX Studio} is a graphical user interface (GUI) created solely for the purpose of editing and compiling `.tex' files. This is the best alternative for someone who wishes to update/use the solver but doesn't want to deal with the headache of troubleshooting code. Everything has been  neatly sorted  and made intuitive enough, so that beginners do not get overwhelmed with unknown commands and their interpretations.
+
+Irrespective of the method used, the main file \texttt{ENG.tex} must be run using \texttt{lualatex --shell-escape}  for every run which introduces changes in the vector image pdf(s) generated by the  \texttt{tikz} package (stored in folder `figures'). If no  changes are made, \texttt{--shell-escape} is not necessary.
+\begin{center}
+    \Large
+    \devanagarifont{ओजस अमित सेवेकर}
+\end{center}
+\end{document}
