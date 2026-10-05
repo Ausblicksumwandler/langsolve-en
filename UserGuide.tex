@@ -18,8 +18,8 @@
 \usepackage{tocloft} %Table of Contents customization
 \usepackage[normalem]{ulem} %Non-float underline and strikethrough
 \usepackage{microtype} %Subtle typography improvements
-\usepackage[hidelinks]{hyperref} %Creation of hyperlinks between document sections
-\usepackage{cleveref} %Referencing adds the type of reference before its numbering in \cref / \Cref
+\usepackage[hidelinks,english]{hyperref} %Creation of hyperlinks between document sections / to the internet
+\hypersetup{linkcolor=black, urlcolor=blue,colorlinks=true}
 \usepackage{titling} %Title page formatting
 %Fonts and language settings
 \usepackage{fontspec} %Setting up fonts per language script
@@ -113,9 +113,9 @@ Any written language is composed of a visible set of characters placed strategic
 \begin{example}
 The\,end / The\!end / The end
 \end{example}
-In the above example, the effect of spacing can be observed. The third `The end' looks the most aesthetic, while in the worst case, the second is incorrectly fused and interpreted as a single word. This is merely a tiny glimpse into what is called `typography', which may be defined as the art of placing characters on a screen, so that they look visually consistent (and satisfy whatever purpose they had).
+In the above example, the effect of spacing can be observed. The third `The end' looks the most aesthetic, while in the worst case, the second is  fused and interpreted as a single word. This is merely a tiny glimpse into what is called `typography', which may be defined as the art of placing characters on a screen, so that they look visually consistent (and satisfy whatever purpose they had).
 
-Typography is something that goes unnoticed when done well, but becomes painfully obvious if done incorrectly, which is why every person who wishes to seriously write anything must eventually grapple with it. On computers, this concerns the style of characters, their size, spacing, tilting, weight among others, which collectively come under `font features', where a `font' is the manner in which the alphabet of a script is written. A good overview of \href{https://www.youtube.com/watch?v=BfEvIjTQkIE}{\textcolor{blue}{computer fonts}}.
+Typography is something that goes unnoticed when done well, but becomes painfully obvious if done incorrectly, which is why every person who wishes to seriously write anything must eventually grapple with it. On computers, this concerns the style of characters, their size, spacing, tilting, weight among others, which collectively come under `font features', where a `font' is the manner in which the alphabet of a script is written. A good overview of \href{https://www.youtube.com/watch?v=BfEvIjTQkIE}{computer fonts}.
 
 That being said, the general author normally doesn't want to spend  time wondering about typographical technicalities, which is why computer font files have certain defaults already loaded in them. Apart from this, other things like paragraph spacing, headings, indents, line spacing\ldots also play a role and are similarly handled by the system on its own. For most general purposes, word processors like \textit{Microsoft Word} provide all the basic functions necessary for creating a style-wise consistent document. This convenience is not without sacrifices.
 
@@ -165,7 +165,7 @@ By default, this solver uses the `NotoSans' font family, which means that every 
 \begin{syntax}
 NotoSans + (suffix)
 \end{syntax}
-\autoref{tab:enfs} shows some suffixes and the scripts they support. All these fonts and more are readily available on \href{https://fonts.google.com/?query=noto+sans+&preview.script=Latn&preview.lang=pl_Latn}{\textcolor{blue}{Google Noto Fonts}}.
+\autoref{tab:enfs} shows some suffixes and the scripts they support. All these fonts and more are readily available on \href{https://fonts.google.com/?query=noto+sans+&preview.script=Latn&preview.lang=pl_Latn}{Google Noto Fonts}.
 \begin{table}[bth]
     \centering
     \begin{tabular}{|m{3cm}|m{6.5cm}|c|}
@@ -241,7 +241,7 @@ The resultant \LaTeX{} project includes each language source file separately in 
 
 \bt{\ut{Every}} file/folder name in the entire project must  \ut{always} be written in \textit{ASCII}, which practically means English characters only. This restriction is purely computer based, and  avoids potential filename corruption across systems. If any language uses a non-\textit{ASCII} script, its  language source file name  is set as the closest \textit{ASCII} transliteration: \textjapanese{日本語} - `nihongo'. 
 
-Each language source file along with its section subfiles live in a folder with the English name of that language (all small letters). Since the medium language for this solver is English, non-\textit{ASCII} folder names are  impossible. An explanation of \href{https://www.youtube.com/watch?v=vpSkBV5vydg}{\textcolor{blue}{Unicode and ASCII text encoding}}.
+Each language source file along with its section subfiles live in a folder with the English name of that language (all small letters). Since the medium language for this solver is English, non-\textit{ASCII} folder names are  impossible. An explanation of \href{https://www.youtube.com/watch?v=vpSkBV5vydg}{Unicode and ASCII text encoding}.
 
 Section naming has the convention:
 \begin{syntax}
@@ -284,7 +284,7 @@ By table number, I literally mean the order of occurrence, with the first table 
 Some minor tips and remarks:
 \begin{example}
     \begin{enumerate}
-        \item Use \verb|\autoref|, \verb|\Cref| or \verb|\cref| to refer to sections and tables
+        \item Use \verb|\autoref| or \verb|\ref| to refer to sections and tables
         \item Multiple spaces between words, or a line break are interpreted as a single space by \LaTeX
         \item A new paragraph begins by leaving a blank line between blocks of text
         \item The `Sans' font family in \verb|\setsansfont| is actually loaded as `NotoSerif', since `NotoSans' is the main family

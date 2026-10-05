@@ -20,15 +20,14 @@
 \usepackage[normalem]{ulem} %Non-float underline and strikethrough
 \usepackage{tocloft} %Table of Contents customization
 \usepackage{microtype} %Subtle typography improvements
-\usepackage[hidelinks]{hyperref} %Creation of hyperlinks between document sections / to the internet
-\usepackage{cleveref} %Referencing objects adds the object type before its numbering in \cref / \Cref
+\usepackage[hidelinks,english]{hyperref} %Creation of hyperlinks between document sections / to the internet
 \hypersetup{colorlinks=true, linkcolor=black, urlcolor=blue}
 \usepackage{comment} %The comment environment. Be careful when using, can cause bugs. Forbidden in the preamble
 \usepackage{titling} %Title page formatting
 \usepackage{titlesec} %Section title formatting
 \titleformat{\chapter}[hang]
   {\normalfont\huge\bfseries}
-  {Chapter \thechapter:}
+  {\chaptername ~\thechapter:}
   {10pt}
   {\Huge}
 \titlespacing*{\chapter}{0pt}{-10pt}{20pt}
