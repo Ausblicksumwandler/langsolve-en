@@ -29,7 +29,7 @@ Sometimes, the multiple genders do not matter and are  related to dialect differ
 \begin{example}
     \begin{tabular}{c|c|c}
     \bt{Wirrwarr} & \bt{Männlich/Sächlich} & Confusion\\\hline
-    \bt{Joghurt} & \bt{Männlich/Weiblich/Sächlich} & Curd
+    \bt{Streu} & \bt{Männlich/Weiblich/Sächlich} & Straw
     \end{tabular}
 \end{example}
 In addition, each noun is attributed an article that represents its gender. Imagine a/an/the but with different forms per case and grammatical gender.
@@ -201,10 +201,10 @@ Then are the adjectives beyond rhyme or reason, but English is no better here:
     \bt{gut/besser/best, hoch/höher/höchst, gern/lieber/liebst}
     \end{tabular}
 \end{example}
-However, not all adjectives have comparative and superlative forms, by virtue of their meaning: \bt{leer} (empty), \bt{schwanger} (pregnant), \bt{tot} (dead). These adjectives are the only ones that do NOT double as adverbs.
+State based adjectives have no comparative or superlative forms, by virtue of their meaning: \bt{leer} (empty), \bt{schwanger} (pregnant), \bt{tot} (dead). Such adjectives are the only ones that do NOT double as adverbs.
 
 \subsection[Pronoun]{Pronoun (Fürwort)}
-Pronouns  do not need compulsory capitalization within sentences.  We start with the class of personal pronouns. Since German only has two stages of formality: formal/informal, the formal forms have not been explicitly considered in \autoref{tab:denounT6}.
+We start with the class of personal pronouns. Since German only has two stages of formality, the formal forms have not been explicitly considered in \autoref{tab:denounT6}.
 \begin{table}[bth]
     \centering
     \begin{subtable}{\textwidth}
@@ -235,11 +235,11 @@ Pronouns  do not need compulsory capitalization within sentences.  We start with
 \label{tab:denounT6}
 \end{table}
 
-For  the polite second person, singular and plural for any particular case are the same. Use the plural forms of the given third person, capitalize the first letter, and there you have the polite second person. Important is that in the polite variant, the pronoun MUST be capitalized irrespective of its place in the sentence. This matrix will be stacked in the third dimension above $\vm{P}[a,In,2_p](:,:,0)$ as $\vm{P}[a,In,2_p](:,:,\mathbb{H})$. Case $6$ personal pronouns take on the gender of the noun  being possessed:
+For  the polite second person, multiplicities $1,\mathbb{M}$ for any particular case are the same. Use the $\mathbb{M}$ forms of the given third person, capitalize the first letter, and there you have the polite second person. Important is that in the polite variant, the pronoun MUST be capitalized irrespective of its place in the sentence. This matrix will be stacked in the third dimension above $\vm{P}[a,In,2_p](:,:,0)$ as $\vm{P}[a,In,2_p](:,:,\mathbb{H})$. Case $6$ personal pronouns take on the gender,  multiplicity of the noun  being possessed, as well as of the possessor. Multiplicity $\mathbb{M}$ is the same as their female form, while $1$ is as shown in \autoref{tab:denounT6}:
 \begin{example}
     \begin{tabular}{c|c}
         \bt{Diese Luft ist ihre} & This air is hers\\\hline
-        \bt{Die Fahrräder sind ihre} & The bicycles are theirs\\\hline
+        \bt{Die Fahrräder sind seine} & The bicycles are his\\\hline
         \bt{Das Buch ist mein} & The book is mine
     \end{tabular}
 \end{example}
@@ -268,7 +268,7 @@ Reflexive pronouns are encompassed under \bt{sich} and its forms as listed in \a
 \begin{table}[bth]
     \centering
     \begin{tabular}{|c|c|c|c|c|c|c|}
-        \hline $\Diamond$ & \multicolumn{2}{|c|}{$K=1_p$} & \multicolumn{2}{|c|}{$K=2_p$} & \multicolumn{2}{|c|}{$K=3_p$}\\\hline
+        \hline $\Diamond$ & \multicolumn{2}{|c|}{$K=1_p$} & \multicolumn{2}{|c|}{$K=2_p\{0\}$} & \multicolumn{2}{|c|}{$K=3_p$}\\\hline
         \bt{Akk} & mich & uns & dich & euch & sich & sich \\\hline
         \bt{Dat} & mir & uns & dir & euch & sich & sich \\\hline
     \end{tabular}
@@ -277,13 +277,12 @@ Reflexive pronouns are encompassed under \bt{sich} and its forms as listed in \a
 \end{table}
 \begin{example}
     \begin{tabular}{m{7cm}|m{7cm}}
-        %\bt{Er stellt sich hinter mich} & He positioned himself behind me\\\hline
         \bt{Ich wasche mir die Hände}& I wash \ut{using myself the hands}\\\hline
         \bt{Wir treffen uns am Montag} & We \ut{are meeting us} on Monday\\\hline
         \bt{Ich bedanke mich fürs\{für + das\} Zuschauen} & I \ut{give the thanks within myself to} \ut{(those who saw)} for the viewing
     \end{tabular}
 \end{example}
-The last example  uses a special  construction used for fixed reflexiveness, something not found in English. It essentially means, `the thanks came from him' but it never mentions to whom it is given, implying it as obvious information. Here, the choice of the reflexive pronoun must additionally match  the fixed case code for the concerned usage. In this case, \bt{Ich bedanke mich} demands case $2$, so \bt{ich bedanke mir} is invalid. Occurrences are rare and the advice is to memorize these. Formal \bt{Sie} reflexives are  $\vm{P}[r,De,3_p]$ forms: these do not need capitalization.
+The last example  uses a special  construction used for fixed reflexiveness, something not found in English. It essentially means, `the thanks came from him' but it never mentions to whom it is given, implying it as obvious information. Here, the choice of the reflexive pronoun must additionally match  the fixed case code for the concerned usage. In this case, \bt{Ich bedanke mich} demands case $2$, so \bt{ich bedanke mir} is invalid. Occurrences are rare and the advice is to memorize these. Formal \bt{Sie} reflexives $\vm{P}[r,De,2_p\{\mathbb{H}\}]=\vm{P}[r,De,3_p]$: these do not need capitalization.
 
 Indefinite pronouns change forms according to corresponding article templates in both dependent and independent uses, but these changes are not consistently assigned. Some indefinite pronouns  can be used exclusively for objects, some exclusively for people, while most others fit for both. \autoref{tab:denounT9} documents various examples along with their followed  form variations. If any adjectives are used in the noun unit during such dependent use, they can be  declined in one of two ways:
 \begin{enumerate}

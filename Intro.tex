@@ -7,9 +7,9 @@
     \bt{Renamed term} & \bt{Original term / Description} \\\hline
     Iff & If and only if\\\hline
     Perspective & Language: A method of perceiving the world \\\hline
-    Multiplicity & Numerical state of a term. The code for singular is $1$, and the highest multiplicity (plural) is $\mathbb{M}$ \\\hline
-    Noun root ($\vm{R}$) & The row vector of the form(s) of a noun, which are used  to create its  case based forms. $\vm{R}(1)$ represents the singular root, $\vm{R}(2)$ the dual root and so on \\\hline
     Roughness/Smoothness & The degree to which a perspective stores meaning in word form variations. Rougher perspectives use more variations\\\hline
+    Multiplicity & Numerical state of a term. The code for singular is $1$, and the highest multiplicity (plural) is $\mathbb{M}$ \\\hline
+    Noun root ($\vm{R}$) & The row vector of the forms of a noun, which are used  to create its  case based forms. $\vm{R}(1)$ represents the singular root, $\vm{R}(2)$ the dual root and so on \\\hline
     Noun unit & The self-sufficient and invariant block of text containing a noun and its attributes, which can be directly deployed in a sentence\\\hline
     Case - Multiplicity matrix ($\vm{C}$) & The matrix whose cells are noun forms, columns are multiplicities and rows are cases\\\hline
     Adjective root & The base version of an adjective that changes form when kept in the noun unit\\\hline
@@ -27,7 +27,7 @@
     Aspect & The state of the action described by the verb\\\hline
     Aspect-Time matrix ($\vm{T}$) & The matrix whose cells are tenses, columns are time, and rows are aspects\\\hline
     Tense submatrix ($\vm{S}$) & The matrix whose cells are verb forms, columns are multiplicities, and rows are conversation natures (person). The $2^{nd}$ person has a $3^{rd}$ dimension for politeness based forms\\\hline
-    Politeness grade & The degree of politeness. $0$ is the most informal and $\mathbb{H}$ the most formal
+    Politeness grade & The degree of politeness. $0$ is the most informal and $\mathbb{H}$ the most formal\\\hline
 \end{tabular}
 \vfill
 \vspace{0.5em plus 0.3em minus 0.1em}
@@ -57,7 +57,7 @@
     $\mathfrak{R}24/12$ & Standard (24hr) or normal (12hr) time\\\hline
     Time preposition & The preposition that  marks a time unit. The calendar analogue is the date preposition\\\hline
     Half marker (HM) & A marker for $\mathfrak{R}12$ time clarifying the exact 12hr half being considered\\\hline
-    Marker verb (MV, $\vm{D}$) & A verb  signifying a forced/permitted action, which takes the actual action verb as its argument
+    Marker verb (MV, $\vm{D}$) & A verb  signifying a forced/permitted action, which takes the actual action verb as its argument\\\hline
 \end{tabular}
 \end{center}
 
@@ -133,34 +133,39 @@ There are multiple things that must be mentioned before we begin.
     \item Good luck.
 \end{enumerate}
 \chapter{The structure} \label{chap:strbas}
-We will treat the different parts separately, with multiple subparts. Sometimes they may be varied depending on perspective, but the draft is always the same. There are five main pillars for any language:
+There are five main pillars for any language:
 \begin{enumerate}
     \item \bt{\textit{Alphabets}} - Writing system, Associated speech
     \item \bt{\textit{Nouns}} - Ideas
     \item \bt{\textit{Verbs}} - Actions
-    \item \bt{\textit{Prepositions}} - Relative positioning
+    \item \bt{\textit{Prepositions}} - Relative positioning (space/time), Relationship marker
     \item \bt{\textit{Sentences}} - Information ordering
 \end{enumerate}
-Each of these pillars further have multiple subdivisions. Someone who reads and understands only \autoref{chap:strbas} would obtain the fundamentals to be able to solve  for any language  of choice, or even create a language of his/her own. It is encouraged and perhaps necessary that the reader attempts to use this framework to try to decode their own mother tongue(s), so as to judge its efficacy and reach.
+Each of these pillars further have multiple subdivisions, which are all treated separately. Someone who reads and understands only \autoref{chap:strbas} would obtain the fundamentals to be able to solve  for any language  of choice, or even create a language of his/her own. It is encouraged and perhaps necessary that the reader attempts to use this framework to try to decode their own mother tongue(s), so as to judge its efficacy and reach.
 \section{Noun} \label{sec:ennoun}
-As I said previously, I won't deal with alphabets. Just watch YouTube or something. Spelling rules can be easily explained on the basis of ease of pronunciation. So, what is a noun? A noun is a concept. Whatever you speak about is the noun. Nouns have  three attributes which can cause form changes:  a possible associated gender, a case, and multiplicity.
+As I said previously, I won't deal with alphabets. Just watch YouTube or something. Spelling rules can be easily explained on the basis of ease of pronunciation. So, what is a noun? A noun is a concept. Whatever you speak about is the noun. Nouns have exactly three attributes, all of which can cause form changes:   gender, case, and multiplicity.
  
 But why change forms at all? Abstract concepts like `patience' cannot  be in multiples to begin with, and only living things can be appropriately gendered. For nouns that support multiplicity, an additional word like `many' could simply be added as a plural marker, or the noun could simply be written multiple times. This is a valid objection, but it would be rather useful to think about this in a different way. Languages have already been created in a certain manner, and the world is the result. Neither of the mentioned methods are incorrect, and are both in use in different regions of the world  with their respective advantages and disadvantages. 
 
 One of the goals of this text is to decipher the ideas behind every such structural choice, and allow for a richer depth in any language learning journey. Many of these choices are not strictly necessary, and could be easily eliminated while creating any hypothetical language for precision and ease of learning. That said, I do not know how `natural' such a language will remain, and if it will be in any way differentiable from computer code.
 \begin{enumerate}
-    \item It is possible to let the multiplicity of nouns to be left to context, as is done by languages like Japanese and Korean. If defined, the entire form becomes an inseparable term, even if composed of multiple words. An example for the noun `book' in some perspectives: buku/buku-buku (Indonesian), Buch/Bücher (German), \textjapanese{本}/\textjapanese{本} (Japanese), book/books (English). Normally, the noun root is comprised of  case $1$  forms.
+    \item It is possible to let the multiplicity of nouns to be left to context. If defined, the entire form becomes an inseparable term, even if composed of multiple words. An example for the noun `book' in some perspectives: buku/buku-buku (Indonesian), Buch/Bücher (German), \textjapanese{本}/\textjapanese{本} (Japanese), book/books (English). 
     \item Gender can be cancerous at the beginning, but has its own charm. This is not a required feature but exists in a non-trivial number of perspectives. Think of it as a memory test.
     \item Nouns follow the cases.
 \end{enumerate}
-The more form changes a perspective uses, the rougher it becomes, whereas smoother languages lean towards stricter rules at the risk of being more wordy (English for example). Artistically, rougher languages cannot be defeated, but have a steep  learning curve.
+The multiplicity of any noun is designated henceforth by a unique number: $1$ for singular and $\mathbb{M}$ for the highest supported multiplicity, which mostly implies plural. Multiplicity methods depend on gender, if it exists. All case based forms of a noun are made from specific base forms, called the noun root ($\vm{R}$). Normally, $\vm{R}$ is comprised of  case $1$  forms.
 
-Every noun can be thought of as a container which may or may not house the various features that modify it: Examples being cases, adjectives, articles among others. These features along with the noun form an inseparable `noun unit' as it will be called, and is an independent block, whose internal order of words cannot be disturbed, and is unique per language. The existence of such units is guaranteed in smooth languages, whereas rougher ones sometimes do not use them.
+Every noun along with  its various features: Examples being  adjectives, articles among others, can be thought of as a container. These features along with the noun form an inseparable `noun unit' as it will be called, and is an independent block, whose internal order of words cannot be disturbed, and is unique per language. The existence of such units is guaranteed in smooth languages, whereas rougher ones sometimes do not use them.
 
 \bt{To structurally know any noun, one must know its form changes with respect to Gender, Multiplicity, and Case}
 
 \subsection{Case}
-This is  the most important feature pertaining to a noun. A case is a uniquely defined meaning attributed to a noun, that clarifies its role in a sentence. There are two ways to attribute this meaning - First is to use a preposition, and the other is to uniquely change the word form. The first approach leans towards smoothness whereas the latter towards rough behaviour. In order to clearly illustrate these approaches, it is necessary to  first introduce the 8 basic cases of communication, based on the divine progenitor of languages - \textsanskrit{संस्कृतम्} (Sanskrit).
+This is  the most important feature pertaining to a noun. A case is a uniquely defined meaning attributed to a noun, that clarifies its role in a sentence. There are two ways to attribute this meaning:
+\begin{enumerate}
+\item Use a preposition
+\item Uniquely change the word form
+\end{enumerate}
+In order to clearly illustrate these approaches, it is necessary to  first introduce the 8 basic cases of communication, based on the divine progenitor of languages - \textsanskrit{संस्कृतम्} (Sanskrit).
 \begin{table}[t]
 \centering
 \begin{tabular}{|c|c|m{8cm}|c|}
@@ -169,30 +174,37 @@ This is  the most important feature pertaining to a noun. A case is a uniquely d
     \hline $2$ & Object & Noun on which the action is performed & - \\
     \hline $3$ & Instrumental & Noun which is used (method/means/companionship) & with, using \\
     \hline $4$ & Dative & Noun which is being pointed at (direction/intention) & to, for \\
-    \hline $5$ & Ablative & Noun from which/whom  separation occurs & from \\
+    \hline $5$ & Ablative & Noun from which  separation occurs & from \\
     \hline $6$ & Genitive & Noun who possesses (Possessor) & of \\
     \hline $7$ & Locative & Noun which is used as reference (location/condition) & at, in \\
-    \hline $8$ & Vocative & Calls/Beckons someone & Hey Tom! \\\hline
+    \hline $8$ & Vocative & Noun who is called/beckoned & Hey Tom! \\\hline
 \end{tabular}
 \caption{The 8 basic cases of communication}
 \label{tab:ennounT1}
 \end{table}
 
-The cases with their numbers, short explanations and possible prepositions that could be used for them are illustrated in \autoref{tab:ennounT1}. Of these, the vocative case is not really relevant, since it only occurs occasionally and usually follows the forms of the subject case. These cases exist in some shape or form in EVERY language of the world, since these meanings are fundamental to existence. English is a preposition based smooth language and does not alter word forms, allowing it to be a good medium to solve for rougher languages. Since perspectives are structured differently in general, I will refer to base cases by using just their numbers in the consequent text. So, even if case naming and association changes per language, case numbers and their meanings will remain forever invariant. 
+The cases with their numbers, short explanations and possible prepositions that could be used for them are illustrated in \autoref{tab:ennounT1}. Of these, the vocative case is not really relevant, since it  occurs occasionally and  follows the forms of the subject case. These cases exist in some shape or form in EVERY language of the world, since these meanings are fundamental to existence. English is a preposition based smooth language and does not alter word forms, allowing it to be a good medium to solve for rougher languages. Since perspectives are structured differently in general, I will refer to base cases by using just their numbers in the consequent text. So, even if case naming and association changes per language, case numbers and their meanings will remain forever invariant. 
 
-If form changes are used, then the noun, according to the number of cases in the perspective will have a table similar to \autoref{tab:ennounT1}. The resulting matrix of case vs multiplicity will be termed the `case-multiplicity' matrix and be given the code $\vm{C}$.
+The rougher a perspective is, the more case-based form changes its nouns use. Combined with its supported multiplicities,  a matrix of case vs multiplicity emerges for every noun, which  will  be given the code $\vm{C}$.
 \subsection{Article}
-These are emphasizers. In other words, they mention whether  a general noun or something specific with prior context is under consideration. An example:
+These are emphasizers. In other words, they mention whether  a general category (\itt{none}), a general noun of a certain category (\itt{indefinite}), or a specific noun of a certain category (\itt{definite}) is under consideration:
 \begin{example}
     \begin{tabular}{c}
-    (A) piece of metal cannot  stave off hunger, but  can turn (the) tide of war \\\hline The mermaid is (a) fool
+    () Life is worthless \\\hline (A) piece of metal cannot  stave off hunger \\\hline (The) mermaid is a fool
     \end{tabular}
 \end{example}
-Many rougher languages do not have this feature, since exclusivity can be given in other ways.  This section will be omitted if irrelevant. If needed, the correspondent matrix will be labelled $\vm{G}$. Subdivisions of this matrix according to gender will be marked with subscript `$M,F,N$': $G_{M},G_{F},G_{N}$ for the male, female and neutral counterparts respectively.
+Many rougher languages do not have this feature, since exclusivity can be given in other ways.   If needed, the correspondent matrix, which is similar to $\vm{C}$, will be labelled $\vm{G}$. Gender based subdivisions  will be marked via subscripts $M,F,N$ for the \enquote{male, female and neutral} counterparts respectively.
 
-\bt{Case, gender and multiplicity form changes - exactly like a noun}
+\bt{Case, gender and multiplicity form changes}
 \subsection{Adjective}
-These words describe nouns, either directly before them or somewhere else in the sentence. In order to avoid confusion, they are normally kept right before the noun they describe but after articles, where their root often changes form  (Matrix name: $\vm{J}$). Additionally, adjectives have normal, comparative and superlative forms, wherein the latter two  allow for the comparison of  nouns based on one of their properties. If adjectives stand alone, the correspondent existential verb (like `to be' for English) must be  the main verb of the sentence, although the comparative forms can  sometimes use other main verbs. Rather interestingly, adjectives are not a necessary part of a language, since the idea of describing a noun implies a sentence like:
+These words describe nouns, and have two possible placements in any sentence:
+\begin{enumerate}
+    \item Directly  before the noun in the noun unit (Most common)
+    \item As an independent unit (requires main verb `to be')
+\end{enumerate}
+If embedded into the noun unit,   the adjective root often changes form  (Matrix name: $\vm{J}$) analogous to $\vm{C}$.  If adjectives stand alone, the correspondent existential verb (like `to be' for English) must be  the main verb of the sentence, although the comparative forms can  sometimes use other main verbs. 
+
+Adjectives (except for state based properties like `dead') possess normal, comparative and superlative forms, wherein the latter two  allow for the comparison of  nouns based on one of their properties. These forms are also subject to $\vm{J}$ if required. Rather interestingly, adjectives are not  necessary for a  language:
 \begin{example}
     \begin{tabular}{c|c}
         \bt{Existential verb} & \bt{Adjective} \\\hline
@@ -208,19 +220,27 @@ Aside from using its comparative and superlative forms, normal adjective intensi
 \end{example}
 If used, the entire group becomes a single adjective unit, in which only the original adjective undergoes any necessary form change. Both of these adjective phenomena have  the same cause, which has to do with the way describer subclauses interact with noun units. 
 
-\bt{Normal, comparitive, superlative forms along with the form changes corresponding to the noun unit}
+\bt{Normal, comparative, superlative forms along with $\vm{J}$}
 \subsection{Pronoun}
-These are placeholders for nouns that are repeated too many times, and consequently follow similar structural patterns as them.  Not absolutely necessary, but contribute to linguistic variety. For example, Japanese does not like to use them and sticks to repeating names or implying their existence based on context. Similar to nouns, pronouns have their own corresponding forms. There exist three different kinds of pronoun forms for the three types of conversations - First person when speaking about a group you are a part of, second person for speaking about a group the conversation partner is a part of, and third person for speaking about a group neither you nor the conversation partner is a part of. Often, the second person contains multiple politeness based variants, which in most cases are based on the plural forms of the informal second person.  The pronouns described until now are termed `personal', since they describe the various `persons'. 
+These are placeholders for nouns. It is possible to omit this feature at the cost of added roughness. For example, Japanese does not like to use them and sticks to repeating names or implying their existence based on context.  There exist three different kinds of pronoun forms for the three types of conversations:
+\begin{enumerate}
+    \item \bt{First person} when speaking about a group you are a part of
+    \item \bt{Second person} for speaking about a group the conversation partner is a part of
+    \item \bt{Third person} for speaking about a group neither you nor the conversation partner is a part of
+\end{enumerate}    
+Often, the second person contains multiple politeness based variants, which in most cases are based on the plural forms of the informal second person.  The pronouns described until now are termed `personal', since they describe and replace the various `persons'. 
 
-Aside from them, there exist other typical classes:  indefinite, demonstrative, possessive,  reflexive. Nouns, and every pronoun class except `personal, reflexive' can only ever be in third person.
+The complete list of pronoun classes is:  \itt{personal, indefinite, demonstrative, possessive,  reflexive}. Nouns, and every pronoun class except `personal, reflexive' are \ut{always} in third person.
 
-A reflexive pronoun is employed if any other case aside from $1$ references  the same entity as $1$ in the same sentence. I am not completely sure why this distinction exists, since a personal pronoun would do just fine, and the forms are often based upon them. Due to  reverse referencing and lone usage (never part of a noun unit), this class can never be in case $1$ or $6$, although case $6$ might have rare exceptions in smooth languages: `Make something of yourself'. Since reflexivity is directly attached to the case $1$ noun, this class must follow its person and multiplicity: only the case may differ. An example with case $2$:
+All pronouns have another property unique to them aside from their classes: \itt{Dependency}. A dependent pronoun may only appear within a noun unit, whereas independent pronouns have their own standalone units, which while similar to noun units, do not provide any features other than $\vm{C}$. Such loner units also require additional external  context to make sense.
+
+A reflexive pronoun is employed if any other case aside from $1$ references  the same entity as $1$ in the same sentence. This class is strictly necessary only  for the third person, but is conventionally used for all conversations. Due to its reverse referencing and independence, this class can never be in case $1$ or $6$, although case $6$ might have rare exceptions in smooth languages: `Make something of yourself'. Since reflexivity is directly attached to the case $1$ noun, this class must follow its person, gender and multiplicity: only the case may differ. An example with case $2$:
 \begin{example}
 \begin{tabular}{c|c}
-    \bt{Reflexive} & I\{$1$\} wash myself\{$2$\} \\\hline \bt{Normal} & He\{$1$\} washes me\{$2$\}
+    \bt{Reflexive} & He\{$1$\} washes himself\{$2$\} \\\hline \bt{Normal} & He\{$1$\} washes him\{$2$\}
 \end{tabular}
 \end{example}
-In order to understand possessive pronouns, a distinction must be drawn between them and general case $6$ personal pronouns. Case $6$ personal pronouns always stand alone in a sentence and only imply possession corresponding to a certain person.  Possessive pronouns  always start a noun unit, and never appear with articles. Often, they also change form.
+Possessive and case $6$ personal pronouns are two sides of the same coin. Case $6$ personal pronouns are independent, and only imply possession corresponding to a certain person, while possessive pronouns  are dependent:
 \begin{example}
     \begin{tabular}{c|c|c}
         \bt{Personal:} $6$ & \bt{Possessive} & \bt{Person, Multiplicity} \\\hline
@@ -230,22 +250,29 @@ In order to understand possessive pronouns, a distinction must be drawn between 
 \end{example}
 Most languages use case $6$ personal pronouns as root forms to make the form variations for their possessive counterparts, but  both these classes are still fundamentally different. Another important difference is that using a case $6$ personal pronoun requires the existential verb `to be' as the main verb. 
 
-\textit{For the curious who wonder if such contractions are also possible for other cases aside from  $6$, for example  case $3$, the short answer is no. The long answer is yes, but you would never need that functionality because of how unnatural it is. A possessive pronoun technically acts like an adjective, and gives the noun unit  an addition of the form:}
+\textit{For the curious who wonder if such contractions are also possible for other cases aside from  $6$, for example  case $3$, the short answer is no. The long answer is yes, but  they would be useless. A possessive pronoun  behaves like an adjective, and gives the noun unit  an addition of the form:}
 \begin{example}
     \begin{tabular}{m{4cm}|m{5cm}|m{5cm}}
         My book is wet & The book, which is mine, is wet & The book, which I possess, is wet\\\hline
         I mutated her hand & I mutated the hand, which was hers & I mutated the hand, which she possessed
     \end{tabular}
 \end{example} 
-\textit{Assume for a moment that the case $3$ counterpart to `my' is `myo'. `Myo book' now means: `The book, which uses me' according to the case $3$ meaning. The reason the meaning flips is because $1,6$ are the only cases that make their argument the actor in the expanded subclause, see \autoref{tab:ennounT1}. Among these, $1$ expects a verb and is ruled out. To illustrate, if `moy' is the case $1$ pronoun, `moy almonds' means: `The almonds, which I perform' or `I almonds', which does not make sense. Examples for cases $3,4,5$:}
+\textit{Such pronoun based additions only make sense if two basic conditions are satisfied:}
+\begin{enumerate}
+    \item \itt{The noun is the actor in the expanded subclause for the case}
+    \item \itt{The noun coupled with its pronoun can express a fully meaningful concept}
+\end{enumerate}
+\textit{$1,6$ are the only two cases for which the first condition is satisfied (see \autoref{tab:ennounT1}). Among these, $1$ expects a verb and is ruled out. To illustrate, if `moy' is the case $1$ pronoun, `moy almonds' means: `The almonds, which I perform' or `I almonds', which does not make sense.} 
+
+\itt{To show why the second condition is necessary, let us  build pronoun counterparts for cases $3,4,5$ and see what they translate to:}
 \begin{example}
-    \begin{tabular}{c|m{7cm}}
-Lisa tossed myo book in the trash & Lisa tossed the book, which uses me, in the trash\\\hline
-Hois cat kicked him in the face & The cat, who (???) to him, kicked him in the face\\\hline
-Tom was looking for horu book & Tom was looking for the book, which separated itself from her
+    \begin{tabular}{c|m{6cm}|m{7cm}}
+$3$ & Lisa tossed omy book in the trash & Lisa tossed the book, which uses me, in the trash\\\hline
+$4$ & Ohis cat kicked him in the face & The cat, who (???) to him, kicked him in the face\\\hline
+$5$ & Tom was looking for oher book & Tom was looking for the book, which separated (itself) from her
     \end{tabular}
 \end{example}
-\textit{It is clear that all case contractions other than $6$ require other nouns to make sense, and cannot interact sensibly with personal pronouns. Case $4$ even becomes invalid since the verb is undefined. Another way to look at this is that case $6$ shows the state of possession, which can be done with only one argument, while other cases normally require more to make sense. In the case $3$ example, it is not clear what the book uses him for. The case $5$ example is valid, but will never make sense to use due to the inverted order of actor and object. A world where nouns start using people (personal pronouns) for various things, rather than people nouns  is rather unnecessary to think about, wouldn't you say?}
+\textit{It is clear that all case contractions other than $6$ either yield ambiguous meanings, or would never be needed.  Case $4$  becomes invalid since the verb cannot be guessed.  The case $3, 5$ examples are valid, but meaningless  to the inverted order of actor and object. In a world where such contractions make sense (nouns start using people (personal pronouns) for various things, rather than people nouns), we would have bigger fish to fry than worrying about linguistics.}
 
 In the previous (non-italic) examples is hidden another class: the demonstrative pronoun. These place emphasis on a particular object(s) along with declaring whether the object(s) in question is near or far from the speaker.
 \begin{example}
@@ -255,53 +282,61 @@ In the previous (non-italic) examples is hidden another class: the demonstrative
         (These) tools may work & (Those) tools may work
     \end{tabular}
 \end{example}
-Often display form variation, and can be used as both standalones and in a noun unit. For standalone usage, previous context is necessary. The last class termed `indefinite' references  objects with unknown quantities or identities.
+Often display form variation, and can be used with both dependencies.  The last class  `indefinite' references  objects with unknown quantities or identities:
 \begin{example}
     \begin{tabular}{c|c}
         (Something) is wrong & He found (nothing) \\\hline
         (Somebody) once told me\ldots & (Nobody) could survive that
     \end{tabular}
 \end{example}
-They display form variation, but not nearly as much as other pronoun classes. Can  be used both as standalones as well as starters of the noun unit. In fact, if the  classes `personal, possessive' are considered as independent and dependent counterparts of a greater class, with `reflexive' being temporarily ignored, then every pronoun has two types of possible uses: Independent, Dependent. The independent use is what has been called `standalone', while the dependent use requires them to start the noun unit, without which they are invalid. To summarize:
+They display form variation, but not nearly as much as other pronoun classes. Can  be used with both dependencies. 
+
+Considering  the  classes `personal, possessive'  as independent and dependent counterparts of a greater class, every pronoun can  be uniquely categorised by the  subarguments person, dependency and class, when provided to the pronoun matrix:
 \begin{syntax}
     \begin{tabular}{c|c|c}
-    \bt{Class} & \bt{Dependence} & \bt{Matrix code}\\\hline
+    \bt{Class} & \bt{Dependency} & \bt{Matrix code}\\\hline
     Personal; Possessive & Independent($In$); Dependent($De$) & $a$ \\\hline
     Indefinite & Both & $b$ \\\hline
     Demonstrative & Both & $c$ \\\hline
     Reflexive & Dependent & $r$
     \end{tabular}
 \end{syntax}
-The matrix for pronouns will be named $\vm{P}$ in general, with subarguments for the class of pronouns according to the above codes, and optional subscripts \enquote{\textit{M,F,N}} for the third person. Independence/Dependence will be marked by $In/De$ respectively. Additional subarguments concerning the person are: $[1_{p},2_{p},3_{p}]$.  The matrix arguments for describing the case-multiplicity matrix of a pronoun are (case,multiplicity,politeness) which follow the structural convention described in \autoref{fig:enverbZ1}. 
+The matrix for pronouns will be named $\vm{P}$ in general, with subarguments  according to the above codes, and optional subscripts \enquote{\textit{M,F,N}} for the third person.  Person subarguments  are: $[1_{p},2_{p},3_{p}]$.  The actual matrix arguments for $\vm{P}$ are (case,multiplicity,politeness) which follow the structural convention described in \autoref{fig:enverbZ1}. 
 
-Especially for $[a,De]$, the multiplicity and politeness of the root forms used  must also be specified beside  the person in curly brackets: \{M,H\}. Hence, $[a,De]$ never needs politeness defined in its cells: (case,multiplicity)
+Especially for $[a,De]$, the multiplicity and politeness of the root forms used  must also be specified beside  the person in curly brackets: \{M,H\}. Hence, $[a,De]$ never needs politeness defined in its cells: (case,multiplicity). Similarly, $[r,De]$ requires the politeness to be defined with $2_p$.
 
-\bt{Case, multiplicity, gender - like a noun}
+\bt{Case, multiplicity, gender, class, person (politeness), dependency}
 \subsection{Joining}
-Rules for joining nouns to create new nouns are important depending on which language is considered. Compounds created using such methods normally have a case $6$ relation between the individual components, but sometimes other cases like $4, 7$ may also be found. Sometimes multiple cases may seem to fit the same example, but this is no cause for concern as long as the word is understood correctly. 
+Rules for joining nouns to create new nouns are important depending on which language is considered. Compounds created using such methods normally have a case $6$ relation between their individual components, but sometimes other cases like $4, 7$ may also be found. 
 \begin{example}
     \begin{tabular}{c|m{9cm}}
         \bt{Case} & \bt{Examples} \\\hline
         $4$ & train station, water bottle, tooth/brush \\\hline
         $6$ & train driver, water bottle, factory owner\\\hline
-        $7$ & Lap/top, earth/worm
+        $7$ & lap/top, earth/worm, rabbit hole
     \end{tabular}
 \end{example}
-These rules serve as tools  to decipher unknown noun compounds, and provide a method to reconcile structure and meaning.
+Sometimes multiple cases may seem to fit the same example, but this is no cause for concern. These rules are merely tools  to decipher unknown noun compounds, and provide a method to reconcile structure and meaning.
 
 \subsection{Numbers}
-Numbers can either occur on their own as pure numbers (one, two\ldots),  as rank counters (first, second, three-eighths\ldots) or to define the multiplicity of objects (single, double, half, one-third\ldots). Their form variations and usage mimic  adjectives in practice,  but pure numbers normally remain invariant. Since ranks represent a specific quantity, adjective gradations (comparative/superlative) are not permitted for them. 
+Numbers can either occur on their own as pure numbers (one, two\ldots),  as rank counters (second, three-eighth\ldots) or to define the multiplicity of objects (double,  one-thirds\ldots). Their form variations and usage mimic  adjectives in practice,  but pure numbers normally remain invariant. Since numbers represent a specific quantity, adjective gradations (comparative/superlative) are not permitted for them. 
 
-From a mathematical perspective, natural languages  concern themselves only with positive rational factors like $3\frac{4}{5}$ for example. The way such a factor is written in word form is to take its whole part, and club it with the fractional part. For the scope of this solver, the following property is important:
+From a mathematical perspective, natural languages  concern themselves only with positive rational factors like $3\frac{4}{5}$ for example. To write such a factor  in word form,  the following property is important:
 \begin{syntax}
 Let $f$ be a positive rational number, with $[f]$ and $\{f\}$ representing the floor (greatest integer smaller than $f$) and fractional (fractional part of $f$) functions respectively. Then, $f$ can be uniquely expressed as:\begin{equation}
     f = [f] + \{f\}
     \label{eq:factor}
 \end{equation}
 \end{syntax}
-Using this property, any factor $f$ can be expressed as an integral part (represented by a pure number) and a fractional part (represented by a modified rank counter), on which a multiplicity marker (`times' for English) can later be appended. Examples for $f$: two and two-thirds ($2\frac{2}{3}$), one and three-quarters ($1\frac{3}{4}$), twenty-two and three-eighty-seconds\ldots. Additionally, there is normally a special verb template that denotes the action of multiplying: doubling, tripling, halving\ldots. This subsection is directly related to timekeeping.
+Using this property, any factor $f$ can be expressed as the sum of an integral part (represented by a pure number) and a fractional part (represented by a rank counter). To express  multiplicities, a marker (`times' for English) is later  appended to $f$:
+\begin{example}
+    \begin{tabular}{cc|cc}
+two and two-third times & $2\frac{2}{3}\times$ & one and three-quarters & $1\frac{3}{4}$ 
+    \end{tabular}
+\end{example}
+Normally, there is  a special verb template that denotes the action of multiplying: doubling, tripling, halving\ldots\, This subsection is directly related to timekeeping.
 
-\bt{Gender, case}
+\bt{$\vm{J}$: gender, case}
 
 \section{Verb} \label{sec:enverb}
 These are action words that describe what occurs to the nouns in a sentence. Verbs have either a suffix or attached preposition that signifies that they are in their dictionary (infinitive) form. If this signifying marker is eliminated, the verb root is left, which is operated upon by conjugation rules. 
@@ -323,9 +358,9 @@ A common example for special verbs requiring a verb argument is the class of `mo
 \end{example}
 If the supporting argument is missing, it is implied via earlier context, since  `modal' verbs are incomplete without their argument.
 
-Verbs that  take prepositional arguments are  `prepositionally supported': get (up), take (out), burn (down)\ldots. The added preposition defines a certain direction or intensity, and creates a new combined meaning with the verb. Also, the preposition requires an associated noun in the necessary case, even if it is implicit. 
+Verbs that  take prepositional arguments are  `prepositionally supported': get (up), take (out), burn (down)\ldots\, The added preposition defines a certain direction or intensity, and creates a new combined meaning with the verb. Also, the preposition requires an associated noun in the necessary case, even if it is implicit. 
 
-Helping verbs (which may otherwise be used normally) are  used as placeholders or indicators. Their sole purpose is to change the VC structure to mark aspects or times. Hence, they must always have a non-empty associated DC. English uses `to be, to have, will' as helping verbs. Aside from this, prefixes can be added to the main verb to change its meaning, but this does not change the verb chain: make/remake, vow/disavow, do/undo\ldots. Such verbs will be briefly considered in the subsection on prefixes. To concretely summarize:
+Helping verbs (which may otherwise be used normally) are  used as placeholders or indicators. Their sole purpose is to change the VC structure to mark aspects or times. Hence, they must always have a non-empty associated DC. English uses `to be, to have, will' as helping verbs. Aside from this, prefixes can be added to the main verb to change its meaning, but this does not change the verb chain: make/remake, vow/disavow, do/undo\ldots\, Such verbs will be briefly considered in the subsection on prefixes. To concretely summarize:
 \begin{syntax}
     \begin{tabular}{c|c|c}
         \bt{Class} & \bt{Argument} & \bt{Set code}\\\hline
@@ -505,7 +540,7 @@ Uses for such suffixes are normally restricted, with at max one example per pers
 \subsection{Prefix}
 Some beginnings alter the meaning of verbs (and consequently their nominalized counterparts) they are applied on, but these are often not very consistent. This section is a starting point into the realm of possibility, and is considered only for completeness.  As such, it will not be very detailed. Besides, learning large lists of meanings without appropriate context is not a good way to acquire them to begin with.
 \section{Preposition} \label{sec:enprep}
-Words that show the location (space/time) of any object. More precisely, these give the relative  sense of time or space: towards, against, from, for, at etc.  Never declined, and have only two possible use cases:
+Words that show the location (space/time) or the relationship of any noun with respect to any other noun:  towards, against, from, for, at etc.  Never declined, and have only two possible use cases:
 \begin{enumerate}
     \item Directly before the associated noun, at the very beginning of the noun unit
     \item With prepositionally supported verbs as their argument
@@ -629,7 +664,7 @@ The very first word that marks the beginning of any describer subclause is the h
     The man($1$), from whom($5$) the blood was extracted, was  a vampire\\\hline The man($1$), whose blood($6$) was extracted, was a vampire
     \end{tabular}
 \end{example}
-This property is more observable for rougher perspectives where $\vm{Q}$ is larger. Due to the special nature of case $6$, its hook words are dependent: they always need an associated noun argument, as seen in the second example. The consequently formed noun unit  takes case $1$ in the subclause.
+This property is more observable for rougher perspectives where $\vm{Q}$ is larger. Due to the special nature of case $6$, its hook words are dependent: they always need an associated noun argument, as seen in the second example.
 
 Such subclauses can be made as descriptive as desired, and although used mainly for nouns, it is also possible to make them for  personal pronouns ($\vm{P}[a,In,:]$) as well. Since $\vm{Q}$ automatically assumes $3_p$, the pronoun must be mentioned again in some perspectives to give the proper context. English is not one of them:
 \begin{example}
