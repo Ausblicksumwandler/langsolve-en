@@ -1,6 +1,7 @@
 # Language-specific ownership
 
 /german/ @Ausblicksumwandler/german
+/hindi/ @Ausblicksumwandler/hindi
 
 # Core project files
 
@@ -10,6 +11,8 @@
 /package.tex @Ausblicksumwandler/core-maintainer
 /command.tex @Ausblicksumwandler/core-maintainer
 /UserGuide.tex @Ausblicksumwandler/core-maintainer
+/InstallationGuide.tex @Ausblicksumwandler/core-maintainer
+/backshots.tex @Ausblicksumwandler/core-maintainer
 /figures/ @Ausblicksumwandler/core-maintainer
 /fonts/ @Ausblicksumwandler/core-maintainer
 

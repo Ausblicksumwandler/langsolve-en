@@ -24,16 +24,16 @@
     Prefixed verb ($\mathcal{Y}$) & Verb that uses a prefix to make a new verb infinitive\\\hline
     [Object/non-object] verb & A verb that [compulsorily needs/does not take] an object\\\hline
     Tense & Describes the time and aspect of any action described by the verb chain\\\hline
-    Aspect & The state of the action described by the verb\\\hline
+    Aspect & The state of the action described by the verb chain\\\hline
     Aspect-Time matrix ($\vm{T}$) & The matrix whose cells are tenses, columns are time, and rows are aspects\\\hline
-    Tense submatrix ($\vm{S}$) & The matrix whose cells are verb forms, columns are multiplicities, and rows are conversation natures (person). The $2^{nd}$ person has a $3^{rd}$ dimension for politeness based forms\\\hline
+    Tense submatrix ($\vm{S}$) & The matrix whose cells are CV forms, columns are multiplicities, and rows are conversation natures (person). The $2^{nd}$ person has a $3^{rd}$ dimension for politeness based forms\\\hline
     Politeness grade & The degree of politeness. $0$ is the most informal and $\mathbb{H}$ the most formal\\\hline
 \end{tabular}
 \vfill
 \vspace{0.5em plus 0.3em minus 0.1em}
 \begin{tabular}{m{5cm} m{10cm}}
     \bt{Renamed term} & \bt{Original term / Description} \\\hline
-    Base cell ($\vm{T}(n_1,n_2)$) & The cell in $\vm{T}$, which has no DC and whose CV is closest to the verb infinitive\\\hline
+    Base cell ($\vm{T}(n_1,n_2)$) & The cell in $\vm{T}$, which has no DC and whose CV is closest to its verb infinitive\\\hline
     Subclause & Dependent clause\\\hline
     P1 & Present Participle: -ing based ongoing forms like going, talking, killing, hopping\ldots \\\hline
     P2 & Past Participle: -ed based completed forms like gone, talked, killed, hopped\ldots \\\hline
@@ -155,7 +155,7 @@ One of the goals of this text is to decipher the ideas behind every such structu
 \end{enumerate}
 The multiplicity of any noun is designated henceforth by a unique number: $1$ for singular and $\mathbb{M}$ for the highest supported multiplicity, which mostly implies plural. Multiplicity methods depend on gender, if it exists. All case based forms of a noun are made from specific base forms, called the noun root ($\vm{R}$). Normally, $\vm{R}$ is comprised of  case $1$  forms.
 
-Every noun along with  its various features: Examples being  adjectives, articles among others, can be thought of as a container. These features along with the noun form an inseparable `noun unit' as it will be called, and is an independent block, whose internal order of words cannot be disturbed, and is unique per language. The existence of such units is guaranteed in smooth languages, whereas rougher ones sometimes do not use them.
+Every noun along with  its various features: Examples being  adjectives, articles among others, can be thought of as a container. These features along with the noun form an inseparable `\texttt{noun unit}' as it will be called, and is an independent block, whose internal order of words cannot be disturbed, and is unique per language. The existence of such units is guaranteed in smooth languages, whereas rougher ones sometimes do not use them.
 
 \bt{To structurally know any noun, one must know its form changes with respect to Gender, Multiplicity, and Case}
 
@@ -228,9 +228,9 @@ These are placeholders for nouns. It is possible to omit this feature at the cos
     \item \bt{Second person} for speaking about a group the conversation partner is a part of
     \item \bt{Third person} for speaking about a group neither you nor the conversation partner is a part of
 \end{enumerate}    
-Often, the second person contains multiple politeness based variants, which in most cases are based on the plural forms of the informal second person.  The pronouns described until now are termed `personal', since they describe and replace the various `persons'. 
+Often, the second person contains multiple politeness based variants, which in most cases are based on the plural forms of the informal second person.  The pronouns described until now are termed `\texttt{personal}', since they describe and replace the various `persons'. 
 
-The complete list of pronoun classes is:  \itt{personal, indefinite, demonstrative, possessive,  reflexive}. Nouns, and every pronoun class except `personal, reflexive' are \ut{always} in third person.
+The complete list of pronoun classes is:  \itt{personal, indefinite, demonstrative, possessive,  reflexive}. Nouns, and every pronoun class except `\texttt{personal, reflexive}' are \ut{always} in third person.
 
 All pronouns have another property unique to them aside from their classes: \itt{Dependency}. A dependent pronoun may only appear within a noun unit, whereas independent pronouns have their own standalone units, which while similar to noun units, do not provide any features other than $\vm{C}$. Such loner units also require additional external  context to make sense.
 
@@ -282,7 +282,7 @@ In the previous (non-italic) examples is hidden another class: the demonstrative
         (These) tools may work & (Those) tools may work
     \end{tabular}
 \end{example}
-Often display form variation, and can be used with both dependencies.  The last class  `indefinite' references  objects with unknown quantities or identities:
+Often display form variation, and can be used with both dependencies.  The last class  `\texttt{indefinite}' references  objects with unknown quantities or identities:
 \begin{example}
     \begin{tabular}{c|c}
         (Something) is wrong & He found (nothing) \\\hline
@@ -291,7 +291,7 @@ Often display form variation, and can be used with both dependencies.  The last 
 \end{example}
 They display form variation, but not nearly as much as other pronoun classes. Can  be used with both dependencies. 
 
-Considering  the  classes `personal, possessive'  as independent and dependent counterparts of a greater class, every pronoun can  be uniquely categorised by the  subarguments person, dependency and class, when provided to the pronoun matrix:
+Considering  the  classes `\texttt{personal, possessive}'  as independent and dependent counterparts of a greater class, every pronoun can  be uniquely categorised by the  subarguments person, dependency and class, when provided to the pronoun matrix:
 \begin{syntax}
     \begin{tabular}{c|c|c}
     \bt{Class} & \bt{Dependency} & \bt{Matrix code}\\\hline
@@ -339,28 +339,42 @@ Normally, there is  a special verb template that denotes the action of multiplyi
 \bt{$\vm{J}$: gender, case}
 
 \section{Verb} \label{sec:enverb}
-These are action words that describe what occurs to the nouns in a sentence. Verbs have either a suffix or attached preposition that signifies that they are in their dictionary (infinitive) form. If this signifying marker is eliminated, the verb root is left, which is operated upon by conjugation rules. 
+All actor, object, intention\ldots\, relations in a sentence pertaining to a certain action are portrayed by noun cases (\autoref{tab:ennounT1}). The action itself is  represented by a verb. Verbs have either a suffix or attached preposition that signifies that they are in their dictionary (infinitive) form. If this signifying marker is eliminated, the verb root is left, which is operated upon by conjugation rules. 
 
-However, verbs cannot directly be used in sentences without forming verb chains (VC). Based on whether the verb takes additional arguments;  the verb tense; and mode of the sentence in question,  the verb chain will vary. Any verb chain has exactly one verb which conjugates according to person and multiplicity, while the other components remain invariant. This variable verb is  the conjugating verb (CV). The invariant part will be termed the dormant chain (DC). 
+Verbs can only be used in sentences as part of a verb chain (VC). Based on whether the verb takes additional arguments;  the verb tense; and mode of the sentence in question,  the verb chain will vary. Any verb chain has exactly one verb which conjugates according to person and multiplicity, while the other components remain invariant. This variable verb is  the conjugating verb (CV). The invariant part will be termed the dormant chain (DC). \ut{The CV may never be empty, though the DC can be a null set.}
 
 \bt{To derive the VC for any combination of sentence mode, verb tense and verb argument type, one only needs to know the corresponding CV and DC}
 
-The CV may never be empty, though the DC can be a null set. Hence, for every declaration of verb chain structure, the CV and DC will be mentioned separately. Obviously, all such VCs must have a main verb, which is the focus. The question of whether the verb takes arguments is always answered for the main verb. 
+All such VCs must have a main verb, which is the focus. The question of whether the verb takes arguments is always answered for the main verb. 
 
-A verb can take two types of arguments: verb, preposition. Any verb can only take one argument from either type at a time. The idea behind supplying these arguments is to supplement the meaning of the verb. Depending on its current usage, a verb may fall in the class `takes arguments', or `takes no argument'. However, it must be noted that these classes  are not mutually exclusive for a given verb: the classification is based solely on its current usage. At the same time, it is also true that there exist verbs, which strictly belong to only one of them. Ex: \textit{get up, get} are both valid verbs, but belong to different argument classes.
+A verb may fall in the class `\texttt{takes arguments}', or `\texttt{takes no argument}'. These classes  are not always mutually exclusive for a given verb:  classification is based solely on  current usage.  Ex: \textit{get [up], get []} are both valid verbs, but belong to different argument classes.
 
-A common example for special verbs requiring a verb argument is the class of `modal' verbs:
+A verb can take two types of arguments: \itt{verb, preposition}. Argument  types are mutually exclusive, and cannot be chained (\itt{get [up] \sout{[away]}, can [get up]}). The idea behind supplying these arguments is to supplement the meaning of the verb. 
+
+A common example for special verbs requiring a verb argument is the  `modal' class:
 \begin{example}
     \begin{tabular}{c|c}
         He can (what?) the guitar & He can (play) the guitar\\\hline
         I must (what?) my opponents & I must (kill) my opponents
     \end{tabular}
 \end{example}
-If the supporting argument is missing, it is implied via earlier context, since  `modal' verbs are incomplete without their argument.
+If the supporting argument is missing, it must be implied via earlier context, since  `modal' verbs are otherwise incomplete.
 
-Verbs that  take prepositional arguments are  `prepositionally supported': get (up), take (out), burn (down)\ldots\, The added preposition defines a certain direction or intensity, and creates a new combined meaning with the verb. Also, the preposition requires an associated noun in the necessary case, even if it is implicit. 
+Prepositional arguments define a certain direction or intensity, and create a new combined meaning with the verb: 
+\begin{example}
+get (up), take (out), burn (down)\ldots
+\end{example}
+This argument type provides a method to implicitly add a noun unit (associated with the argument) to the verb, and can sometimes result in meanings that do not seem to stem from either of its parts:
+\begin{example}
+    \begin{tabular}{c}
+        Take him  [out] (of the world)\\\hline Get [down] (to the hospital) now!
+    \end{tabular}
+\end{example}
+It is practically impossible to trace back the exact logic everytime, but  incorrect  logic can also greatly facilitate their retention in memory. In case the contracted unit is explicitly specified, it behaves as per  usual  noun unit rules, but  its associated preposition remains part of the DC.
 
-Helping verbs (which may otherwise be used normally) are  used as placeholders or indicators. Their sole purpose is to change the VC structure to mark aspects or times. Hence, they must always have a non-empty associated DC. English uses `to be, to have, will' as helping verbs. Aside from this, prefixes can be added to the main verb to change its meaning, but this does not change the verb chain: make/remake, vow/disavow, do/undo\ldots\, Such verbs will be briefly considered in the subsection on prefixes. To concretely summarize:
+Helping verbs (which may otherwise be used normally) are  used as placeholders or indicators. Their \ut{sole} purpose is to change the VC structure to mark aspects, times or sentence modes.  English uses `to be, to have, will' as helping verbs. 
+
+Aside from this, prefixes can be added to the main verb to change its meaning, but this does not change the verb chain: make/remake, vow/disavow, do/undo\ldots\, Such verbs will be briefly considered in the subsection on prefixes. In summary:
 \begin{syntax}
     \begin{tabular}{c|c|c}
         \bt{Class} & \bt{Argument} & \bt{Set code}\\\hline
@@ -370,24 +384,24 @@ Helping verbs (which may otherwise be used normally) are  used as placeholders o
         Prefixed & -/Preposition & $\mathcal{Y}$
     \end{tabular}
 \end{syntax}
-The last distinction separate from all the rest is about verbs that take  or do not take objects. For this solver, object verbs mean those verbs that compulsorily need an object (case $2$ noun) to make sense: I use (what?), I use (a knife). Non-object verbs are those that express state change and never take objects: The car stopped, The bomb is exploding. These two categories are mutually exclusive, and are normally differentiated through a change in the verb infinitive: either a prefix or different spelling. English is a language that does not make these changes unfortunately:
+The last distinction separate from all the rest is about verbs that take  or do not take objects. For this solver, object verbs mean those verbs that compulsorily need an object (case $2$ noun) to make sense. Non-object verbs are those that express state change and never take objects. These two categories are mutually exclusive, and are normally differentiated through a spelling change in the verb infinitive. English is a language that does not differentiate:
 \begin{example}
     \begin{tabular}{c|c}
         \bt{Non-object} & \bt{Object}\\\hline
         The car($1$) stopped & I($1$) stopped the car($2$)\\\hline
-        The boat($1$) drowned & He($2$) drowned the boat($2$)
+        The boat($1$) sank & He($1$) sank the boat($2$)
     \end{tabular}
 \end{example}
-This is particularly important for the subsection on passive sentences, since  passives for non-object verbs are illegal.
+This is particularly important for voice (\autoref{sec:enstce}), since  passives for non-object verbs are illegal.
 
 \textit{Footnote - `to be' as a verb will always be irregular irrespective of language}
 
 \bt{VC, Aspect-Time Matrix: \autoref{tab:enverbT1}}
 
 \subsection{Tense}
-Here, I would like to introduce the Aspect-Time-Politeness matrix. Any language can have ONLY three time forms - past, present, future. Along with this, there can be additional information encoded within a verb that portrays the state of the action being performed. The combination of both these things is what we call a tense. Note that a tense only describes the relative time with respect to the referred point of time. In other words, a tense answers two questions:
+I would like to introduce the Aspect-Time-Politeness matrix. Any language can have ONLY three time forms - past, present, future. Along with this, there can be additional information encoded within a verb that portrays the state of the action being performed. The combination of both these things is  a tense. Note that a tense only describes the relative time with respect to the referred point of time. In other words, a tense answers two questions:
 \begin{enumerate}
-    \item When did this action occur?
+    \item When does this action occur?
     \item What is the state of this action?
 \end{enumerate}
 Both these questions are independent, and give rise to the Aspect-Time matrix, which is  documented for English in \autoref{tab:enverbT1}.
@@ -404,31 +418,31 @@ Both these questions are independent, and give rise to the Aspect-Time matrix, w
     \label{tab:enverbT1}
 \end{table}
 
-I am sure you can see where each tense fits already. The column `Neutral' implies the existence of just the aspect without commenting on the time. These are infinitive based forms which  appear in contracted subclauses of a sentence, and cannot stand on their own. A fun fact is that if you take these neutral forms and use enough adverbs, it is possible to understand the sentence as usual even without a time conjugation. Naturally, this is neither allowed nor elegant.
+I am sure you can see where each tense fits already. The column `\texttt{Neutral}' implies the existence of just the aspect without commenting on the time. These are infinitive based forms which  appear in contracted subclauses of a sentence, and cannot stand on their own. A fun fact is that if you take these neutral forms and use enough adverbs, it is possible to understand the sentence as usual even without a time conjugation. Naturally, this is neither allowed nor elegant.
 
 Many cultures have politeness and respect ingrained in their lives, and consequently language. In such cases, the third dimension of politeness appears for either direct conversation partners, or those being spoken of ($2^{nd}, 3^{rd}$ person). For the $3^{rd}$ person, a salutation or special title often suffices without any necessary form changes. For the $2^{nd}$ person, both pronouns and verbs often have different forms to encode this politeness. Due to technical limitations, all politeness grades have to be documented below each other, but the reader should imagine them as out of the page, both for pronouns and verbs.
 
-In order to get the right form of a verb, first the appropriate cell from \autoref{tab:enverbT1} must be chosen. Within each such cell (tense), verbs generally display form changes according to multiplicity and person. Once the person and multiplicity are decided, one may consider if a politeness grade is relevant. If not, the algorithm stops, or the politeness variant is updated to deliver the final verb form. This process is illustrated in \autoref{fig:enverbZ1}. Although I have only tested four: Pictorial (Japanese type), Slavic, Indian and European, I can confidently state that this works for all language groups.  Prove me wrong if you dare. 
+In order to get the right form of a verb (CV), first the appropriate cell from \autoref{tab:enverbT1} must be chosen. Within each such cell (tense), verbs generally display form changes according to multiplicity and person. Once the person and multiplicity are decided, one may consider if a politeness grade is relevant. If not, the algorithm stops, or the politeness variant is updated to deliver the final verb form. This process is illustrated in \autoref{fig:enverbZ1}. Although I have only tested four: Pictorial (Japanese type), Slavic, Indian and European, I can confidently state that this works for all language groups.  Prove me wrong if you dare. 
 
 \begin{figure}[bth]
     \centering
 \begin{tikzpicture}[node distance=1.5cm,>=stealth]
-  % Stil für Knoten
+  % Style for nodes
   \tikzstyle{punkt}=[rectangle,draw,thick,minimum width=1.6cm,minimum height=0.9cm,align=center]
 
-  % Mittelknoten waagerecht
+  % Horizontal nodes
   \node[punkt,label=above:{Step 1}] (m1) {Aspect ($a$)\\ Time ($t$)\\ in $\vm{T}(a,t)$};
   \node[punkt,label=above:{Step 2}] (m2) [right=of m1] {Person ($p$)\\ Multiplicity ($m$)\\ in $\vm{S}[\vm{T}(a,t)](p,m)$};
   \node[punkt,label=above:{Step 3}] (m3) [right=of m2] {Politeness applicable?\\ No - Terminate\\ Yes - Degree $h$ appended};
 
-  % Kanten vom Anfangsknoten zu den Mittelknoten
+  % Flow arrows from beginning to end
   \draw[->] (m1) -- (m2);
   \draw[->] (m2) -- (m3);
 \end{tikzpicture}
 \caption{Verb form calculation algorithm}
 \label{fig:enverbZ1}
 \end{figure}
-Since matrices have been properly introduced, basic matrix notation is required. Any matrix $\vm{A}$ has individual cells represented by notation (row, column). So the cell formed by the intersection of row $3$ and column $2$ will read $\vm{A}(3,2)$.  By default, the Aspect-Time matrix will be denoted by the symbol $\vm{T}$. The submatrix of a cell of $\vm{T}$ describing person and plurality changes will be denoted by $\vm{S}$. All cells of a particular dimension will be collectively denoted using `:', which makes the notation for the $i^{th}$ row of $\vm{T}$ as $\vm{T}(i,:)$, and for the $i^{th}$ column as $\vm{T}(:,i)$. Similarly, cell ranges can be defined using something like $\vm{T}(4,3\leftrightarrow 4)$ for the columns $3$ to $4$ including both of them for the $4^{th}$ row. MATLAB users will find themselves right at home.
+Since matrices have been properly introduced, basic matrix notation is required. Any matrix $\vm{A}$ has individual cells represented by notation (row, column). So the cell formed by the intersection of row $3$ and column $2$ will read $\vm{A}(3,2)$.  By default, the Aspect-Time matrix will be denoted by the symbol $\vm{T}$. The submatrix of a cell of $\vm{T}$ describing person and plurality changes will be denoted by $\vm{S}$. All cells of a particular dimension will be collectively denoted using `\texttt{:}', which makes the notation for the $i^{th}$ row of $\vm{T}$ as $\vm{T}(i,:)$, and for the $i^{th}$ column as $\vm{T}(:,i)$. Similarly, cell ranges can be defined using expressions like $\vm{T}(4,3\leftrightarrow 4)$ for the columns $3$ to $4$ including both of them for the $4^{th}$ row. MATLAB users will find themselves right at home.
 
 On the basis of the above notation and \autoref{fig:enverbZ1}, a particular verb form can be written as: $\vm{S}[\vm{T}(a,t)](p,m)$. If and only if (iff) politeness is relevant, an additional dimension $h$ at the end  in the form $(p,m,h)$ must be appended with the relevant degree. The degree $0$ is the most informal, whereas every natural number after it will represent an increase in formality. For denoting the highest possible formality in a perspective, the letter $\mathbb{H}$ will be used instead.
 
@@ -436,19 +450,19 @@ Interestingly, the first step of \autoref{fig:enverbZ1} can also be used to  obt
 \begin{syntax}
     Let a verb chain $V$ correspond to cell $\vm{T}(i,j)$ in \autoref{tab:enverbT1}, not including $\vm{T}(:,4)$. A method $\mathcal{M}^{X}_{p}[V]$ is defined as an operator that takes in $V$ as an argument, and adds $p$ to the $X^{th}$ argument of $\vm{T}(i,j)$. Argument $1$ of $\vm{T}(i,j)$ is $i$. Methods do not affect the person and multiplicity of $V$.
 \end{syntax}
-The cell of $\vm{T}$ which has the smallest verb chain, with the CV in its  infinitive (dictionary) form is the base cell: $\vm{T}(n_1,n_2)$. Normally, this cell  always has time `present' and aspect `simple/continuous'. Starting from a verb chain $b$ from this base cell, two methods are applied successively in order to reach the necessary cell in $\vm{T}$. The total transformation is: $\mathcal{M}^{2}_{t-2}[\mathcal{M}^{1}_{a-1}[b]]$. This algorithm is illustrated in \autoref{fig:enverbZ2}.
+The cell of $\vm{T}$ which has the smallest verb chain, with its CV closest to its  infinitive (dictionary) form is the base cell: $\vm{T}(n_1,n_2)$. Normally, this cell   has time `\texttt{present}' and aspect `\texttt{simple/continuous}'. Starting from a verb chain $b$ from this base cell, two methods are applied successively in order to reach the necessary cell in $\vm{T}$. The total transformation for reaching $\vm{T}(a,t)$ is: $\mathcal{M}^{2}_{t-n_2}[\mathcal{M}^{1}_{a-n_1}[b]]$. This algorithm is illustrated in \autoref{fig:enverbZ2}.
 \begin{figure}[bth]
     \centering
 \begin{tikzpicture}[node distance=1.5cm,>=stealth]
-  % Stil für Knoten
+  % Style for nodes
   \tikzstyle{punkt}=[rectangle,draw,thick,minimum width=1.6cm,minimum height=0.9cm,align=center]
 
-  % Mittelknoten waagerecht
+  % Horizontal nodes
   \node[punkt,label=above:{Step 1}] (m1) {Start at base cell\\ $b$ in $\vm{T}(n_1,n_2)$};
-  \node[punkt,label=above:{Step 2}] (m2) [right=of m1] {Apply aspect $a$\\ $g=\mathcal{M}^{1}_{a-1}[b]$ \\$\rightarrow\vm{T}(n_1+a-1,n_2)$};
-  \node[punkt,label=above:{Step 3}] (m3) [right=of m2] {Apply time $t$\\ $\mathcal{M}^{2}_{t-2}[g]$\\  $\rightarrow\vm{T}(n_1+a-1,n_2+t-2)$};
+  \node[punkt,label=above:{Step 2}] (m2) [right=of m1] {Apply aspect $a$\\ $g=\mathcal{M}^{1}_{a-n_1}[b]$ \\$\rightarrow\vm{T}(n_1+a-n_1,n_2)$};
+  \node[punkt,label=above:{Step 3}] (m3) [right=of m2] {Apply time $t$\\ $\mathcal{M}^{2}_{t-n_2}[g]$\\  $\rightarrow\vm{T}(a,n_2+t-n_2)$};
 
-  % Kanten vom Anfangsknoten zu den Mittelknoten
+  % Flow arrows from beginning to end
   \draw[->] (m1) -- (m2);
   \draw[->] (m2) -- (m3);
 \end{tikzpicture}
@@ -456,7 +470,7 @@ The cell of $\vm{T}$ which has the smallest verb chain, with the CV in its  infi
 \label{fig:enverbZ2}
 \end{figure}
 
-The reason for the shift in $a-1$ or $t-2$ is to keep it consistent with the variable definitions and conventions created previously. If $\vm{T}$ is defined differently, the base cell will move around, and the coordinate shift in \autoref{fig:enverbZ2} will need to be adjusted accordingly. In essence, aspect comes before time. Let us say we want to build  the English `Past Perfect', which is $\vm{T}(3,1)$ according to \autoref{tab:enverbT1}, for the verb `to destroy':
+If $\vm{T}$ is defined differently, the base cell will move around, yet the algorithm would remain unchanged.  Let us say we want to build  the English `Past Perfect', which is $\vm{T}(3,1)$ according to \autoref{tab:enverbT1}, for the verb \texttt{to destroy}:
 \begin{example}
     \begin{enumerate}
     \item Our base cell is $\vm{T}(1,2)$, with the form `destroy' 
@@ -466,18 +480,20 @@ The reason for the shift in $a-1$ or $t-2$ is to keep it consistent with the var
 \end{example}
 This reduces the memory required to store the VC variation in $\vm{T}$, since only the  forms for the column and row  containing  the base cell need to be remembered: $\vm{T}(:,n_2), \vm{T}(n_1,:)$. If  $\vm{T}(n_1,4)$ is considered as the base cell, this also works for $\vm{T}(:,4)$.
 \subsection{Adverb}
-Adverbs add information to the verb analogous to adjectives for nouns. Normally, adverbs never change form. The only important things about them are their building and placement. The placement can be picked up by exposure, so only the building will be considered. 
+Adverbs add information to the verb analogous to adjectives for nouns, and normally never change form. The only important things about them are their building and placement. The placement can be picked up by exposure, so only the building will be considered. 
 
-Although adjectives and adverbs have [many structural similarities/overlapping forms],  adjective gradations (comparative / superlative) can never be used as adverbs. An interesting fact is that adverbs and tenses are not independent, as mentioned earlier. One can use adverbs to bypass the need of a tense (time, not aspect) and vice versa. Some languages use this feature to avoid changing the verb in order to create different  time forms (Chinese).
+Although adjectives and adverbs have many structural similarities or overlapping forms,  adjective gradations (comparative / superlative) can never be used as adverbs. 
+
+Adverbs and tenses are not independent, as mentioned earlier. One may use adverbs to mimic the method $\mathcal{M}^{2}_{t}$ and bypass the need of a tense (time, not aspect) and vice versa. Some languages use this feature to avoid changing the verb chain in order to create different  time forms (Chinese).
 \subsection{Nominalization}
 The conversion of adjectives and verbs into nouns to denote processes, states or other contracted meanings is referred to as nominalization. This section is closely related to describer subclauses. Examples: The sad, the wealthy, Driver, Prisoner\ldots
 
 There are two  types of noun conversions:
 \begin{enumerate}
     \item \textit{Contractions}: The associated noun is eliminated due to being obvious, and for stylistic reasons
-    \item \textit{Conceptualizations}: The concept behind the root word is crystallized as a state or process
+    \item \textit{Conceptualizations}: The concept behind the root word is crystallized with respect to multiple viewpoints
 \end{enumerate}
-Contractions are valid only for adjectives, and they mean different things for pure, P1 based and P2 based words. Pure adjectives create real contractions, where the base word is obvious, and often `man/woman/people':
+\textcolor{magenta}{\itt{Contractions}} are valid only for adjectives, and they mean different things for pure, P1 based and P2 based words. Pure adjectives create simple contractions, where the base word is obvious, and often `man/woman/people':
 \begin{example}
     \begin{tabular}{c|c|c}
         The people, who are poor & The poor people & The poor\\\hline
@@ -489,10 +505,11 @@ Sometimes it isn't as simple as merely eliminating the noun, but such specifics 
 \begin{example}
     \begin{tabular}{m{5cm}|c|c}
         The man, who is driving & The driving man & The driver\\\hline
-        The woman, who is working as a doctor & The  woman working as a doctor & The doctor
+        The woman, who is working as a doctor & The  woman working as a doctor & The doctor\\\hline
+        The people, who are dying & The dying people & The dying
     \end{tabular}
 \end{example}
-The second example looks strange, because there are no other words to express that concept.  Hence, P1 based contractions that represent professions are better treated as independent nouns rather than contractions, although their source is P1 adjectives.
+The second example looks strange, because there are no direct verbs to express that concept.  Hence, P1 based contractions that represent professions are better treated as independent nouns rather than contractions, although their source is P1 adjectives.
 
 P2 based contractions represent someone who is currently suffering the action represented by the verb:
 \begin{example}
@@ -501,9 +518,11 @@ P2 based contractions represent someone who is currently suffering the action re
         The people, who have been infected & The infected people & The infected
     \end{tabular}
 \end{example}
-Since such contractions mostly refer to people, they are normally gendered, and have different forms for the male and female versions: the actual, NOT grammatical gender is important. English does not perform this differentiation in form: `Prisoner' can refer to both the male or female counterpart. Technically, this  is not limited to living entities, as long as the omitted noun is obvious. In such  cases, assume the grammatical gender of the omitted noun. Such contractions are  shorthand ways of compressing simple describer subclauses, and help  declutter sentences, especially when a certain property of the eliminated noun is more important than its existence.
+Since such \textcolor{magenta}{contractions} mostly refer to people, they are normally gendered, and have different forms for the male and female versions: the actual, NOT grammatical gender is important. English does not perform this differentiation in form: `Prisoner' can refer to both the male or female counterpart. 
 
-In contrast, conceptualizations create specific nouns that represent either a state or process. Pure adjectives may be conceptualized in two ways, the first of which denotes a collective of all entities that possess a certain quality:
+Technically, this  is not limited to living entities, as long as the omitted noun is obvious. In such  cases, assume the grammatical gender of the omitted noun. Such contractions are  shorthand ways of compressing simple describer subclauses, and help  declutter sentences, especially when a certain property of the eliminated noun is more important than its existence.
+
+In contrast, \textcolor{magenta}{\itt{conceptualizations}} create specific nouns whose meanings stem from their root words. Pure adjectives may be conceptualized in two ways, the first of which denotes a collective of all entities that possess a certain quality:
 \begin{example}
     \begin{tabular}{c|c}
         Evil & Evil  balances the scales\\\hline
@@ -512,7 +531,7 @@ In contrast, conceptualizations create specific nouns that represent either a st
 \end{example}
 Since the collection is not limited to people or things, there is no associated noun. Hence, this is not a contraction, although English makes it appear like one. The second way is more common and adds some suffixes to / uniquely alters adjectives to create concepts:
 \begin{example}
-    Beauty(beautiful), Weakness(weak), Strength(strong), Roundness(round)\ldots
+    Beauty(beautiful) Strength(strong), Roundness(round)\ldots
 \end{example}
 The next two ways are for verbs, the first of which represents process nouns:
 \begin{example}
@@ -521,31 +540,32 @@ The next two ways are for verbs, the first of which represents process nouns:
         killing & The killing of enemies is a soldier's responsibility
     \end{tabular}
 \end{example}
-The second way represents states that occur as a result of the associated action; during the associated action, or the collective entities responsible for performing the action:
+The second way represents states that occur as a result of the associated action, the idea of  the associated action, or the collective entity responsible for performing the action:
 \begin{example}
     \begin{tabular}{c|c|m{6cm}}
-        The state of  rescuing someone &rescue & The rescue succeeded\\\hline
-        %The body that  administers & administration & The administration could not fool the people\\\hline
+        The idea of  rescuing someone & rescue & The rescue succeeded\\\hline
         The body that governs & government & The government decides\\\hline
-        The state of being permitted & permission & He received permission for the duel
+        The state of being permitted & permission & Permission to duel is granted
     \end{tabular}
 \end{example}
 Depending on the perspective, there are some special suffixes that may sometimes be added to nouns, irrespective of whether they are pure or nominalized:
 \begin{example}
     \begin{tabular}{c|c|m{9cm}}
-        -cle & something small & particle (small part), icicle (small ice piece), chronicle (small time-book), article (tiny item)
+        -cle & scale reduction & particle (small part), icicle (small ice piece), chronicle (small time-book), article (tiny item)\ldots
     \end{tabular}
 \end{example}
-Uses for such suffixes are normally restricted, with at max one example per perspective that occurs frequently. They are not extremely relevant due to their inconsistent usage and (sometimes) meaning, but can rarely prove useful.
+Use of such suffixes is normally restricted, with at max three examples per perspective that occur frequently. Although they are not extremely relevant due to their inconsistent usage and (sometimes) meaning, knowing about them is helpful.
 \subsection{Prefix}
 Some beginnings alter the meaning of verbs (and consequently their nominalized counterparts) they are applied on, but these are often not very consistent. This section is a starting point into the realm of possibility, and is considered only for completeness.  As such, it will not be very detailed. Besides, learning large lists of meanings without appropriate context is not a good way to acquire them to begin with.
 \section{Preposition} \label{sec:enprep}
 Words that show the location (space/time) or the relationship of any noun with respect to any other noun:  towards, against, from, for, at etc.  Never declined, and have only two possible use cases:
 \begin{enumerate}
-    \item Directly before the associated noun, at the very beginning of the noun unit
-    \item With prepositionally supported verbs as their argument
+    \item With the associated noun, as part of its noun unit
+    \item With prepositionally supported verbs as their argument ($\mathcal{Z}$)
 \end{enumerate}
-Basic prepositions exist in some form in every language, but their situational associations are often different and need to be relearned, which is the only hurdle with these words. Prepositions are to cases what adverbs are to tense time forms: The lesser the reliance upon them, the rougher a language will become.
+A noun unit with a preposition is no longer counted towards the traditionally expected units in a sentence, a statement which will be further clarified in \autoref{sec:enstce}.
+
+Basic prepositions exist in some form in every language, but their situational associations are often different and need to be relearned. Prepositions are to cases what adverbs are to tense time forms: The lesser the reliance upon them, the rougher a language will become.
 \section{Sentence} \label{sec:enstce}
 Uptill now, verb chains (VC) and noun units have been introduced and documented. One may also form some other units like adverb or pronoun units that can be deployed beside these. This grouping of similar components into units is similar to `tokenization' with a `Lexer': an essential first step for compiling any computer code. Using these units in specific orders, interpretable sequences can be formed, which are called sentences. A formal definition of a sentence is:
 \begin{syntax}
@@ -757,7 +777,7 @@ Once the parsing is complete, a multilayered parse tree will appear that uniquel
 
 At this point, my original claim about languages being logical is self-sustaining. Naturally, I cannot claim that the brain makes parse trees internally each time someone listens to a sentence, and perhaps the key to real mastery relies on leaving the calculations behind. Yet, this method should prove invaluable to decipher and troubleshoot sentences that otherwise seem too complicated to think about. If someone has difficulties understanding this explanation, I strongly encourage watching the first five hours of \href{https://www.youtube.com/watch?v=awsH0iq0O1A}{Compiler architecture} by Milen Patel.
 \subsection{Order/Request}
-$\biguplus$ Separate verb command forms for orders/requests. Politeness based languages end up with multiple verb forms here. 
+$\biguplus$ Separate verb command forms for orders/requests.
 
 Orders are always given in the present, and  exclusively to $2^{nd}$ person observers. This means that there is exactly one cell in \autoref{tab:enverbT1}: $\vm{T}(1,2)$, and only its second person including the entire third dimension which is responsible for this form. This cell will be termed as the `order cell'.
 
@@ -770,7 +790,6 @@ Interestingly, orders allow more politeness grades than the perspective normally
         Please get the bicycle & $0.5$\\\hline
         Could you get the bicycle? & $0.5$\\\hline
         Could you please get the bicycle? & $\approx0.8$\\\hline
-        Would it be possible to get change? & $0.5$\\\hline
     \end{tabular}
    \\ \bt{Note:} For English,  since politeness does not exist, $0=\mathbb{H}$. Compounding grade keywords or hypotheticals cannot cross the next integer, hence a grade of $1$ is impossible in English.
 \end{example}
@@ -780,7 +799,7 @@ I would like to have a tomato / We would like to have a tomato
 \end{example}
 These are  active voice hypothetical sentences $\in\vm{S}[\vm{T}(1,2)](1_p,1\leftrightarrow\mathbb{M})$.
 
-In spoken language,  the tone of voice also increases or decreases the politeness grade. \textcolor{red}{Mars (\textsanskrit{मंगळ})} based direct and loud statements reduce the grade, while \textcolor{blue}{Moon (\textsanskrit{चन्द्र})} based soft and gentle statements increase it. Hence, the minimum politeness grade of any spoken statement is not actually $0$, but negative.
+In spoken language,  the tone of voice also increases or decreases the politeness grade. \textcolor{red}{Mars (\textsanskrit{मंगळ})} based direct and loud statements reduce the grade, while \textcolor{blue}{Moon (\textsanskrit{चन्द्र})} based soft and gentle statements increase it. Hence, the minimum politeness grade of any spoken statement is not $0$, but negative.
 
 Independent first person group orders like `Let us go!' are special, yet use one of the classic order forms. Self directed orders like `Go, me!' are treated as part of the second person, as  reflexive commands. Unless used by narcissists, their politeness grade is always $0$.
 
@@ -966,7 +985,7 @@ Mirorring noun units with equivalent descriptions has already been mentioned onc
 \end{example}
 This also works in general for \bt{any} unit type. \textit{CoM} separators are similarly employed for the purpose. Proper usage of this feature is usually found in complicated religious texts:
 \begin{example}
-    I prostrate before the lotus-feet of [\textsanskrit{विघ्नेश्वर}], [offspring of \textsanskrit{उमा}], [the cause of destruction of sorrow], \{who is served by \textsanskrit{महाभूत} (the five great elements of the universe) etc.\}, [\{who has the face of a tusker\}] and [\{who consumes the essence of \textsanskrit{कपित्त} and \textsanskrit{जाम्भु} fruits\}]\\ - \href{https://vedpuran.net/wp-content/uploads/2021/04/brihat_parashara_hora_shastra_english_v.pdf}{\textsanskrit{बृहत्पराशर होराशास्त्र}} (Brihat Parashar Horashastra - The Science of Astrology)
+    I prostrate before the lotus-feet of \textsanskrit{विघ्नेश्वर}, [offspring of \textsanskrit{उमा}], [the cause of destruction of sorrow], \{who is served by \textsanskrit{महाभूत} (the five great elements of the universe) etc.\}, [\{who has the face of a tusker\}] and [\{who consumes the essence of \textsanskrit{कपित्त} and \textsanskrit{जाम्भु} fruits\}]\\ - \href{https://vedpuran.net/wp-content/uploads/2021/04/brihat_parashara_hora_shastra_english_v.pdf}{\textsanskrit{बृहत्पराशर होराशास्त्र}} (Brihat Parashar Horashastra - The Science of Astrology)
 \end{example}
 Every [duplication] and \{describer subclause\} has been marked accordingly. As can be seen, even the subclauses have been duplicated. This subsection will never be explicitly mentioned unless the structure of the duplication is different. Instead, there will be  \bt{exposure} resources provided in \autoref{sec:enrmrk} marked with a \bt{+} employing such structures, which can be used to test grammatical understanding.
 \subsection{Forced/Permitted actions}
